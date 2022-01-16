@@ -1,16 +1,31 @@
 /// --- CHATPAGE.JSX --- ///
 
 import "./ChatPage.scss";
-import React from "react";
+import React, { useState } from "react";
+
 import ChatBox from "../../components/ChatBox/ChatBox";
+import io from "socket.io-client";
+
+//establish connection to backend
+//link to where running socket.io server
+//SERVER_URL
+const socket = io.connect("http://localhost:3001");
 
 const ChatPage = ({ userName }) => {
+	const [room, setRoom] = useState("");
+
 	return (
-		<div>
+		<main>
 			<h1>ChatPage</h1>
 			{userName ? <p>chat away {userName}</p> : null}
-			<ChatBox />
-		</div>
+			{/* <Inbox currentFriend={currentFriend}/> */}
+			{/* or */}
+			{/* <Inbox currentFriend={currentFriend}/> */}
+			<ChatBox userName={userName} socket={socket} />
+			{/* <FriendInfo currentFriend={currentFriend}>*/}
+			{/*  or*/}
+			{/* <FriendInfo room={room}>*/}
+		</main>
 	);
 };
 

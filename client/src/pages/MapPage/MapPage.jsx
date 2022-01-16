@@ -4,7 +4,7 @@ import "./MapPage.scss";
 import React from "react";
 
 const MapPage = () => {
-	return <div>Map Page</div>;
+	return <main>Map Page</main>;
 };
 
 export default MapPage;

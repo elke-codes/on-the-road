@@ -4,7 +4,7 @@ import "./HomePage.scss";
 import React from "react";
 
 const HomePage = () => {
-	return <div>home page</div>;
+	return <main>home page</main>;
 };
 
 export default HomePage;
