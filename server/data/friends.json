@@ -1,0 +1,48 @@
+[{
+  "name": "Erin",
+  "room":"uuid?",
+  "id":"uuid?",
+  "image":"an image",
+  "location":"location",
+  "messages":[{	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"},
+        {	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"}
+      ]
+},
+{
+  "name": "Kaz",
+  "room":"uuid?",
+  "id":"uuid?",
+  "messages":[],
+  "image":"an image",
+  "location":"location"
+},
+{
+  "name": "Jamie",
+  "room":"uuid?",
+  "id":"uuid?",
+  "messages":[],
+  "image":"an image",
+  "location":"location"
+},
+{
+  "name": "Jeff",
+  "room":"uuid?",
+  "id":"uuid?",
+  "messages":[],
+  "image":"an image",
+  "location":"location"
+},{
+  "name": "Rob",
+  "room":"uuid?",
+  "id":"uuid?",
+  "messages":[],
+  "image":"an image",
+  "location":"location"
+}
+]

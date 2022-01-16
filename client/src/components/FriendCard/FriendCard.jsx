@@ -31,16 +31,12 @@ const FriendCard = () => {
 						</a>
 					</div>
 					<div className="friend-card__mini-map-container">
-						{/* <iframe
-							width="600"
-							height="450"
-							style="border:0"
-							loading="lazy"
-							// allowfullscreen
-							src="https://www.google.ca/maps/place/Vancouver,+BC/@49.2577143,-123.1939434,12z/data=!3m1!4b1!4m5!3m4!1s0x548673f143a94fb3:0xbb9196ea9b81f38b!8m2!3d49.2827291!4d-123.1207375"
-							// 					src="https://www.google.com/maps/embed/v1/place?key=API_KEY
-							// &q=Space+Needle,Seattle+WA"
-						></iframe> */}
+						<iframe
+							id="inlineFrameExample"
+							title="Inline Frame Example"
+							width="300"
+							height="200"
+							src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"></iframe>
 					</div>
 				</div>
 			</article>
