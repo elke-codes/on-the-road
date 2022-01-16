@@ -13,10 +13,15 @@ import { useState } from "react";
 const App = () => {
 	const [userName, setUserName] = useState(null);
 	const [currentFriend, setCurrentFriend] = useState("");
+	const [loggedIn, setLoggedIn] = useState(false);
 
 	return (
 		<BrowserRouter>
-			<Header userName={userName} setUserName={setUserName} />
+			<Header
+				userName={userName}
+				setUserName={setUserName}
+				setLoggedIn={setLoggedIn}
+			/>
 			{/* userName={userName} setUserName={setUserName} */}
 			<Switch>
 				<Route path="/" exact component={HomePage} />
@@ -24,15 +29,17 @@ const App = () => {
 					<MapPage
 						currentFriend={currentFriend}
 						setCurrentFriend={setCurrentFriend}
+						loggedIn={loggedIn}
 						// userName={userName}
 					/>
 				</Route>
 
 				<Route path="/chat">
 					<ChatPage
-						userName={userName}
+						// userName={userName}
 						currentFriend={currentFriend}
 						setCurrentFriend={setCurrentFriend}
+						loggedIn={loggedIn}
 					/>
 				</Route>
 			</Switch>

@@ -5,23 +5,25 @@ import React, { useState } from "react";
 
 import ChatBox from "../../components/ChatBox/ChatBox";
 import io from "socket.io-client";
+import FriendCard from "../../components/FriendCard/FriendCard";
 
 //establish connection to backend
 //link to where running socket.io server
 //SERVER_URL
 const socket = io.connect("http://localhost:3001");
 
-const ChatPage = ({ userName }) => {
+const ChatPage = ({ userName, loggedIn }) => {
 	const [room, setRoom] = useState("");
 
 	return (
-		<main>
+		<main className="chat-page">
 			<h1>ChatPage</h1>
-			{userName ? <p>chat away {userName}</p> : null}
+			{loggedIn ? <p>chat away {userName}</p> : null}
 			{/* <Inbox currentFriend={currentFriend}/> */}
 			{/* or */}
 			{/* <Inbox currentFriend={currentFriend}/> */}
 			<ChatBox userName={userName} socket={socket} />
+			<FriendCard />
 			{/* <FriendInfo currentFriend={currentFriend}>*/}
 			{/*  or*/}
 			{/* <FriendInfo room={room}>*/}

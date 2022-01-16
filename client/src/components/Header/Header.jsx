@@ -2,12 +2,13 @@
 import "./Header.scss";
 import React, { useState } from "react";
 
-const Header = ({ userName, setUserName }) => {
+const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 	const handleLogin = (e) => {
 		console.log(e.target.userName.value);
 		e.preventDefault();
 		setUserName(e.target.userName.value);
-		console.log("username", userName);
+		setLoggedIn(true);
+		console.log("username", userName, loggedIn);
 	};
 
 	// const handleChange = (e) => {
@@ -18,7 +19,7 @@ const Header = ({ userName, setUserName }) => {
 	return (
 		<section className="header">
 			<div className="header__login">
-				{userName ? (
+				{loggedIn ? (
 					<p>{userName}</p>
 				) : (
 					<form className="header__login-form" onSubmit={handleLogin}>
