@@ -83,7 +83,7 @@ const ChatBox = ({ userName, socket }) => {
 										<p>{messageContent.message}</p>
 									</div>
 									<div className="message-meta">
-										<p>
+										<div>
 											{" "}
 											<p className="time">
 												{messageContent.time}
@@ -91,7 +91,7 @@ const ChatBox = ({ userName, socket }) => {
 											<p className="author">
 												{messageContent.author}
 											</p>
-										</p>
+										</div>
 									</div>
 								</div>
 							</div>

@@ -1,11 +1,14 @@
 /// --- CHATPAGE.JSX --- ///
 
 import "./ChatPage.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import ChatBox from "../../components/ChatBox/ChatBox";
 import io from "socket.io-client";
 import FriendCard from "../../components/FriendCard/FriendCard";
+
+import axios from "axios";
+import Inbox from "../../components/Inbox/Inbox";
 
 //establish connection to backend
 //link to where running socket.io server
@@ -13,16 +16,30 @@ import FriendCard from "../../components/FriendCard/FriendCard";
 const socket = io.connect("http://localhost:3001");
 
 const ChatPage = ({ userName, loggedIn }) => {
-	const [room, setRoom] = useState("");
+	// const [room, setRoom] = useState("");
+	const [users, setUsers] = useState([]);
+	const getUsers = () => {
+		axios.get("http://localhost:8000/chat").then((result) => {
+			console.log("GET users result", result);
+			setUsers(result.data);
+		});
+		// .catch((err) => console.log("GET faillled", err));
+	};
+	useEffect(() => {
+		getUsers();
+	}, [users]);
 
 	return (
 		<main className="chat-page">
 			<h1>ChatPage</h1>
 			{loggedIn ? <p>chat away {userName}</p> : null}
+
+			<Inbox users={users} />
 			{/* <Inbox currentFriend={currentFriend}/> */}
 			{/* or */}
 			{/* <Inbox currentFriend={currentFriend}/> */}
 			<ChatBox userName={userName} socket={socket} />
+
 			<FriendCard />
 			{/* <FriendInfo currentFriend={currentFriend}>*/}
 			{/*  or*/}

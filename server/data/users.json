@@ -1,0 +1,118 @@
+[{
+  "name": "Erin",
+  "id":"uuid?",
+  "image":"https://placedog.net/50",
+  "location":"location",
+  "messages":[{	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"},
+        {	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"}
+      ]
+},
+{
+  "name": "Kaz",
+  "id":"uuid?",
+  "image":"an image",
+  "location":"location",
+  "messages":[{	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"},
+        {	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"}
+      ]
+},
+{
+  "name": "Jamie",
+  "id":"uuid?",
+  "image":"an image",
+  "location":"location",
+  "messages":[{	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"},
+        {	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"}
+      ]
+},
+{
+  "name": "Jeff",
+  "id":"uuid?",
+  "image":"an image",
+  "location":"location",
+  "messages":[{	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"},
+        {	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"}
+      ]
+},{
+  "name": "Rob",
+  "id":"uuid?",
+  "image":"an image",
+  "location":"location",
+  "messages":[{	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"},
+        {	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"}
+      ]
+},{
+  "name": "Elke",
+  "id":"uuid?",
+  "image":"an image",
+  "location":"location",
+  "messages":[{	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"},
+        {	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"}
+      ]
+}, 
+{
+  "name": "Ghinwa",
+  "id":"uuid?",
+  "image":"an image",
+  "location":"location",
+  "messages":[{	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"},
+        {	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"}
+      ]
+},{
+  "name": "Anais",
+  "id":"uuid?",
+  "image":"an image",
+  "location":"location",
+  "messages":[{	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"},
+        {	"room": "room",
+				"author": "userName",
+				"message": "currentMessage",
+				"time":"time"}
+      ]
+}
+]

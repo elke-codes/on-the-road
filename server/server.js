@@ -4,9 +4,12 @@ const express = require("express");
 const app = express();
 const http = require("http");
 const cors = require("cors");
+const userRouter = require("./routes/userRoute");
 //server is a class on socket.io
 const { Server } = require("socket.io");
+
 app.use(cors());
+// -- SOCKETS -- //
 
 const server = http.createServer(app);
 
@@ -45,7 +48,23 @@ io.on("connection", (socket) => {
 	});
 });
 
-//listening on SERVER_URL
+//listening on SERVER_URL (socket)
 server.listen(3001, () => {
-	console.log("server running on port 3001");
+	console.log("🚀 server running on port 3001");
+});
+
+// -- EXPRESS -- //
+
+// include static middleware to be able to serve images from Express server
+app.use(express.static("public"));
+require("dotenv").config();
+// const PORT = process.env.PORT;
+app.use("/users", userRouter);
+// Listen on PORT CLIENT__URL and provide a success callback function
+// app.listen(process.env.PORT, () => {
+// 	console.log("🚀 Server listening on ", process.env.PORT);
+// });
+
+app.listen(8000, () => {
+	console.log("🚀 Server listening on ", 8000);
 });
