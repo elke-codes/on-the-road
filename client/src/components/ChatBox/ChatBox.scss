@@ -1,1 +1,54 @@
 /// --- CHATBOX.SCSS --- ///
+.chat-box {
+	height: 300px;
+	width: 700px;
+	margin: 1rem;
+	border: 1px solid black;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	background-color: white;
+	&__header {
+		border-bottom: 1px solid black;
+		// background: linear-gradient(
+		// 	101deg,
+		// 	rgba(16, 6, 187, 1) 22%,
+		// 	rgba(7, 237, 49, 1) 48%,
+		// 	rgba(255, 196, 0, 1) 70%
+		// );
+
+		// color: white;
+		text-align: center;
+		font-size: 20px;
+		padding: 1rem 0;
+	}
+	&__body {
+		display: flex;
+
+		// height: 100%;
+	}
+	&__footer {
+		display: flex;
+	}
+	&__footer-input {
+		// width: 100%;
+		flex-grow: 1;
+		height: 3rem;
+		padding: 0 1rem;
+		border: none;
+		border-top: 1px solid black;
+	}
+
+	&__footer-button {
+		&:hover {
+			background: linear-gradient(
+				90deg,
+				rgba(16, 6, 187, 1) 22%,
+				rgba(255, 196, 0, 1) 70%
+			);
+		}
+	}
+}

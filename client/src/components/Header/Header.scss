@@ -1,7 +1,22 @@
 .header {
 	border: 1px solid black;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	background: linear-gradient(
+		45deg,
+		rgba(16, 6, 187, 1) 22%,
+		rgba(255, 196, 0, 1) 70%
+	);
+
 	&__login {
+		margin-left: 1rem;
 	}
+}
+
+.logo {
+	// font-weight: bold;
+	font-style: italic;
+	color: white;
 }

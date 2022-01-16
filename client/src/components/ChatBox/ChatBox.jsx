@@ -61,7 +61,7 @@ const ChatBox = ({ userName, socket }) => {
 	return (
 		<section className="chat-box">
 			{/* header talking to? */}
-			<article className="chat-box__header">chatheader</article>
+			<article className="chat-box__header">Live Chat</article>
 			<article className="chat-box__body">
 				<ScrollToBottom className="message-container">
 					{messageList.map((messageContent) => {
@@ -101,9 +101,10 @@ const ChatBox = ({ userName, socket }) => {
 			</article>
 			<article className="chat-box__footer">
 				<input
+					className="chat-box__footer-input"
 					type="text"
 					value={currentMessage}
-					placeholder="Hello..."
+					placeholder="Write your message here..."
 					onChange={(e) => {
 						setCurrentMessage(e.target.value);
 					}}
@@ -112,7 +113,11 @@ const ChatBox = ({ userName, socket }) => {
 						e.key === "Enter" && sendMessage();
 					}}
 				/>
-				<button onClick={sendMessage}>&#9658;</button>
+				<button
+					className="chat-box__footer-button"
+					onClick={sendMessage}>
+					&#9658;
+				</button>
 			</article>
 		</section>
 	);

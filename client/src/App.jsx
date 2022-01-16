@@ -8,12 +8,25 @@ import HomePage from "./pages/HomePage/HomePage";
 import MapPage from "./pages/MapPage/MapPage";
 import ChatPage from "./pages/ChatPage/ChatPage";
 import Footer from "./components/Footer/Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const App = () => {
-	const [userName, setUserName] = useState(null);
+	const [userName, setUserName] = useState("");
 	const [currentFriend, setCurrentFriend] = useState("");
 	const [loggedIn, setLoggedIn] = useState(false);
+	const [users, setUsers] = useState([]);
+
+	const getUsers = () => {
+		axios.get("http://localhost:8000/").then((result) => {
+			console.log("GET users result", result);
+			setUsers(result.data);
+		});
+		// .catch((err) => console.log("GET faillled", err));
+	};
+	useEffect(() => {
+		getUsers();
+	}, []);
 
 	return (
 		<BrowserRouter>
@@ -40,6 +53,7 @@ const App = () => {
 						currentFriend={currentFriend}
 						setCurrentFriend={setCurrentFriend}
 						loggedIn={loggedIn}
+						users={users}
 					/>
 				</Route>
 			</Switch>

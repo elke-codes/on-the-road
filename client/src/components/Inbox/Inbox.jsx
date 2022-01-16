@@ -5,67 +5,84 @@ import React from "react";
 
 const Inbox = ({ users }) => {
 	return (
-		<article className="inbox">
+		<section className="inbox">
+			<h2 className="inbox__title">Inbox</h2>
 			{/* filter over people, filter out id that matches logged in id */}
 			{/* {users.map((user) => { */}
-			<div className="inbox__user">
+			<article className="inbox__user">
 				<img
 					className="inbox__image"
 					src="https://placedog.net/50"
 					alt=""
 				/>
 				<p className="inbox__name">User Name</p>
-			</div>
-			<div className="inbox__user">
+			</article>
+			<article className="inbox__user">
 				<img
 					className="inbox__image"
 					src="https://placedog.net/50"
 					alt=""
 				/>
 				<p className="inbox__name">User Name</p>
-			</div>{" "}
-			<div className="inbox__user">
+			</article>
+			<article className="inbox__user">
 				<img
 					className="inbox__image"
 					src="https://placedog.net/50"
 					alt=""
 				/>
 				<p className="inbox__name">User Name</p>
-			</div>{" "}
-			<div className="inbox__user">
+			</article>
+			<article className="inbox__user">
 				<img
 					className="inbox__image"
 					src="https://placedog.net/50"
 					alt=""
 				/>
 				<p className="inbox__name">User Name</p>
-			</div>{" "}
-			<div className="inbox__user">
+			</article>
+			<article className="inbox__user">
 				<img
 					className="inbox__image"
 					src="https://placedog.net/50"
 					alt=""
 				/>
 				<p className="inbox__name">User Name</p>
-			</div>{" "}
-			<div className="inbox__user">
+			</article>
+			<article className="inbox__user">
 				<img
 					className="inbox__image"
 					src="https://placedog.net/50"
 					alt=""
 				/>
 				<p className="inbox__name">User Name</p>
-			</div>{" "}
-			<div className="inbox__user">
+			</article>
+			<article className="inbox__user">
 				<img
 					className="inbox__image"
 					src="https://placedog.net/50"
 					alt=""
 				/>
 				<p className="inbox__name">User Name</p>
-			</div>
+			</article>
+			<article className="inbox__user">
+				<img
+					className="inbox__image"
+					src="https://placedog.net/50"
+					alt=""
+				/>
+				<p className="inbox__name">User Name</p>
+			</article>
+			<article className="inbox__user">
+				<img
+					className="inbox__image"
+					src="https://placedog.net/50"
+					alt=""
+				/>
+				<p className="inbox__name">User Name</p>
+			</article>
 			;{/* })} */}
-		</article>
+		</section>
 	);
 };
 

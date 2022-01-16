@@ -1,43 +1,84 @@
-.App {
-	padding: 2rem;
-	background-color: yellow;
+/// --- APP SCSS --- ///
+
+// // -- GLOBAL STYLES -- //
+// @use "./styles/partials/typography.scss" as *;
+// @use "./styles/partials/mixins" as *;
+// @use "./styles/partials/variables" as *;
+// @use "./styles/partials/colors" as *;
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
 }
 
-// .App {
-//   text-align: center;
-// }
+body {
+	margin: 0;
+	margin: 0;
+	font-family: "Arsenal", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+	// color: $primary-text;
+	background-color: #fff;
+}
+#root {
+	// width: 100vw;
+}
 
-// .App-logo {
-//   height: 40vmin;
-//   pointer-events: none;
-// }
+main {
+	height: 70vh;
+}
 
-// @media (prefers-reduced-motion: no-preference) {
-//   .App-logo {
-//     animation: App-logo-spin infinite 20s linear;
-//   }
-// }
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+	margin: 0;
+	padding: 0;
+}
 
-// .App-header {
-//   background-color: #282c34;
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   color: white;
-// }
+a {
+	text-decoration: none;
+}
 
-// .App-link {
-//   color: #61dafb;
-// }
+ul {
+	list-style: none;
+}
 
-// @keyframes App-logo-spin {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
+input {
+	// @include body-copy;
+	// font-family: "AvenirNext LT Pro", Arial, sans-serif;
+	border-radius: 0.25rem;
+	padding: 0.75rem;
+	margin: 0.5rem 0;
+	// border: 1px solid $mercury;
+	// background-color: $alabaster;
+	color: black;
+	// default state border: 1px solid $mercury
+	// active state $bandsite-black;
+	//error state #d22d2d;
+	// @include tablet {
+	// 	margin: 0;
+
+	// 	padding: 1rem;
+	// }
+	&--active {
+		border: 1px solid;
+		border-color: rgba(255, 196, 0, 0.5);
+		// $action-hover;
+	}
+
+	&--error {
+		border-color: #d22d2d;
+	}
+	&--error-message {
+		color: #d22d2d;
+	}
+	//overwriting this default setting that seems to be applied on the "ouline"
+	&:focus-visible {
+		outline-color: rgba(255, 196, 0, 0.5);
+		// $action-hover;
+	}
+}

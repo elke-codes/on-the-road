@@ -1,1 +1,40 @@
 /// --- FOOTER.SCSS --- ///
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem 0;
+	background-color: Black;
+	width: 100vw;
+	// height: 15vh;
+	align-self: flex-end;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	&__copy {
+		padding-bottom: 1rem;
+		font-size: 20px; // TODO why is this &-- not working?
+		&--bstn {
+			padding-top: 1rem;
+			font-size: 14px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	&__list-item {
+		padding-right: 2rem;
+		&:hover {
+			transform: scale(1.2);
+		}
+	}
+
+	&__link-email {
+		font-size: 2.5rem;
+	}
+}

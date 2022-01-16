@@ -1,8 +1,12 @@
 /// --- HEADER.JSX --- ///
 import "./Header.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
+	// useEffect(() => {
+	// 	setUserName(userName);
+	// }, [loggedIn]);
+
 	const handleLogin = (e) => {
 		console.log(e.target.userName.value);
 		e.preventDefault();
@@ -12,17 +16,23 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 	};
 
 	// const handleChange = (e) => {
+	// 	e.preventDefault();
 	// 	setUserName(e.target.value);
+	// 	console.log(userName);
 	// };
 
 	// useEffect({}, []);
 	return (
 		<section className="header">
+			<h1 className="logo">On the road...</h1>
 			<div className="header__login">
 				{loggedIn ? (
 					<p>{userName}</p>
 				) : (
-					<form className="header__login-form" onSubmit={handleLogin}>
+					<form
+						className="header__login-form"
+						//  onSubmit={handleLogin}
+					>
 						{/* <label className="header__input-label" htmlFor="userName">
 						Username
 					</label> */}
@@ -33,7 +43,10 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 							name="userName"
 							// onChange={handleChange}
 						/>
-						<button type="submit" className="header__login">
+						<button
+							type="submit"
+							className="header__login"
+							onSubmit={handleLogin}>
 							LOGIN
 						</button>
 					</form>

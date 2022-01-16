@@ -19,10 +19,10 @@ const writeData = () => {
 //be able to send json body when post
 router.use(express.json());
 
-router.get("/chat", (req, res) => {
-	const userData = readData;
-	console.log(data);
-	res.status(200).json(userData);
+router.get("/", (req, res) => {
+	const usersData = readData;
+	console.log(usersData);
+	res.status(200).json(usersData);
 });
 
 module.exports = router;
