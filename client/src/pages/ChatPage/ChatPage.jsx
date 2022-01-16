@@ -4,10 +4,11 @@ import "./ChatPage.scss";
 import React from "react";
 import ChatBox from "../../components/ChatBox/ChatBox";
 
-const ChatPage = () => {
+const ChatPage = ({ userName }) => {
 	return (
 		<div>
 			<h1>ChatPage</h1>
+			{userName ? <p>chat away {userName}</p> : null}
 			<ChatBox />
 		</div>
 	);
