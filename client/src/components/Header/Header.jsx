@@ -6,12 +6,13 @@ const Header = ({ userName, setUserName }) => {
 	const handleLogin = (e) => {
 		console.log(e.target.userName.value);
 		e.preventDefault();
+		setUserName(e.target.userName.value);
 		console.log("username", userName);
 	};
 
-	const handleChange = (e) => {
-		setUserName(e.target.value);
-	};
+	// const handleChange = (e) => {
+	// 	setUserName(e.target.value);
+	// };
 
 	// useEffect({}, []);
 	return (
@@ -29,7 +30,7 @@ const Header = ({ userName, setUserName }) => {
 							type="text"
 							placeholder="enter your username"
 							name="userName"
-							onChange={handleChange}
+							// onChange={handleChange}
 						/>
 						<button type="submit" className="header__login">
 							LOGIN
