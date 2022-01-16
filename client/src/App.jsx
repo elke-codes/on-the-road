@@ -20,16 +20,16 @@ const App = () => {
 			<Switch>
 				<Route path="/" exact component={HomePage} />
 				<Route path="/map" component={MapPage} />
-				<Route
+				{/* <Route
 					path="/chat"
 					render={() => {
 						<ChatPage userName={userName} />;
 					}}
-				/>
-
-				{/* // component={ChatPage} />
-
-				//  render={(props) => <DetailsPage globalStore={globalStore} {...props} */}
+				/> */}
+				{/* <Route path="/chat" component={ChatPage} /> */}
+				<Route path="/chat">
+					<ChatPage userName={userName} />
+				</Route>
 			</Switch>
 			<Footer />
 		</BrowserRouter>
