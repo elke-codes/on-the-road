@@ -16,7 +16,7 @@ const MapPage = ({ userName, users, loggedIn }) => {
 	return (
 		<main className="map-page">
 			{/* <h1>MAP PAGE</h1> */}
-			<article className="map-page__explanation">
+			{/* <article className="map-page__explanation">
 				<h3>How to use this map</h3>
 				<ul>
 					<li>
@@ -29,7 +29,7 @@ const MapPage = ({ userName, users, loggedIn }) => {
 						click on a marker to see more info about your friend
 					</li>
 				</ul>
-			</article>
+			</article> */}
 			<section className="map-page__container">
 				{userName ? <p>welcome {userName}</p> : null}
 				{/* <FriendList /> */}
