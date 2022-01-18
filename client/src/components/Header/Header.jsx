@@ -1,6 +1,7 @@
 /// --- HEADER.JSX --- ///
 import "./Header.scss";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 	// useEffect(() => {
@@ -24,7 +25,10 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 	// useEffect({}, []);
 	return (
 		<section className="header">
-			<h1 className="logo">On the road...</h1>
+			<Link to="/">
+				{" "}
+				<h1 className="logo">On the road...</h1>
+			</Link>
 			<div className="header__login">
 				{loggedIn ? (
 					<p>{userName}</p>

@@ -1,0 +1,14 @@
+/// --- MAP.SCSS --- ///
+/* using react leaflet this is how you set the map hight */
+.leaflet-container {
+	height: 500px;
+	width: 900px;
+	border: 1px solid black;
+	// TODO background something cool, space?
+	background-color: black;
+}
+
+.map {
+	display: flex;
+	justify-content: space-around;
+}

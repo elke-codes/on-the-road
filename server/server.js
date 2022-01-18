@@ -9,6 +9,7 @@ const userRouter = require("./routes/userRoute");
 const { Server } = require("socket.io");
 
 app.use(cors());
+
 // -- SOCKETS -- //
 
 const server = http.createServer(app);

@@ -13,12 +13,21 @@ const FriendCard = () => {
 			<div className="friend-card__top-container">
 				<img src="" alt="" />
 				<h3 className="friend-card__name">Ghinwa Yassine</h3>
+				{/* https://myprojects.geoapify.com/api/Uvf0Dk1JqGJgrI0OCWvD/keys */}
 				<p className="friend-card__location">is in Portugal</p>
 			</div>
 			<p className="friend-card__distance">
 				We're{" "}
-				<span className="friend-card__distance--bold">.... km </span>{" "}
+				{/* https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates */}
+				<span className="friend-card__distance--bold">10,533 km </span>{" "}
 				apart!
+			</p>
+			<p className="friend-card__distance">
+				It's {/* api s for timezone...  */}
+				<span className="friend-card__distance--bold">
+					3:22pm{" "}
+				</span>{" "}
+				here
 			</p>
 			<div className="friend-card__bottom-container">
 				<div className="friend-card__mini-map-container">

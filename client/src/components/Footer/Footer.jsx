@@ -3,7 +3,7 @@
 import React from "react";
 import "./Footer.scss";
 import GitHubLogo from "../../assets/icons/GitHub-Mark-Light-32px.png";
-
+import linkedIn from "../../assets/icons/linkedin.png";
 const Footer = () => {
 	return (
 		<footer className="footer">
@@ -16,7 +16,11 @@ const Footer = () => {
 						target="_blank"
 						title="Check this and other projects out on GitHub"
 						className="footer__link">
-						<img src={GitHubLogo} alt="GitHub Logo" />
+						<img
+							src={GitHubLogo}
+							className="footer__link-image"
+							alt="GitHub Logo"
+						/>
 					</a>
 				</li>
 				<li className="footer__list-item">
@@ -27,6 +31,19 @@ const Footer = () => {
 						title="Get in touch!"
 						className="footer__link-email">
 						📨
+					</a>
+				</li>
+				<li className="footer__list-item">
+					<a
+						href="https://www.linkedin.com/in/elke-dick/"
+						target="_blank"
+						title="Check this and other projects out on GitHub"
+						className="footer__link">
+						<img
+							src={linkedIn}
+							className="footer__link-image"
+							alt="linkedin logo"
+						/>
 					</a>
 				</li>
 			</ul>

@@ -3,6 +3,7 @@
 import "./MapPage.scss";
 import React, { useState } from "react";
 import FriendCard from "../../components/FriendCard/FriendCard";
+import Map from "../../components/Map/Map";
 
 const MapPage = ({ userName }) => {
 	const [showModal, setShowModal] = useState(false);
@@ -15,12 +16,9 @@ const MapPage = ({ userName }) => {
 		<main>
 			<h1>MAP PAGE</h1>
 			{userName ? <p>welcome {userName}</p> : null}
-			{showModal && <FriendCard />}
-
-			<button onClick={handleClick}>friend 1</button>
-			<button onClick={handleClick}>friend 2</button>
-			<button onClick={handleClick}>friend 3</button>
+			<Map userName={userName} />
 			{/* <FriendList/> */}
+			{showModal && <FriendCard />}
 		</main>
 	);
 };
