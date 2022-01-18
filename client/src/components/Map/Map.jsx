@@ -12,11 +12,12 @@ import {
 import { v4 as uuid } from "uuid";
 import FriendCard from "../FriendCard/FriendCard";
 
-const Map = ({ userName }) => {
+const Map = ({ userName, users }) => {
 	const [markers, setMarkers] = useState([]);
 	const [friendsData, setFriendsData] = useState([]);
 	const [userPosition, setUserPosition] = useState(null);
 	const [activeFriend, setActiveFriend] = useState(null);
+	console.log("users in map", users);
 
 	// const getFriendsData = async () => {
 	// 	const result = await axios.get("http://localhost:8000/users/");
@@ -68,7 +69,7 @@ const Map = ({ userName }) => {
 					// id="mapbox/streets-v11"
 					id="mapbox://styles/mapbox/satellite-v9"
 				/>
-				{friendsData.map((friend) => {
+				{users.map((friend) => {
 					return (
 						<Marker
 							position={friend.location}
@@ -77,7 +78,7 @@ const Map = ({ userName }) => {
 								setActiveFriend(friend);
 							}}>
 							<Popup>
-								<FriendCard friendName={friend.name} />{" "}
+								<FriendCard friend={friend} />{" "}
 							</Popup>
 						</Marker>
 					);

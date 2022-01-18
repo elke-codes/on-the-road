@@ -85,21 +85,6 @@
 				"message": "currentMessage",
 				"time":"time"}
       ]
-}
-,{
-  "name": "Elke",
-  "id":"uuid?",
-  "image":"an image",
-  "location":[],
-  "messages":[{	"room": "room",
-				"author": "userName",
-				"message": "currentMessage",
-				"time":"time"},
-        {	"room": "room",
-				"author": "userName",
-				"message": "currentMessage",
-				"time":"time"}
-      ]
 }, 
 {
   "name": "Ghinwa",

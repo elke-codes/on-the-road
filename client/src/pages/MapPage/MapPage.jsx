@@ -6,7 +6,7 @@ import FriendCard from "../../components/FriendCard/FriendCard";
 import Map from "../../components/Map/Map";
 import Inbox from "../../components/Inbox/Inbox";
 
-const MapPage = ({ userName }) => {
+const MapPage = ({ userName, users }) => {
 	const [showModal, setShowModal] = useState(false);
 
 	const handleClick = () => {
@@ -33,7 +33,7 @@ const MapPage = ({ userName }) => {
 
 				{/* <Inbox /> */}
 
-				<Map userName={userName} />
+				<Map userName={userName} users={users} />
 				{showModal && <FriendCard />}
 			</section>
 		</main>

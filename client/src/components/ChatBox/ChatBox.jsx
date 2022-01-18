@@ -3,6 +3,7 @@
 import "./ChatBox.scss";
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
+import { v4 as uuid } from "uuid";
 
 const ChatBox = ({ userName, socket }) => {
 	//keep track of message
@@ -71,6 +72,7 @@ const ChatBox = ({ userName, socket }) => {
 						return (
 							<div
 								className="message"
+								key={uuid()}
 								// check who is the autor of the message, it it s the one sending it , it s you lol, otherwise it s the other
 								id={
 									userName === messageContent.author

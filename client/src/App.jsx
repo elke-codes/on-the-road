@@ -27,8 +27,9 @@ const App = () => {
 
 	// if there was a log in, get the users
 	useEffect(() => {
-		loggedIn && getUsers();
-		console.log("logged in app", loggedIn);
+		// loggedIn &&
+		getUsers();
+		// console.log("logged in app", loggedIn);
 	}, []);
 
 	return (
@@ -47,6 +48,7 @@ const App = () => {
 						currentFriend={currentFriend}
 						setCurrentFriend={setCurrentFriend}
 						loggedIn={loggedIn}
+						users={users}
 						// userName={userName}
 					/>
 				</Route>

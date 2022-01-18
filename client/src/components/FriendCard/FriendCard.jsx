@@ -6,13 +6,13 @@ import airBnb from "../../assets/images/airbnb.png";
 
 import React from "react";
 
-const FriendCard = () => {
+const FriendCard = ({ friend }) => {
 	return (
 		// <section className="friend">
 		<article className="friend-card">
 			<div className="friend-card__top-container">
 				<img src="" alt="" />
-				<h3 className="friend-card__name">Ghinwa Yassine</h3>
+				<h3 className="friend-card__name">{friend.name}</h3>
 				{/* https://myprojects.geoapify.com/api/Uvf0Dk1JqGJgrI0OCWvD/keys */}
 				<p className="friend-card__location">is in Portugal</p>
 			</div>

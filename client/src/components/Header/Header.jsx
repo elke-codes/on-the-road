@@ -12,7 +12,7 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 		// console.log(e.target.userName.value);
 		e.preventDefault();
 		setUserName(e.target.userName.value);
-		setLoggedIn(true);
+		// setLoggedIn(true);
 
 		// setLoggedOut(false);
 	};
