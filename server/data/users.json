@@ -1,6 +1,6 @@
 [{
   "name": "Erin",
-  "id":"uuid?",
+  "id":"9e5b0a03-ce91-4864-87cb-2a87cb8e35a0",
   "image":"https://placedog.net/50",
   "location":[56.68338659555295, -5.117055182931919],
   "messages":[{	"room": "room",
@@ -15,7 +15,7 @@
 },
 {
   "name": "Kaz",
-  "id":"uuid?",
+  "id":"a077cfa0-d0ff-4417-97f9-8c2b2d08e8f7",
   "image":"an image",
   "location":[56.68338659555295, -5.117055182931919],
   "messages":[{	"room": "room",
@@ -30,7 +30,7 @@
 },
 {
   "name": "Jamie",
-  "id":"uuid?",
+  "id":"fee32c29-81cc-46bc-8b16-dd3e1ed1ea3d",
   "image":"an image",
   "location":[12.466598133888956, -69.95279488218297],
   "messages":[{	"room": "room",
@@ -45,7 +45,7 @@
 },
 {
   "name": "Jeff",
-  "id":"uuid?",
+  "id":"592281bb-4b9a-4796-b1dc-091327be366e",
   "image":"an image",
   "location":[38.71301885813053, -9.143733378717352],
   "messages":[{	"room": "room",
@@ -59,7 +59,7 @@
       ]
 },{
   "name": "Rob",
-  "id":"uuid?",
+  "id":"62937cc2-191b-4222-bc68-a8acb042844c",
   "image":"an image",
   "location":[49.28276395901426, -123.05882433013782],
   "messages":[{	"room": "room",
@@ -73,7 +73,7 @@
       ]
 },{
   "name": "Jesi",
-  "id":"uuid?",
+  "id":"354d5801-e8c6-4342-a746-eac03fd06f9f",
   "image":"an image",
   "location":[49.305217755374365, -123.15661947422305],
   "messages":[{	"room": "room",
@@ -88,7 +88,7 @@
 }, 
 {
   "name": "Ghinwa",
-  "id":"uuid?",
+  "id":"13d12e3b-1cdd-44c4-9b39-8caa537531d6",
   "image":"an image",
   "location":[33.902139778786434, 35.491046126215444],
   "messages":[{	"room": "room",
@@ -102,7 +102,7 @@
       ]
 },{
   "name": "Anais",
-  "id":"uuid?",
+  "id":"ca94b1c7-121f-4f49-b207-73c84bbff5e7",
   "image":"an image",
   "location":[31.645048209027657, -6.026930279757645],
   "messages":[{	"room": "room",

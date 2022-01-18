@@ -8,14 +8,25 @@ const readData = () => {
 	return JSON.parse(friendsData);
 };
 
+const writeData = () => {
+	// JSON.stringify takes additional parameters, that allow us to specify the amounts of white space (ie, indentation) in the file
+	fs.writeFileSync("./data/users.json", JSON.stringify(usersData, null, 2));
+};
+
 // const writeFile = (friendsData) => {
 // 	// JSON.stringify takes additional parameters, that allow us to specify the amounts of white space (ie, indentation) in the file
 // 	fs.writeFileSync("./friends.json", JSON.stringify(friendsData, null, 2));
 // };
 
-router.get("/", (req, res) => {
-	const friendsData = readData();
-	//TODO filter out CURRENTUSER
+// router.get("/geo-reverse", (req, res) => {
+// 	let userData = fs.readFileSync("./users.json");
 
-	res.status(200).json(friendsData);
-});
+// 	let current = userData.find((user) => {
+// 		userID === user.id;
+// 	});
+
+// 	// const country = res.data.properties.country;
+// 	// const city = res.data.properties.city;
+
+// 	const city = res.status(200);
+// });

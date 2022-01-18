@@ -1,12 +1,12 @@
 /// --- FRIENDCARD.SCSS --- ///
 .friend-card {
-	margin: 1rem;
+	// margin: 1rem;
 	border: 1px solid black;
 	border-radius: 20px;
 	padding: 1rem;
 	text-align: center;
-	// height: 200px;
-	width: 300px;
+	height: fit-content;
+	width: fit-content;
 	// display: flex;
 	// @include body-copy;
 	background-color: white;

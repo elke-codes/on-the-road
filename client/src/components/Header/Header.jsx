@@ -11,16 +11,19 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 	const handleLogin = (e) => {
 		// console.log(e.target.userName.value);
 		e.preventDefault();
+		if (!e.target.userName.value) {
+			return alert("please enter your username");
+		}
 		setUserName(e.target.userName.value);
-		// setLoggedIn(true);
+		setLoggedIn(true);
 
 		// setLoggedOut(false);
 	};
 
-	// const handleLogOut = () => {
-	// 	setLoggedOut(true);
-	// 	setLoggedIn(false);
-	// };
+	const handleLogOut = () => {
+		// setLoggedOut(true);
+		setLoggedIn(false);
+	};
 
 	// const handleChange = (e) => {
 	// 	e.preventDefault();
@@ -39,7 +42,7 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 				{loggedIn === true ? (
 					<div>
 						<p>{userName}</p>
-						<button>logout</button>
+						<button onClick={handleLogOut}>logout</button>
 					</div>
 				) : (
 					<form className="header__login-form" onSubmit={handleLogin}>

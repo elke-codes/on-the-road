@@ -30,7 +30,8 @@ const FriendCard = ({ friend }) => {
 				here
 			</p>
 			<div className="friend-card__bottom-container">
-				<div className="friend-card__mini-map-container">
+				{/* give classname to not show when on map */}
+				{/* <div className="friend-card__mini-map-container">
 					<iframe
 						className="friend-card__mini-map"
 						id="inlineFrameExample"
@@ -38,8 +39,8 @@ const FriendCard = ({ friend }) => {
 						width="300"
 						height="200"
 						src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"></iframe>
-				</div>
-				<div className="friend-card__links">
+				</div> */}
+				{/* <div className="friend-card__links">
 					<a
 						href="http://www.airbnb.com"
 						className="friend-card__link">
@@ -58,7 +59,7 @@ const FriendCard = ({ friend }) => {
 							className="friend-card__link-image"
 						/>
 					</a>
-				</div>
+				</div> */}
 			</div>
 		</article>
 		// </section>

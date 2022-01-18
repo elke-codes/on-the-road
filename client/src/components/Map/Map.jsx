@@ -12,12 +12,13 @@ import {
 import { v4 as uuid } from "uuid";
 import FriendCard from "../FriendCard/FriendCard";
 
-const Map = ({ userName, users }) => {
+const Map = ({ userName, users, loggedIn }) => {
 	const [markers, setMarkers] = useState([]);
 	const [friendsData, setFriendsData] = useState([]);
 	const [userPosition, setUserPosition] = useState(null);
 	const [activeFriend, setActiveFriend] = useState(null);
-	console.log("users in map", users);
+	// console.log("users in map", users);
+	// console.log("loggedininmap", loggedIn);
 
 	// const getFriendsData = async () => {
 	// 	const result = await axios.get("http://localhost:8000/users/");
@@ -69,20 +70,29 @@ const Map = ({ userName, users }) => {
 					// id="mapbox/streets-v11"
 					id="mapbox://styles/mapbox/satellite-v9"
 				/>
-				{users.map((friend) => {
-					return (
-						<Marker
-							position={friend.location}
-							key={uuid()}
-							onClick={() => {
-								setActiveFriend(friend);
-							}}>
-							<Popup>
-								<FriendCard friend={friend} />{" "}
-							</Popup>
-						</Marker>
-					);
-				})}
+				{loggedIn &&
+					users.map((friend) => {
+						return (
+							<Marker
+								position={friend.location}
+								key={uuid()}
+								onClick={() => {
+									setActiveFriend(friend);
+								}}
+								onMouseOver={(e) => {
+									//stackoverflow.com/questions/51662140/how-to-toggle-popup-in-react-leaflet-on-mouse-hover
+									// Leaflet Marker object is accessible via event.target property of mouseover and mouseout events, so popup could be opened/closed like this:
+									e.target.openPopup();
+								}}
+								onMouseOut={(e) => {
+									e.target.closePopup();
+								}}>
+								<Popup>
+									<FriendCard friend={friend} />{" "}
+								</Popup>
+							</Marker>
+						);
+					})}
 
 				<LocationMarker />
 			</MapContainer>

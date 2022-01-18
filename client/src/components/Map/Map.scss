@@ -14,3 +14,8 @@
 	display: flex;
 	justify-content: space-around;
 }
+
+.leaflet-popup-content-wrapper {
+	height: fit-content;
+	width: fit-content;
+}
