@@ -20,7 +20,7 @@ const writeData = () => {
 router.use(express.json());
 
 router.get("/", (req, res) => {
-	const usersData = readData;
+	const usersData = readData();
 	console.log(usersData);
 	res.status(200).json(usersData);
 });

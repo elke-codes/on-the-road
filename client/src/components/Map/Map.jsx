@@ -18,21 +18,21 @@ const Map = ({ userName }) => {
 	const [userPosition, setUserPosition] = useState(null);
 	const [activeFriend, setActiveFriend] = useState(null);
 
-	const getFriendsData = async () => {
-		const result = await axios.get("http://localhost:8000/");
-		return result.data;
-	};
+	// const getFriendsData = async () => {
+	// 	const result = await axios.get("http://localhost:8000/users/");
+	// 	return result.data;
+	// };
 
-	useEffect(async () => {
-		const friends = await getFriendsData();
-		console.log("friends to set", friends);
-		setFriendsData(friends);
-		// const friendsMarkers = friends.map((friend) => friend.location);
-		// setMarkers(friendsMarkers);
-		// console.log("friendsmarkers", friendsMarkers);
-		console.log("friends", friends);
-		// renderFriendMarkers(friends);
-	}, []);
+	// useEffect(async () => {
+	// 	const friends = await getFriendsData();
+	// 	console.log("friends to set", friends);
+	// 	setFriendsData(friends);
+	// 	// const friendsMarkers = friends.map((friend) => friend.location);
+	// 	// setMarkers(friendsMarkers);
+	// 	// console.log("friendsmarkers", friendsMarkers);
+	// 	console.log("friends", friends);
+	// 	// renderFriendMarkers(friends);
+	// }, []);
 
 	//on click asks for location and then brings your marker there so smoothly
 	const LocationMarker = () => {

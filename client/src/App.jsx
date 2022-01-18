@@ -18,14 +18,17 @@ const App = () => {
 	const [users, setUsers] = useState([]);
 
 	const getUsers = () => {
-		axios.get("http://localhost:8000/").then((result) => {
+		axios.get("http://localhost:8000/users").then((result) => {
 			console.log("GET users result", result);
 			setUsers(result.data);
 		});
 		// .catch((err) => console.log("GET faillled", err));
 	};
+
+	// if there was a log in, get the users
 	useEffect(() => {
-		getUsers();
+		loggedIn && getUsers();
+		console.log("logged in app", loggedIn);
 	}, []);
 
 	return (
@@ -34,6 +37,7 @@ const App = () => {
 				userName={userName}
 				setUserName={setUserName}
 				setLoggedIn={setLoggedIn}
+				loggedIn={loggedIn}
 			/>
 			{/* userName={userName} setUserName={setUserName} */}
 			<Switch>

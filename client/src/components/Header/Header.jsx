@@ -9,17 +9,23 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 	// }, [loggedIn]);
 
 	const handleLogin = (e) => {
-		console.log(e.target.userName.value);
+		// console.log(e.target.userName.value);
 		e.preventDefault();
 		setUserName(e.target.userName.value);
 		setLoggedIn(true);
-		console.log("username", userName, loggedIn);
+
+		// setLoggedOut(false);
 	};
+
+	// const handleLogOut = () => {
+	// 	setLoggedOut(true);
+	// 	setLoggedIn(false);
+	// };
 
 	// const handleChange = (e) => {
 	// 	e.preventDefault();
 	// 	setUserName(e.target.value);
-	// 	console.log(userName);
+	// 	console.log("username handle change", userName);
 	// };
 
 	// useEffect({}, []);
@@ -30,13 +36,13 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 				<h1 className="logo">On the road...</h1>
 			</Link>
 			<div className="header__login">
-				{loggedIn ? (
-					<p>{userName}</p>
+				{loggedIn === true ? (
+					<div>
+						<p>{userName}</p>
+						<button>logout</button>
+					</div>
 				) : (
-					<form
-						className="header__login-form"
-						//  onSubmit={handleLogin}
-					>
+					<form className="header__login-form" onSubmit={handleLogin}>
 						{/* <label className="header__input-label" htmlFor="userName">
 						Username
 					</label> */}
@@ -50,7 +56,8 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 						<button
 							type="submit"
 							className="header__login"
-							onSubmit={handleLogin}>
+							// onSubmit={handleLogin}
+						>
 							LOGIN
 						</button>
 					</form>

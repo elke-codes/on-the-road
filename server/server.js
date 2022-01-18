@@ -60,7 +60,9 @@ server.listen(3001, () => {
 app.use(express.static("public"));
 require("dotenv").config();
 // const PORT = process.env.PORT;
+
 app.use("/users", userRouter);
+
 // Listen on PORT CLIENT__URL and provide a success callback function
 // app.listen(process.env.PORT, () => {
 // 	console.log("🚀 Server listening on ", process.env.PORT);

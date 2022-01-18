@@ -4,6 +4,7 @@ import "./MapPage.scss";
 import React, { useState } from "react";
 import FriendCard from "../../components/FriendCard/FriendCard";
 import Map from "../../components/Map/Map";
+import Inbox from "../../components/Inbox/Inbox";
 
 const MapPage = ({ userName }) => {
 	const [showModal, setShowModal] = useState(false);
@@ -13,12 +14,28 @@ const MapPage = ({ userName }) => {
 		setShowModal(true);
 	};
 	return (
-		<main>
-			<h1>MAP PAGE</h1>
-			{userName ? <p>welcome {userName}</p> : null}
-			<Map userName={userName} />
-			{/* <FriendList/> */}
-			{showModal && <FriendCard />}
+		<main className="map-page">
+			{/* <h1>MAP PAGE</h1> */}
+			<article className="map-page__explanation">
+				<h3>How to use this map</h3>
+				<ul>
+					<li>click anywhere on the map to go to your location</li>
+					<li>drag around the map to see where your friends are</li>
+					<li>... your friends are hidden in the markers</li>
+					<li>
+						click on a marker to see more info about your friend
+					</li>
+				</ul>
+			</article>
+			<section className="map-page__container">
+				{userName ? <p>welcome {userName}</p> : null}
+				{/* <FriendList /> */}
+
+				{/* <Inbox /> */}
+
+				<Map userName={userName} />
+				{showModal && <FriendCard />}
+			</section>
 		</main>
 	);
 };
