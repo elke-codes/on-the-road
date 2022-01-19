@@ -1,6 +1,7 @@
 /// --- REGISTER.JSX --- ///
 import "./Register.scss";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 const Register = (e) => {
@@ -9,6 +10,7 @@ const Register = (e) => {
 	const [lng, setLng] = useState(null);
 	const [city, setCity] = useState(null);
 	const [country, setCountry] = useState(null);
+	let history = useHistory();
 
 	const getLocation = (e) => {
 		e.preventDefault();
@@ -23,31 +25,25 @@ const Register = (e) => {
 
 		reverseGeoCodeLocation();
 		// TODO provide the option to manually set location
-		handleRegistration(e);
+		postRegistration(e);
 
 		e.target.reset();
 	};
 
-	const handleRegistration = (e) => {
+	const postRegistration = (e) => {
 		axios
 			.post("http://localhost:8000/users/register", {
 				userName: e.target.userName.value,
 				firstName: e.target.firstName.value,
 				lastName: e.target.lastName.value,
-				email: e.target.email.value
-				// locations: [
-				// 	{
-				// 		lat: lat,
-				// 		lng: lng
-				// 	}
-				// ]
-				// location: {
-				// 	lat: lat,
-				// 	lng: lng
-				// }
+				email: e.target.email.value,
+				lat: lat,
+				lng: lng,
+				city: city,
+				country: country
 			})
 			.then((result) => {
-				// redirect to map page
+				history.push("/map");
 			})
 			.catch((err) => console.log(err));
 	};
@@ -64,8 +60,17 @@ const Register = (e) => {
 			)
 			.then((result) => {
 				console.log("tom result", result);
-				setCity(result);
-			});
+				setCity(result.data.addresses[0].address.municipality);
+				setCountry(result.data.addresses[0].address.country);
+				return result.data;
+			})
+
+			.catch((error) =>
+				console.log(
+					"reverseGeoCodeLocation function, GET request failed",
+					error
+				)
+			);
 	};
 
 	return (

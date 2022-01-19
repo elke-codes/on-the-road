@@ -33,18 +33,16 @@ router.post("/register", (req, res) => {
 		userName: req.body.userName,
 		firstName: req.body.firstName,
 		lastName: req.body.lastName,
-		email: req.body.email
-		// locations: [
-		// 	{
-		// 		lat: req.body.locations.lat,
-		// 		lng: req.body.locations.lng,
-		// 		created_at: new Date()
-		// 	}
-		// ]
-		// location: {
-		// 	lat: req.body.lat,
-		// 	lng: req.body.lng
-		// }
+		email: req.body.email,
+		locations: [
+			{
+				lat: req.body.lat,
+				lng: req.body.lng,
+				created_at: new Date(),
+				city: req.body.city,
+				country: req.body.country
+			}
+		]
 	};
 
 	userData.push(newUser);
