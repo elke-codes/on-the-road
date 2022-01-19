@@ -9,9 +9,8 @@ const HomePage = () => {
 	return (
 		<main>
 			{/* <button onClick={handleOpenRegister}>Register! </button> */}
-
-			<Map />
 			<Register />
+			<Map />
 		</main>
 	);
 };

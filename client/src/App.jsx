@@ -27,10 +27,9 @@ const App = () => {
 
 	// if there was a log in, get the users
 	useEffect(() => {
-		// loggedIn &&
-		getUsers();
+		loggedIn && getUsers();
 		// console.log("logged in app", loggedIn);
-	}, []);
+	}, [loggedIn]);
 
 	return (
 		<BrowserRouter>

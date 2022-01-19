@@ -1,1 +1,33 @@
 /// --- REGISTER --- ///
+
+.register-modal {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	&__container {
+		background-color: white;
+		opacity: 0.7;
+		padding: 1rem;
+		border: 20px;
+		width: 25%;
+	}
+
+	&__title {
+	}
+
+	&__disclaimer {
+		// width: 30%;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+}
