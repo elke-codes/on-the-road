@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 
-const Register = (e) => {
+const Register = ({ userName, setUserName, setLoggedIn }) => {
 	// https://medium.com/p/54e87c9c6c94
 	const [lat, setLat] = useState(null);
 	const [lng, setLng] = useState(null);
@@ -12,41 +12,35 @@ const Register = (e) => {
 	const [country, setCountry] = useState(null);
 	let history = useHistory();
 
-	const getLocation = (e) => {
+	// TODO provide the option to manually set location
+	//on formsubmit
+	//TO DO FORMVALIDATION
+	//after formvalidation get location
+	const getLocation = async (e) => {
 		e.preventDefault();
 		if (!navigator.geolocation) {
 			alert("Sorry, geolocation is not supported by your browser");
 		} else {
-			navigator.geolocation.getCurrentPosition((position) => {
-				setLat(position.coords.latitude);
-				setLng(position.coords.longitude);
-			});
+			navigator.geolocation.getCurrentPosition(
+				(position) => {
+					setLat(position.coords.latitude);
+					setLng(position.coords.longitude);
+				},
+				() => {
+					alert("Unable to retrieve your location");
+				}
+			);
 		}
-
+		//convert lat and lon into country and city an setCity and setCountry
 		reverseGeoCodeLocation();
-		// TODO provide the option to manually set location
+		// after getting all the info and getting it converted, POST user information to backend and redirect to /map/:userID
 		postRegistration(e);
 
 		e.target.reset();
 	};
 
-	const postRegistration = (e) => {
-		axios
-			.post("http://localhost:8000/users/register", {
-				userName: e.target.userName.value,
-				firstName: e.target.firstName.value,
-				lastName: e.target.lastName.value,
-				email: e.target.email.value,
-				lat: lat,
-				lng: lng,
-				city: city,
-				country: country
-			})
-			.then((result) => {
-				history.push("/map");
-			})
-			.catch((err) => console.log(err));
-	};
+	// wait for the state to be set on lat and lng, then set city and country
+	// useEffect(() => {}, [lat, lng]);
 
 	const reverseGeoCodeLocation = () => {
 		const baseURL = "api.tomtom.com";
@@ -62,14 +56,37 @@ const Register = (e) => {
 				console.log("tom result", result);
 				setCity(result.data.addresses[0].address.municipality);
 				setCountry(result.data.addresses[0].address.country);
-				return result.data;
 			})
-
 			.catch((error) =>
 				console.log(
 					"reverseGeoCodeLocation function, GET request failed",
 					error
 				)
+			);
+	};
+
+	const postRegistration = (e) => {
+		axios
+			.post("http://localhost:8000/users/register", {
+				userName: e.target.userName.value,
+				firstName: e.target.firstName.value,
+				lastName: e.target.lastName.value,
+				email: e.target.email.value,
+				lat: lat,
+				lng: lng,
+				city: city,
+				country: country
+			})
+			.then(() => {
+				setUserName(e.target.userName.value);
+				setLoggedIn(true);
+			})
+			.then((result) => {
+				//TODO /map/:userID
+				history.push("/map");
+			})
+			.catch((err) =>
+				console.log("postRegistration POST request failed", err)
 			);
 	};
 

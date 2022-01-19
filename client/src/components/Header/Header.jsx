@@ -1,12 +1,13 @@
 /// --- HEADER.JSX --- ///
 import "./Header.scss";
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory, Redirect } from "react-router-dom";
+import axios from "axios";
 
 const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
-	// useEffect(() => {
-	// 	setUserName(userName);
-	// }, [loggedIn]);
+	useEffect(() => {
+		setUserName(userName);
+	}, [loggedIn]);
 
 	const handleLogin = (e) => {
 		// console.log(e.target.userName.value);
@@ -17,12 +18,19 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 		setUserName(e.target.userName.value);
 		setLoggedIn(true);
 
-		// setLoggedOut(false);
+		axios.get("http:/localhost:8000/users").then((result) => {
+			console.log(result.data);
+		});
+
+		//then render Redirect to="/map"
 	};
 
 	const handleLogOut = () => {
 		// setLoggedOut(true);
 		setLoggedIn(false);
+		//TODO redirect to home
+		// let history = useHistory();
+		// history.push("/");
 	};
 
 	// const handleChange = (e) => {
@@ -40,10 +48,17 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 			</Link>
 			<div className="header__login">
 				{loggedIn === true ? (
-					<div>
-						<p>{userName}</p>
-						<button onClick={handleLogOut}>logout</button>
-					</div>
+					<>
+						<Redirect to="/map" />;
+						<div>
+							<button className="header_button-add-friend">
+								Fiend friends
+							</button>
+							<button onClick={handleLogOut}>logout</button>
+							<p>{userName}</p>
+							<img className="header__avatar" src="" alt="" />
+						</div>
+					</>
 				) : (
 					<form className="header__login-form" onSubmit={handleLogin}>
 						{/* <label className="header__input-label" htmlFor="userName">

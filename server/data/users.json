@@ -190,84 +190,9 @@
     "email": "elke.dick@gmail.com",
     "locations": [
       {
-        "lat": 49.2626441,
-        "lng": -123.0788752,
-        "created_at": "2022-01-19T06:04:44.789Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "dasdadas",
-    "firstName": "elke",
-    "lastName": "dick",
-    "email": "elke.dick@gmail.com",
-    "locations": [
-      {
         "lat": null,
         "lng": null,
-        "created_at": "2022-01-19T06:08:21.488Z",
-        "city": null,
-        "country": null
-      }
-    ]
-  },
-  {
-    "userName": "elke",
-    "firstName": "elke",
-    "lastName": "dick",
-    "email": "elke.dick@gmail.com",
-    "locations": [
-      {
-        "lat": 49.2626441,
-        "lng": -123.0788752,
-        "created_at": "2022-01-19T06:08:28.195Z",
-        "city": null,
-        "country": null
-      }
-    ]
-  },
-  {
-    "userName": "elke",
-    "firstName": "elke",
-    "lastName": "dick",
-    "email": "elke.dick@gmail.com",
-    "locations": [
-      {
-        "lat": 49.2626441,
-        "lng": -123.0788752,
-        "created_at": "2022-01-19T06:08:33.282Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "dasdadas",
-    "firstName": "elke",
-    "lastName": "dick",
-    "email": "elke.dick@gmail.com",
-    "locations": [
-      {
-        "lat": 49.2626441,
-        "lng": -123.0788752,
-        "created_at": "2022-01-19T06:09:14.264Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "elke",
-    "firstName": "elke",
-    "lastName": "dick",
-    "email": "elke.dick@gmail.com",
-    "locations": [
-      {
-        "lat": null,
-        "lng": null,
-        "created_at": "2022-01-19T06:21:14.907Z",
+        "created_at": "2022-01-19T07:49:31.147Z",
         "city": null,
         "country": null
       }
@@ -282,7 +207,67 @@
       {
         "lat": null,
         "lng": null,
-        "created_at": "2022-01-19T06:27:36.602Z",
+        "created_at": "2022-01-19T08:03:42.277Z",
+        "city": null,
+        "country": null
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": null,
+        "lng": null,
+        "created_at": "2022-01-19T08:05:28.929Z",
+        "city": null,
+        "country": null
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "codes",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": null,
+        "lng": null,
+        "created_at": "2022-01-19T08:08:54.536Z",
+        "city": null,
+        "country": null
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": null,
+        "lng": null,
+        "created_at": "2022-01-19T08:09:20.460Z",
+        "city": null,
+        "country": null
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": null,
+        "lng": null,
+        "created_at": "2022-01-19T08:31:46.443Z",
         "city": null,
         "country": null
       }

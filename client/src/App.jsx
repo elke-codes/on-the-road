@@ -41,7 +41,13 @@ const App = () => {
 			/>
 			{/* userName={userName} setUserName={setUserName} */}
 			<Switch>
-				<Route path="/" exact component={HomePage} />
+				<Route path="/" exact>
+					<HomePage
+						userName={userName}
+						setUserName={setUserName}
+						setLoggedIn={setLoggedIn}
+					/>
+				</Route>
 				<Route path="/map">
 					<MapPage
 						currentFriend={currentFriend}
