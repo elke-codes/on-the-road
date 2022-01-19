@@ -18,11 +18,13 @@ const App = () => {
 	const [users, setUsers] = useState([]);
 
 	const getUsers = () => {
-		axios.get("http://localhost:8000/users").then((result) => {
-			console.log("GET users result", result);
-			setUsers(result.data);
-		});
-		// .catch((err) => console.log("GET faillled", err));
+		axios
+			.get("http://localhost:8000/users")
+			.then((result) => {
+				console.log("GET users result", result);
+				setUsers(result.data);
+			})
+			.catch((err) => console.log("getUsers GET request failed", err));
 	};
 
 	// if there was a log in, get the users

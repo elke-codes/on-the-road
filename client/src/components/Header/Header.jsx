@@ -18,9 +18,9 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 		setUserName(e.target.userName.value);
 		setLoggedIn(true);
 
-		axios.get("http:/localhost:8000/users").then((result) => {
-			console.log(result.data);
-		});
+		// axios.get("http:/localhost:8000/users").then((result) => {
+		// 	console.log(result.data);
+		// });
 
 		//then render Redirect to="/map"
 	};
@@ -39,7 +39,6 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 	// 	console.log("username handle change", userName);
 	// };
 
-	// useEffect({}, []);
 	return (
 		<section className="header">
 			<Link to="/">
@@ -49,14 +48,18 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 			<div className="header__login">
 				{loggedIn === true ? (
 					<>
-						<Redirect to="/map" />;
+						{/* <Redirect to="/map" />; */}
 						<div>
 							<button className="header_button-add-friend">
 								Fiend friends
 							</button>
 							<button onClick={handleLogOut}>logout</button>
 							<p>{userName}</p>
-							<img className="header__avatar" src="" alt="" />
+							<div className="avatar offline">
+								<div className="rounded-full w-14 h-14">
+									<img src="http://daisyui.com/tailwind-css-component-profile-1@56w.png" />
+								</div>
+							</div>
 						</div>
 					</>
 				) : (

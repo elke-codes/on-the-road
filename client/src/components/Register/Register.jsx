@@ -101,7 +101,6 @@ const Register = ({ userName, setUserName, setLoggedIn }) => {
 
 					onSubmit={getLocation}>
 					{/* <label htmlFor="userName"></label> */}
-
 					<input
 						className="register-modal__input"
 						type="text"
@@ -135,7 +134,10 @@ const Register = ({ userName, setUserName, setLoggedIn }) => {
 						allow us to use your location. This is needed for our
 						app to work.
 					</p>
-					<button type="submit">Sign up</button>
+					<button type="submit" className="btn btn-primary">
+						Sign up
+					</button>
+					{/* <Button variant="contained">Hello World</Button>{" "} */}
 					{/* <button type="submit">Let's go!</button> */}
 				</form>
 			</div>
