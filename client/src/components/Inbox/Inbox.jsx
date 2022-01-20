@@ -17,7 +17,7 @@ const Inbox = ({ users }) => {
 							src="https://placedog.net/50"
 							alt=""
 						/>
-						<p className="inbox__name">{user}</p>
+						<p className="inbox__name">{user.userName}</p>
 					</article>;
 				})}
 		</section>

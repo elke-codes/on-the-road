@@ -26,7 +26,7 @@ const ChatPage = ({ userName, loggedIn, users }) => {
 
 			<ChatBox userName={userName} socket={socket} />
 
-			{/* <FriendCard users={users} /> */}
+			{/* <FriendCard /> */}
 			{/* <FriendInfo currentFriend={currentFriend}>*/}
 			{/*  or*/}
 			{/* <FriendInfo room={room}>*/}
