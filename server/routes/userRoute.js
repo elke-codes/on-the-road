@@ -16,12 +16,13 @@ const writeData = (usersData) => {
 	fs.writeFileSync("./data/users.json", JSON.stringify(usersData, null, 2));
 };
 
-//be able to send json body when post
+//-- be able to send json body when post
 router.use(express.json());
 
+//-- routes --//
 router.get("/", (req, res) => {
 	const usersData = readData();
-	console.log(usersData);
+	// console.log(usersData);
 	res.status(200).json(usersData);
 });
 
@@ -34,11 +35,14 @@ router.post("/register", (req, res) => {
 		firstName: req.body.firstName,
 		lastName: req.body.lastName,
 		email: req.body.email,
+
 		locations: [
 			{
 				lat: req.body.lat,
 				lng: req.body.lng,
 				created_at: new Date(),
+				// .getTimezoneOffset() to get timezone to be able to say what time it is at their location
+				// timezone_offset: created_at,
 				city: req.body.city,
 				country: req.body.country
 			}
@@ -47,7 +51,7 @@ router.post("/register", (req, res) => {
 
 	userData.push(newUser);
 	writeData(userData);
-	res.status(201).json(newUser);
+	res.status(201).json(userData);
 });
 
 module.exports = router;

@@ -1,230 +1,46 @@
 [
   {
-    "name": "Erin",
-    "id": "9e5b0a03-ce91-4864-87cb-2a87cb8e35a0",
-    "image": "https://placedog.net/50",
-    "location": [
-      56.68338659555295,
-      -5.117055182931919
-    ],
-    "messages": [
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      },
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      }
-    ]
-  },
-  {
-    "name": "Kaz",
-    "id": "a077cfa0-d0ff-4417-97f9-8c2b2d08e8f7",
-    "image": "an image",
-    "location": [
-      56.68338659555295,
-      -5.117055182931919
-    ],
-    "messages": [
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      },
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      }
-    ]
-  },
-  {
-    "name": "Jamie",
-    "id": "fee32c29-81cc-46bc-8b16-dd3e1ed1ea3d",
-    "image": "an image",
-    "location": [
-      12.466598133888956,
-      -69.95279488218297
-    ],
-    "messages": [
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      },
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      }
-    ]
-  },
-  {
-    "name": "Jeff",
-    "id": "592281bb-4b9a-4796-b1dc-091327be366e",
-    "image": "an image",
-    "location": [
-      38.71301885813053,
-      -9.143733378717352
-    ],
-    "messages": [
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      },
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      }
-    ]
-  },
-  {
-    "name": "Rob",
-    "id": "62937cc2-191b-4222-bc68-a8acb042844c",
-    "image": "an image",
-    "location": [
-      49.28276395901426,
-      -123.05882433013782
-    ],
-    "messages": [
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      },
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      }
-    ]
-  },
-  {
-    "name": "Jesi",
-    "id": "354d5801-e8c6-4342-a746-eac03fd06f9f",
-    "image": "an image",
-    "location": [
-      49.305217755374365,
-      -123.15661947422305
-    ],
-    "messages": [
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      },
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      }
-    ]
-  },
-  {
-    "name": "Ghinwa",
-    "id": "13d12e3b-1cdd-44c4-9b39-8caa537531d6",
-    "image": "an image",
-    "location": [
-      33.902139778786434,
-      35.491046126215444
-    ],
-    "messages": [
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      },
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      }
-    ]
-  },
-  {
-    "name": "Anais",
-    "id": "ca94b1c7-121f-4f49-b207-73c84bbff5e7",
-    "image": "an image",
-    "location": [
-      31.645048209027657,
-      -6.026930279757645
-    ],
-    "messages": [
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      },
-      {
-        "room": "room",
-        "author": "userName",
-        "message": "currentMessage",
-        "time": "time"
-      }
-    ]
-  },
-  {
     "userName": "elke",
     "firstName": "elke",
     "lastName": "dick",
     "email": "elke.dick@gmail.com",
     "locations": [
       {
-        "lat": null,
-        "lng": null,
-        "created_at": "2022-01-19T07:49:31.147Z",
-        "city": null,
-        "country": null
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T01:20:28.690Z",
+        "city": "Vancouver",
+        "country": "Canada"
       }
     ]
   },
   {
-    "userName": "elke",
+    "userName": "dasdadas",
     "firstName": "elke",
     "lastName": "dick",
     "email": "elke.dick@gmail.com",
     "locations": [
       {
-        "lat": null,
-        "lng": null,
-        "created_at": "2022-01-19T08:03:42.277Z",
-        "city": null,
-        "country": null
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T01:23:33.795Z",
+        "city": "Vancouver",
+        "country": "Canada"
       }
     ]
   },
   {
-    "userName": "elke",
+    "userName": "dasdadas",
     "firstName": "elke",
     "lastName": "dick",
     "email": "elke.dick@gmail.com",
     "locations": [
       {
-        "lat": null,
-        "lng": null,
-        "created_at": "2022-01-19T08:05:28.929Z",
-        "city": null,
-        "country": null
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T02:29:45.366Z",
+        "city": "Vancouver",
+        "country": "Canada"
       }
     ]
   },
@@ -235,11 +51,11 @@
     "email": "elke.dick@gmail.com",
     "locations": [
       {
-        "lat": null,
-        "lng": null,
-        "created_at": "2022-01-19T08:08:54.536Z",
-        "city": null,
-        "country": null
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T02:30:40.646Z",
+        "city": "Vancouver",
+        "country": "Canada"
       }
     ]
   },
@@ -250,11 +66,11 @@
     "email": "elke.dick@gmail.com",
     "locations": [
       {
-        "lat": null,
-        "lng": null,
-        "created_at": "2022-01-19T08:09:20.460Z",
-        "city": null,
-        "country": null
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T02:31:00.261Z",
+        "city": "Vancouver",
+        "country": "Canada"
       }
     ]
   },
@@ -265,11 +81,11 @@
     "email": "elke.dick@gmail.com",
     "locations": [
       {
-        "lat": null,
-        "lng": null,
-        "created_at": "2022-01-19T08:31:46.443Z",
-        "city": null,
-        "country": null
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T02:32:15.031Z",
+        "city": "Vancouver",
+        "country": "Canada"
       }
     ]
   },
@@ -280,11 +96,281 @@
     "email": "elke.dick@gmail.com",
     "locations": [
       {
-        "lat": null,
-        "lng": null,
-        "created_at": "2022-01-19T09:50:25.967Z",
-        "city": null,
-        "country": null
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T02:33:18.748Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "dasdadas",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T02:34:37.006Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "dasdadas",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T02:35:01.455Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T02:35:55.581Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "dasdadas",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T02:36:17.329Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T03:07:38.801Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "dasdadas",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.078752,
+        "created_at": "2022-01-20T03:19:00.162Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "alex",
+    "firstName": "alex",
+    "lastName": "alex",
+    "email": "alex",
+    "locations": [
+      {
+        "lat": 49.262641,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T03:19:35.360Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.262641,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T04:08:03.282Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 4.262441,
+        "lng": -13.078752,
+        "created_at": "2022-01-20T04:08:31.241Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.266441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T05:08:12.255Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "codes",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T05:21:29.894Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "fsdf",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 9.2626441,
+        "lng": -13.0788752,
+        "created_at": "2022-01-20T05:22:21.947Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T05:38:50.640Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "dasdadas",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T05:40:30.107Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "",
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T05:51:39.374Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "",
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T05:59:49.248Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T06:00:12.544Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "dasdadas",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T07:05:59.792Z",
+        "city": "Vancouver",
+        "country": "Canada"
       }
     ]
   }
