@@ -373,5 +373,20 @@
         "country": "Canada"
       }
     ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T16:58:39.457Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
   }
 ]
