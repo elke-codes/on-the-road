@@ -1,0 +1,23 @@
+/* using react leaflet this is how you set the map hight */
+.leaflet-container {
+  height: 500px;
+  width: 900px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background: url("https://cdna.artstation.com/p/assets/images/images/006/519/308/large/alessandro-emanuelli-028.jpg?1499210379");
+  z-index: 0;
+}
+
+.map {
+  display: flex;
+  justify-content: space-around;
+}
+
+.leaflet-popup-content-wrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}/*# sourceMappingURL=Map.css.map */

@@ -1,0 +1,16 @@
+.header {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(45deg, #1006bb 22%, #ffc400 70%);
+}
+.header__login {
+  margin-left: 1rem;
+}
+
+.logo {
+  font-style: italic;
+  color: white;
+}/*# sourceMappingURL=Header.css.map */

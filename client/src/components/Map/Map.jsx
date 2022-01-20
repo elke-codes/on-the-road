@@ -17,24 +17,25 @@ const Map = ({ userName, users, loggedIn }) => {
 	const [friendsData, setFriendsData] = useState([]);
 	const [userPosition, setUserPosition] = useState(null);
 	const [activeFriend, setActiveFriend] = useState(null);
-	// console.log("users in map", users);
-	// console.log("loggedininmap", loggedIn);
+	console.log("users in map", users);
+	console.log("loggedininmap", loggedIn);
 
-	// const getFriendsData = async () => {
-	// 	const result = await axios.get("http://localhost:8000/users/");
-	// 	return result.data;
-	// };
+	const getFriendsData = async () => {
+		const result = await axios.get("http://localhost:8000/users/");
+		console.log("getFriendsData", result.data);
+		return result.data;
+	};
 
-	// useEffect(async () => {
-	// 	const friends = await getFriendsData();
-	// 	console.log("friends to set", friends);
-	// 	setFriendsData(friends);
-	// 	// const friendsMarkers = friends.map((friend) => friend.location);
-	// 	// setMarkers(friendsMarkers);
-	// 	// console.log("friendsmarkers", friendsMarkers);
-	// 	console.log("friends", friends);
-	// 	// renderFriendMarkers(friends);
-	// }, []);
+	useEffect(async () => {
+		const friends = await getFriendsData();
+		console.log("friends to set", friends);
+		setFriendsData(friends);
+		// const friendsMarkers = friends.map((friend) => friend.location);
+		// setMarkers(friendsMarkers);
+		// console.log("friendsmarkers", friendsMarkers);
+		console.log("friends", friends);
+		// renderFriendMarkers(friends);
+	}, [loggedIn]);
 
 	//on click asks for location and then brings your marker there so smoothly
 	const LocationMarker = () => {
@@ -53,7 +54,7 @@ const Map = ({ userName, users, loggedIn }) => {
 
 		return userPosition === null ? null : (
 			<Marker position={userPosition}>
-				<Popup>You(username?) are in userPosition to Location</Popup>
+				<Popup>You</Popup>
 			</Marker>
 		);
 	};
@@ -70,30 +71,34 @@ const Map = ({ userName, users, loggedIn }) => {
 					// id="mapbox/streets-v11"
 					id="mapbox://styles/mapbox/satellite-v9"
 				/>
-				{loggedIn &&
-					users.map((friend) => {
+				{friendsData &&
+					friendsData.map((friend) => {
 						return (
 							<Marker
-								position={friend.location}
+								position={[
+									friend.locations[0].lat,
+									friend.locations[0].lng
+								]}
 								key={uuid()}
-								onClick={() => {
-									setActiveFriend(friend);
-								}}
-								onMouseOver={(e) => {
-									//stackoverflow.com/questions/51662140/how-to-toggle-popup-in-react-leaflet-on-mouse-hover
-									// Leaflet Marker object is accessible via event.target property of mouseover and mouseout events, so popup could be opened/closed like this:
-									e.target.openPopup();
-								}}
-								onMouseOut={(e) => {
-									e.target.closePopup();
-								}}>
+								// onClick={() => {
+								// 	setActiveFriend(friend);
+								// }}
+								// onMouseOver={(e) => {
+								// 	//stackoverflow.com/questions/51662140/how-to-toggle-popup-in-react-leaflet-on-mouse-hover
+								// 	// Leaflet Marker object is accessible via event.target property of mouseover and mouseout events, so popup could be opened/closed like this:
+								// 	e.target.openPopup();
+								// }}
+								// onMouseOut={(e) => {
+								// 	e.target.closePopup();
+								// }}
+							>
 								<Popup>
-									<FriendCard friend={friend} />{" "}
+									<p>{friend.userName}</p>
+									{/* <FriendCard friend={friend} />{" "} */}
 								</Popup>
 							</Marker>
 						);
 					})}
-
 				<LocationMarker />
 			</MapContainer>
 		</section>

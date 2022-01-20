@@ -21,16 +21,20 @@ const App = () => {
 		axios
 			.get("http://localhost:8000/users")
 			.then((result) => {
-				console.log("GET users result", result);
+				// console.log("GET users result", result);
 				setUsers(result.data);
 			})
-			.catch((err) => console.log("getUsers GET request failed", err));
+			.then(() => {
+				console.log(users);
+			});
+		// .catch((err) => console.log("getUsers GET request failed", err));
 	};
 
 	// if there was a log in, get the users
 	useEffect(() => {
+		console.log("from get users", userName);
 		loggedIn && getUsers();
-		// console.log("logged in app", loggedIn);
+		// console.log("logged in app", );
 	}, [loggedIn]);
 
 	return (

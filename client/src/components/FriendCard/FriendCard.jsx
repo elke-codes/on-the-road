@@ -12,9 +12,12 @@ const FriendCard = ({ friend }) => {
 		<article className="friend-card">
 			<div className="friend-card__top-container">
 				<img src="" alt="" />
-				<h3 className="friend-card__name">friend.name</h3>
+				<h3 className="friend-card__name">{friend.name}</h3>
 				{/* https://myprojects.geoapify.com/api/Uvf0Dk1JqGJgrI0OCWvD/keys */}
-				<p className="friend-card__location">is in Portugal</p>
+				<p className="friend-card__city">{friend.locations[0].city}</p>
+				<p className="friend-card__country">
+					{friend.locations[0].country}
+				</p>
 			</div>
 			<p className="friend-card__distance">
 				We're{" "}

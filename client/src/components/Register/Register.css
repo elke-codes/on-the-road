@@ -1,0 +1,22 @@
+.register-modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 100;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.register-modal__container {
+  background-color: white;
+  opacity: 0.7;
+  padding: 1rem;
+  border: 20px;
+  width: 25%;
+}
+.register-modal__form {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=Register.css.map */
