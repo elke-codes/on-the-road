@@ -25,7 +25,7 @@ const App = () => {
 				setUsers(result.data);
 			})
 			.then(() => {
-				console.log(users);
+				console.log("user getUsers", users);
 			});
 		// .catch((err) => console.log("getUsers GET request failed", err));
 	};

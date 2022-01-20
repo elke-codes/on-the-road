@@ -36,7 +36,15 @@ const MapPage = ({ userName, users, loggedIn }) => {
 
 				{/* <Inbox /> */}
 
-				<Map userName={userName} users={users} loggedIn={loggedIn} />
+				{loggedIn ? (
+					<Map
+						userName={userName}
+						users={users}
+						loggedIn={loggedIn}
+					/>
+				) : (
+					<h2>Please log in to continue</h2>
+				)}
 				{showModal && <FriendCard />}
 			</section>
 		</main>

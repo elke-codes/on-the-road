@@ -19,17 +19,14 @@ const ChatPage = ({ userName, loggedIn, users }) => {
 
 	return (
 		<main className="chat-page">
-			<Inbox users={users} />
-			{/* <Inbox currentFriend={currentFriend}/> */}
-			{/* or */}
-			{/* <Inbox currentFriend={currentFriend}/> */}
-
-			<ChatBox userName={userName} socket={socket} />
-
-			{/* <FriendCard /> */}
-			{/* <FriendInfo currentFriend={currentFriend}>*/}
-			{/*  or*/}
-			{/* <FriendInfo room={room}>*/}
+			{loggedIn ? (
+				<>
+					<Inbox users={users} />
+					<ChatBox userName={userName} socket={socket} />
+				</>
+			) : (
+				<h2>Please log in to continue</h2>
+			)}
 		</main>
 	);
 };

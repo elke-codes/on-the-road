@@ -94,6 +94,10 @@ const Map = ({ userName, users, loggedIn }) => {
 							>
 								<Popup>
 									<p>{friend.userName}</p>
+									<p>
+										{friend.locations[0].city}{" "}
+										{friend.locations[0].county}
+									</p>
 									{/* <FriendCard friend={friend} />{" "} */}
 								</Popup>
 							</Marker>
