@@ -5,12 +5,26 @@ import { useHistory } from "react-router-dom";
 import { postRegistration } from "../../utils/forms/postRegistration";
 
 const Register = ({ setLoggedInUser }) => {
-	let history = useHistory();
+	const history = useHistory();
 
 	// TODO provide the option to manually set location
 	//on formsubmit
 	//TO DO FORMVALIDATION
 	//after formvalidation get location
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		// try catch instead of then catch when using async await
+		try {
+			const user = await postRegistration(e);
+			setLoggedInUser(user);
+			history.push("/map");
+			e.target.reset();
+		} catch (e) {
+			// e.response.data is the error message, set in the server.
+			alert(e.response.data);
+		}
+	};
 
 	return (
 		<section className="register-modal">
@@ -23,42 +37,38 @@ const Register = ({ setLoggedInUser }) => {
 					className="register-modal__form"
 					// type="submit"
 
+					//because handle submit is an async function i have to await it when i call it here
 					onSubmit={async (e) => {
-						e.preventDefault();
-						const user = await postRegistration(e);
-						setLoggedInUser(user);
-						history.push("/map");
-						e.target.reset();
+						await handleSubmit(e);
 					}}>
-					{/* <label htmlFor="userName"></label> */}
 					<input
 						className="register-modal__input"
 						type="text"
 						placeholder="User name"
 						name="userName"
 					/>
-					{/* <label htmlFor="firstName"></label> */}
+
 					<input
 						className="register-modal__input"
 						type="text"
 						placeholder="First name"
 						name="firstName"
 					/>
-					{/* <label htmlFor="lastName"></label> */}
+
 					<input
 						className="register-modal__input"
 						type="text"
 						placeholder="Last Name"
 						name="lastName"
 					/>
-					{/* <label htmlFor="email"></label> */}
+
 					<input
 						className="register-modal__input"
 						type="text"
 						placeholder="Email"
 						name="email"
 					/>
-					{/* <label htmlFor="location">location</label> */}
+
 					<p className="register-modal__disclaimer">
 						When signing up you will be asked by your browser to
 						allow us to use your location. This is needed for our
@@ -67,8 +77,6 @@ const Register = ({ setLoggedInUser }) => {
 					<button type="submit" className="btn btn-primary">
 						Sign up
 					</button>
-					{/* <Button variant="contained">Hello World</Button>{" "} */}
-					{/* <button type="submit">Let's go!</button> */}
 				</form>
 			</div>
 		</section>

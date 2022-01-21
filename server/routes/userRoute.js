@@ -4,6 +4,7 @@ const express = require("express");
 const fs = require("fs");
 const router = express.Router();
 const { v4: uuid } = require("uuid");
+const userNameExists = require("../utils/validations/userNameExists");
 
 // -- Helper functions -- //
 const readData = () => {
@@ -33,6 +34,9 @@ router.post("/register", (req, res) => {
 
 	// .getTimezoneOffset() to get timezone to be able to say what time it is at their location
 	// timezone_offset: created_at,
+	if (userNameExists(userData, req.body.userName)) {
+		return res.status(422).send("username already taken");
+	}
 
 	const newUser = {
 		userName: req.body.userName,
