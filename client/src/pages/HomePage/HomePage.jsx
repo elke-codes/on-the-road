@@ -1,23 +1,19 @@
 import "./HomePage.scss";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Register from "../../components/Register/Register";
 import Hero from "../../components/Hero/Hero";
+import { getLoggedInUserFromStorage } from "../../utils/getLoggedInUserFromStorage";
+
 // import Map from "../../components/Map/Map";
 
-const HomePage = ({ userName, setUserName, setLoggedIn, loggedIn }) => {
+const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 	return (
 		<main>
 			{/* <button onClick={handleOpenRegister}>Register! </button> */}
 
 			{/* <Map /> */}
-			{!loggedIn && (
-				<Register
-					userName={userName}
-					setUserName={setUserName}
-					setLoggedIn={setLoggedIn}
-				/>
-			)}
+			{!loggedInUser && <Register setLoggedInUser={setLoggedInUser} />}
 			{/* <Hero /> */}
 		</main>
 	);

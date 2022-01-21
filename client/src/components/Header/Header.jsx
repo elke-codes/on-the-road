@@ -2,42 +2,24 @@
 import "./Header.scss";
 import React, { useEffect, useState } from "react";
 import { Link, useHistory, Redirect } from "react-router-dom";
-import axios from "axios";
+import { getLoggedInUserFromStorage } from "../../utils/getLoggedInUserFromStorage";
+import { deleteLoggedInUser } from "../../utils/deleteLoggedInUser";
 
-const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
-	useEffect(() => {
-		setUserName(userName);
-	}, [loggedIn]);
-
+const Header = ({ loggedInUser, setLoggedInUser }) => {
 	const handleLogin = (e) => {
 		// console.log(e.target.userName.value);
 		e.preventDefault();
 		if (!e.target.userName.value) {
 			return alert("please enter your username");
 		}
-		setUserName(e.target.userName.value);
-		setLoggedIn(true);
-
-		// axios.get("http:/localhost:8000/users").then((result) => {
-		// 	console.log(result.data);
-		// });
-
-		//then render Redirect to="/map"
 	};
-
+	const history = useHistory();
 	const handleLogOut = () => {
-		// setLoggedOut(true);
-		setLoggedIn(false);
-		//TODO redirect to home
-		// let history = useHistory();
-		// history.push("/");
-	};
+		deleteLoggedInUser();
+		setLoggedInUser(null);
 
-	// const handleChange = (e) => {
-	// 	e.preventDefault();
-	// 	setUserName(e.target.value);
-	// 	console.log("username handle change", userName);
-	// };
+		history.push("/");
+	};
 
 	return (
 		<section className="header">
@@ -46,7 +28,7 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 				<h1 className="logo">On the road...</h1>
 			</Link>
 			<div className="header__logged-in">
-				{loggedIn === true ? (
+				{loggedInUser ? (
 					<>
 						{/* <Redirect to="/map" />; */}
 						{/* <div className="header__logged-in"> */}
@@ -86,7 +68,7 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 						{/* </div> */}
 					</>
 				) : (
-					<form className="header__login-form" onSubmit={handleLogin}>
+					<form className="header__login-form" onSubmit={() => {}}>
 						{/* <label className="header__input-label" htmlFor="userName">
 						Username
 					</label> */}

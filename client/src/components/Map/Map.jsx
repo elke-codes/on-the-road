@@ -1,6 +1,6 @@
 /// --- MAP.JSX --- ///
 import "./Map.scss";
-import axios from "axios";
+
 import React, { useEffect, useState } from "react";
 import {
 	TileLayer,
@@ -10,32 +10,27 @@ import {
 	useMapEvents
 } from "react-leaflet";
 import { v4 as uuid } from "uuid";
-import FriendCard from "../FriendCard/FriendCard";
+import { getFriendsData } from "../../utils/getFriendsData";
 
-const Map = ({ userName, users, loggedIn }) => {
+const Map = ({ loggedInUser }) => {
 	const [markers, setMarkers] = useState([]);
 	const [friendsData, setFriendsData] = useState([]);
 	const [userPosition, setUserPosition] = useState(null);
 	const [activeFriend, setActiveFriend] = useState(null);
-	console.log("users in map", users);
-	console.log("loggedininmap", loggedIn);
-
-	const getFriendsData = async () => {
-		const result = await axios.get("http://localhost:8000/users");
-		console.log("getFriendsData", result.data);
-		return result.data;
-	};
 
 	useEffect(async () => {
+		if (!loggedInUser) {
+			return;
+		}
+		console.log("gettting friends data");
 		const friends = await getFriendsData();
 		console.log("friends to set", friends);
 		setFriendsData(friends);
 		// const friendsMarkers = friends.map((friend) => friend.location);
 		// setMarkers(friendsMarkers);
 		// console.log("friendsmarkers", friendsMarkers);
-		console.log("friends", friends);
 		// renderFriendMarkers(friends);
-	}, [loggedIn]);
+	}, [loggedInUser]);
 
 	//on click asks for location and then brings your marker there so smoothly
 	const LocationMarker = () => {
@@ -46,7 +41,6 @@ const Map = ({ userName, users, loggedIn }) => {
 				map.locate();
 			},
 			locationfound(e) {
-				console.log("locationfound", e);
 				setUserPosition(e.latlng);
 				map.flyTo(e.latlng, map.getZoom());
 			}

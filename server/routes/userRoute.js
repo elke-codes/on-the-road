@@ -21,28 +21,30 @@ router.use(express.json());
 
 //-- routes --//
 router.get("/", (req, res) => {
+	console.log("trying to get users");
 	const usersData = readData();
+	console.log(`got users ${usersData}`);
 	// console.log(usersData);
 	res.status(200).json(usersData);
 });
 
 router.post("/register", (req, res) => {
 	const userData = readData();
-	console.log("req.body.locations=", req.body.locations);
+
+	// .getTimezoneOffset() to get timezone to be able to say what time it is at their location
+	// timezone_offset: created_at,
 
 	const newUser = {
 		userName: req.body.userName,
 		firstName: req.body.firstName,
 		lastName: req.body.lastName,
 		email: req.body.email,
-
+		id: uuid(),
 		locations: [
 			{
 				lat: req.body.lat,
 				lng: req.body.lng,
 				created_at: new Date(),
-				// .getTimezoneOffset() to get timezone to be able to say what time it is at their location
-				// timezone_offset: created_at,
 				city: req.body.city,
 				country: req.body.country
 			}
@@ -51,7 +53,7 @@ router.post("/register", (req, res) => {
 
 	userData.push(newUser);
 	writeData(userData);
-	res.status(201).json(userData);
+	res.status(201).json(newUser);
 });
 
 module.exports = router;

@@ -10,69 +10,36 @@ import ChatPage from "./pages/ChatPage/ChatPage";
 import Footer from "./components/Footer/Footer";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { getLoggedInUserFromStorage } from "./utils/getLoggedInUserFromStorage";
 
 const App = () => {
-	const [userName, setUserName] = useState("");
-	const [currentFriend, setCurrentFriend] = useState("");
-	const [loggedIn, setLoggedIn] = useState(false);
-	const [users, setUsers] = useState([]);
+	const [loggedInUser, setLoggedInUser] = useState();
 
-	const getUsers = () => {
-		axios
-			.get("http://localhost:8000/users")
-			.then((result) => {
-				// console.log("GET users result", result);
-				setUsers(result.data);
-			})
-			.then(() => {
-				console.log("user getUsers", users);
-			});
-		// .catch((err) => console.log("getUsers GET request failed", err));
-	};
-
-	// if there was a log in, get the users
 	useEffect(() => {
-		console.log("from get users", userName);
-		loggedIn && getUsers();
-		// console.log("logged in app", );
-	}, [loggedIn]);
+		const user = getLoggedInUserFromStorage();
+		setLoggedInUser(user);
+	});
 
 	return (
 		<BrowserRouter>
 			<Header
-				userName={userName}
-				setUserName={setUserName}
-				setLoggedIn={setLoggedIn}
-				loggedIn={loggedIn}
+				loggedInUser={loggedInUser}
+				setLoggedInUser={setLoggedInUser}
 			/>
-			{/* userName={userName} setUserName={setUserName} */}
+
 			<Switch>
 				<Route path="/" exact>
 					<HomePage
-						userName={userName}
-						setUserName={setUserName}
-						setLoggedIn={setLoggedIn}
-						loggedIn={loggedIn}
+						loggedInUser={loggedInUser}
+						setLoggedInUser={setLoggedInUser}
 					/>
 				</Route>
 				<Route path="/map">
-					<MapPage
-						currentFriend={currentFriend}
-						setCurrentFriend={setCurrentFriend}
-						loggedIn={loggedIn}
-						users={users}
-						// userName={userName}
-					/>
+					<MapPage loggedInUser={loggedInUser} />
 				</Route>
 
 				<Route path="/chat">
-					<ChatPage
-						// userName={userName}
-						currentFriend={currentFriend}
-						setCurrentFriend={setCurrentFriend}
-						loggedIn={loggedIn}
-						users={users}
-					/>
+					<ChatPage loggedInUser={loggedInUser} />
 				</Route>
 			</Switch>
 			<Footer />

@@ -14,20 +14,21 @@ import Inbox from "../../components/Inbox/Inbox";
 //SERVER_URL
 const socket = io.connect("http://localhost:3001");
 
-const ChatPage = ({ userName, loggedIn, users }) => {
+const ChatPage = () => {
 	// const [room, setRoom] = useState("");
 
 	return (
-		<main className="chat-page">
-			{loggedIn ? (
-				<>
-					<Inbox users={users} />
-					<ChatBox userName={userName} socket={socket} />
-				</>
-			) : (
-				<h2>Please log in to continue</h2>
-			)}
-		</main>
+		// <main className="chat-page">
+		// 	{loggedIn ? (
+		// 		<>
+		// 			<Inbox users={users} />
+		// 			<ChatBox userName={userName} socket={socket} />
+		// 		</>
+		// 	) : (
+		// 		<h2>Please log in to continue</h2>
+		// 	)}
+		// </main>
+		<></>
 	);
 };
 
