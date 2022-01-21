@@ -11,8 +11,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 	const history = useHistory();
 
 	const handleLogin = async (e) => {
-		console.log(e.target.userName.value);
-		console.log("handleLogin clicke");
+		// console.log(e.target.userName.value);
 
 		e.preventDefault();
 
@@ -21,7 +20,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 		}
 
 		const user = await getUserData(e.target.userName.value);
-		console.log("user", user);
+		// console.log("user", user);
 		setLoggedInUser(user);
 		history.push("/map");
 	};
