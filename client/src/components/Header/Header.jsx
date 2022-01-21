@@ -10,7 +10,7 @@ import { getUserData } from "../../utils/forms/getUserData";
 const Header = ({ loggedInUser, setLoggedInUser }) => {
 	const history = useHistory();
 
-	const handleLogin = (e) => {
+	const handleLogin = async (e) => {
 		console.log(e.target.userName.value);
 		console.log("handleLogin clicke");
 
@@ -20,8 +20,8 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 			return alert("please enter your username");
 		}
 
-		const user = getUserData(e.target.userName.value);
-		setLoggedInUserIntoStorage(user.userName);
+		const user = await getUserData(e.target.userName.value);
+		console.log("user", user);
 		setLoggedInUser(user);
 		history.push("/map");
 	};

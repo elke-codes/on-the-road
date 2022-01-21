@@ -35,9 +35,9 @@ router.get("/:userName", (req, res) => {
 	const userData = readData();
 	console.log("get logged in user", req.params.userName);
 	const loggedInUser = userData.find((user) => {
-		user.userName === req.params.userName;
+		return user.userName === req.params.userName;
 	});
-
+	console.log("found user", loggedInUser);
 	res.status(200).json(loggedInUser);
 });
 

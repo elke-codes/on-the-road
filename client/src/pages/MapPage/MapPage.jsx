@@ -31,7 +31,7 @@ const MapPage = ({ loggedInUser }) => {
 				</ul>
 			</article> */}
 			<section className="map-page__container">
-				{loggedInUser ? <p>welcome {loggedInUser.userName}</p> : null}
+				{/* {loggedInUser ? <p>welcome {loggedInUser.userName}</p> : null} */}
 				{/* <FriendList /> */}
 
 				{/* <Inbox /> */}

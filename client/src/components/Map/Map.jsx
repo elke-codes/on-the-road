@@ -11,6 +11,7 @@ import {
 } from "react-leaflet";
 import { v4 as uuid } from "uuid";
 import { getFriendsData } from "../../utils/getFriendsData";
+import FriendCard from "../FriendCard/FriendCard";
 
 const Map = ({ loggedInUser }) => {
 	const [markers, setMarkers] = useState([]);
@@ -23,7 +24,7 @@ const Map = ({ loggedInUser }) => {
 			return;
 		}
 		console.log("gettting friends data");
-		const friends = await getFriendsData();
+		const friends = await getFriendsData(loggedInUser);
 		console.log("friends to set", friends);
 		setFriendsData(friends);
 		// const friendsMarkers = friends.map((friend) => friend.location);
@@ -92,7 +93,7 @@ const Map = ({ loggedInUser }) => {
 										{friend.locations[0].city}{" "}
 										{friend.locations[0].county}
 									</p>
-									{/* <FriendCard friend={friend} />{" "} */}
+									{/* <FriendCard />{" "} */}
 								</Popup>
 							</Marker>
 						);
