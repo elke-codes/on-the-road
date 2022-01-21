@@ -52,6 +52,7 @@ const App = () => {
 						userName={userName}
 						setUserName={setUserName}
 						setLoggedIn={setLoggedIn}
+						loggedIn={loggedIn}
 					/>
 				</Route>
 				<Route path="/map">
