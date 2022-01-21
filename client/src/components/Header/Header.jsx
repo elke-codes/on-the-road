@@ -4,16 +4,26 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory, Redirect } from "react-router-dom";
 import { getLoggedInUserFromStorage } from "../../utils/getLoggedInUserFromStorage";
 import { deleteLoggedInUser } from "../../utils/deleteLoggedInUser";
+import { setLoggedInUserIntoStorage } from "../../utils/setLoggedInUserIntoStorage";
 
 const Header = ({ loggedInUser, setLoggedInUser }) => {
+	const history = useHistory();
+
 	const handleLogin = (e) => {
-		// console.log(e.target.userName.value);
+		console.log(e.target.userName.value);
+		console.log("handleLogin clicke");
+
 		e.preventDefault();
+
 		if (!e.target.userName.value) {
 			return alert("please enter your username");
 		}
+
+		setLoggedInUserIntoStorage(e.target.userName.value);
+		setLoggedInUser();
+		history.push("/map");
 	};
-	const history = useHistory();
+
 	const handleLogOut = () => {
 		deleteLoggedInUser();
 		setLoggedInUser(null);
@@ -40,7 +50,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 							onClick={handleLogOut}>
 							logout
 						</button>
-						{/* <p>{userName}</p> */}
+						<p>{loggedInUser}</p>
 
 						<div className="dropdown">
 							<div tabindex="0">
@@ -68,7 +78,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 						{/* </div> */}
 					</>
 				) : (
-					<form className="header__login-form" onSubmit={() => {}}>
+					<form className="header__login-form" onSubmit={handleLogin}>
 						{/* <label className="header__input-label" htmlFor="userName">
 						Username
 					</label> */}

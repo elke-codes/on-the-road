@@ -5,6 +5,8 @@ import axios from "axios";
 
 export const postRegistration = async (e) => {
 	//await coords to be gotten from geolocation
+	console.log("post reg e.target", e.target.locationPermission.value);
+	//TODO check if locationpermission was given, if not return null for lat lng city and country else return what s below
 	const coords = await getLocation();
 	console.log("from PostReg", coords);
 	const reversedGeoCode = await reverseGeoCodeLocation(coords);

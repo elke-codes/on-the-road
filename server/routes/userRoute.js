@@ -4,7 +4,9 @@ const express = require("express");
 const fs = require("fs");
 const router = express.Router();
 const { v4: uuid } = require("uuid");
+const emailExists = require("../utils/validations/emailExists");
 const userNameExists = require("../utils/validations/userNameExists");
+const emailValid = require("../utils/validations/emailValid");
 
 // -- Helper functions -- //
 const readData = () => {
@@ -35,7 +37,19 @@ router.post("/register", (req, res) => {
 	// .getTimezoneOffset() to get timezone to be able to say what time it is at their location
 	// timezone_offset: created_at,
 	if (userNameExists(userData, req.body.userName)) {
-		return res.status(422).send("username already taken");
+		return res.status(422).send("Username already taken.");
+	}
+
+	if (emailExists(userData, req.body.email)) {
+		return res.status(422).send("Email address already taken.");
+	}
+	// TODO EMAIL CHARACTER VALIDATION
+	if (!emailValid(req.body.email)) {
+		return res
+			.status(422)
+			.send(
+				"Email address invalid. Please provide a an email that looks more like this yourname@yourcompany.com"
+			);
 	}
 
 	const newUser = {

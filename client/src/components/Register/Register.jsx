@@ -68,6 +68,20 @@ const Register = ({ setLoggedInUser }) => {
 						placeholder="Email"
 						name="email"
 					/>
+					{/* <input
+						type="password"
+						name="password"
+						placeholder="password"
+					/> */}
+
+					<input
+						type="checkbox"
+						name="locationPermission"
+						value="false"
+					/>
+					<label htmlFor="locationPermission">
+						I'd rather enter my location manually
+					</label>
 
 					<p className="register-modal__disclaimer">
 						When signing up you will be asked by your browser to
