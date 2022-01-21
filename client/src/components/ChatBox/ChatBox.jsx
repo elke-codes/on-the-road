@@ -63,7 +63,9 @@ const ChatBox = ({ friendsData, loggedInUser, socket }) => {
 	return (
 		<section className="chat-box">
 			{/* header talking to? */}
-			<article className="chat-box__header">Live Chat</article>
+			<article className="chat-box__header">
+				Live Chat with activeFriend
+			</article>
 			<article className="chat-box__body">
 				<ScrollToBottom className="message-container">
 					{messageList.map((messageContent) => {
@@ -81,17 +83,17 @@ const ChatBox = ({ friendsData, loggedInUser, socket }) => {
 										: "other"
 								}>
 								<div>
-									<div className="message-content">
+									<div className="message__content">
 										{" "}
 										<p>{messageContent.message}</p>
 									</div>
-									<div className="message-meta">
+									<div className="message__meta">
 										<div>
 											{" "}
-											<p className="time">
+											<p className="message__meta-time">
 												{messageContent.time}
 											</p>
-											<p className="author">
+											<p className="message__meta-author">
 												{messageContent.author}
 											</p>
 										</div>

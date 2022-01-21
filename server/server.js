@@ -26,6 +26,7 @@ const io = new Server(server, {
 // listening for event "connection" in socket server
 io.on("connection", (socket) => {
 	console.log(`User connected ${socket.id}`);
+	console.log("socket", socket);
 
 	//create event listener
 	//listen for event("join_room") on client side

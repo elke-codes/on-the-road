@@ -11,6 +11,7 @@
 	justify-content: space-between;
 	overflow: hidden;
 	background-color: white;
+
 	&__header {
 		border-bottom: 1px solid black;
 		// background: linear-gradient(
@@ -25,14 +26,17 @@
 		font-size: 20px;
 		padding: 1rem 0;
 	}
+
 	&__body {
 		display: flex;
 
 		// height: 100%;
 	}
+
 	&__footer {
 		display: flex;
 	}
+
 	&__footer-input {
 		// width: 100%;
 		flex-grow: 1;
@@ -51,4 +55,30 @@
 			);
 		}
 	}
+}
+
+.message-container {
+}
+
+.message {
+	&__content {
+	}
+
+	&__meta {
+	}
+
+	&__meta-time {
+		font-size: 10px;
+	}
+
+	&__meta-author {
+		font-size: 10px;
+	}
+}
+
+#you {
+}
+
+#other {
+	text-align: left;
 }
