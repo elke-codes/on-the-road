@@ -43,6 +43,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 					<>
 						{/* <Redirect to="/map" />; */}
 						{/* <div className="header__logged-in"> */}
+
 						<button className="header__button-add-friend btn btn-primary">
 							Find friends
 						</button>
@@ -51,8 +52,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 							onClick={handleLogOut}>
 							logout
 						</button>
-						<p>{loggedInUser.userName}</p>
-
+						<p>Welcome, {loggedInUser.userName}</p>
 						<div className="dropdown">
 							<div tabindex="0">
 								<div className="avatar header__avatar">

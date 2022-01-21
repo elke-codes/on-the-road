@@ -27,6 +27,11 @@ const Map = ({ loggedInUser }) => {
 		const friends = await getFriendsData(loggedInUser);
 		console.log("friends to set", friends);
 		setFriendsData(friends);
+		console.log("loggedinuser", loggedInUser.userName);
+		// setUserPosition(
+		// 	loggedInUser.locations[0].lat,
+		// 	loggedInUser.locations[0].lng
+		// );
 		// const friendsMarkers = friends.map((friend) => friend.location);
 		// setMarkers(friendsMarkers);
 		// console.log("friendsmarkers", friendsMarkers);
@@ -98,6 +103,18 @@ const Map = ({ loggedInUser }) => {
 							</Marker>
 						);
 					})}
+				{/* <Marker
+					position={[
+						loggedInUser.locations[0].lat,
+						loggedInUser.locations[0].lng
+					]}>
+					<Popup>
+						<p>You</p>
+						<p>{loggedInUser.locations[0].city}</p>
+						<p>{loggedInUser.locations[0].country}</p>
+					</Popup>
+				</Marker> */}
+
 				<LocationMarker />
 			</MapContainer>
 		</section>

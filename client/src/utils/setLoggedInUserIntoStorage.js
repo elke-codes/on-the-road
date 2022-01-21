@@ -1,3 +1,4 @@
 export const setLoggedInUserIntoStorage = (user) => {
-	window.localStorage.setItem("user", user);
+	const jsonUser = JSON.stringify(user);
+	window.localStorage.setItem("user", jsonUser);
 };

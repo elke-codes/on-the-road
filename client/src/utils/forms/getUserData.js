@@ -7,6 +7,6 @@ export const getUserData = async (userName) => {
 		.catch((error) => console.log("getUserData error", error));
 
 	console.log("getUserData", user.data);
-	setLoggedInUserIntoStorage(user.data.userName);
+	setLoggedInUserIntoStorage(user.data);
 	return user.data;
 };
