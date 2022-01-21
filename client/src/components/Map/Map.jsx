@@ -21,7 +21,7 @@ const Map = ({ userName, users, loggedIn }) => {
 	console.log("loggedininmap", loggedIn);
 
 	const getFriendsData = async () => {
-		const result = await axios.get("http://localhost:8000/users/");
+		const result = await axios.get("http://localhost:8000/users");
 		console.log("getFriendsData", result.data);
 		return result.data;
 	};

@@ -10,8 +10,26 @@
 		rgba(255, 196, 0, 1) 70%
 	);
 
-	&__login {
+	&__logged-in {
+		// margin-left: 1rem;
+		display: flex;
+		align-items: center;
+	}
+
+	&__button-login {
 		margin-left: 1rem;
+	}
+
+	&__avatar {
+		height: 56px;
+	}
+
+	&__button-add-friend {
+		margin-right: 1rem;
+	}
+
+	&__button-logout {
+		margin-right: 1rem;
 	}
 }
 

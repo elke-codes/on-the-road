@@ -45,22 +45,45 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 				{" "}
 				<h1 className="logo">On the road...</h1>
 			</Link>
-			<div className="header__login">
+			<div className="header__logged-in">
 				{loggedIn === true ? (
 					<>
 						{/* <Redirect to="/map" />; */}
-						<div>
-							<button className="header_button-add-friend">
-								Fiend friends
-							</button>
-							<button onClick={handleLogOut}>logout</button>
-							<p>{userName}</p>
-							<div className="avatar offline">
-								<div className="rounded-full w-14 h-14">
-									<img src="http://daisyui.com/tailwind-css-component-profile-1@56w.png" />
+						{/* <div className="header__logged-in"> */}
+						<button className="header__button-add-friend btn btn-primary">
+							Find friends
+						</button>
+						<button
+							className="header__button-logout btn btn-primary"
+							onClick={handleLogOut}>
+							logout
+						</button>
+						{/* <p>{userName}</p> */}
+
+						<div className="dropdown">
+							<div tabindex="0">
+								<div className="avatar header__avatar">
+									<div className="mb-8 rounded-full w-14 h-14">
+										<img src="http://daisyui.com/tailwind-css-component-profile-1@56w.png" />
+									</div>
 								</div>
 							</div>
+							<ul
+								tabindex="0"
+								className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
+								<li>
+									<a>Item 1</a>
+								</li>
+								<li>
+									<a>Item 2</a>
+								</li>
+								<li>
+									<a>Item 3</a>
+								</li>
+							</ul>
 						</div>
+
+						{/* </div> */}
 					</>
 				) : (
 					<form className="header__login-form" onSubmit={handleLogin}>
@@ -76,7 +99,7 @@ const Header = ({ userName, setUserName, loggedIn, setLoggedIn }) => {
 						/>
 						<button
 							type="submit"
-							className="header__login"
+							className="header__button-login btn btn-primary"
 							// onSubmit={handleLogin}
 						>
 							LOGIN

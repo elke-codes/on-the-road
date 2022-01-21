@@ -156,5 +156,35 @@
         "country": "Canada"
       }
     ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T23:33:11.927Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "elke",
+    "firstName": "elke",
+    "lastName": "dick",
+    "email": "elke.dick@gmail.com",
+    "locations": [
+      {
+        "lat": 49.2626441,
+        "lng": -123.0788752,
+        "created_at": "2022-01-20T23:33:51.879Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
   }
 ]
