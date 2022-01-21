@@ -5,6 +5,7 @@ import skyscanner from "../../assets/images/skyscanner.png";
 import airBnb from "../../assets/images/airbnb.png";
 import { distanceBetweenCoordinates } from "../../utils/distanceBetweenCoordinates";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FriendCard = ({ friend, loggedInUser }) => {
 	console.log("loggedinusr friendcard", loggedInUser);
@@ -46,6 +47,7 @@ const FriendCard = ({ friend, loggedInUser }) => {
 				</span>{" "}
 				here
 			</p>
+			<Link to="/chat">Chat with me!</Link>
 			<div className="friend-card__bottom-container">
 				{/* give classname to not show when on map */}
 				{/* <div className="friend-card__mini-map-container">
