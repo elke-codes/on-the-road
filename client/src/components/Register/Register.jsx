@@ -17,12 +17,14 @@ const Register = ({ setLoggedInUser }) => {
 		// try catch instead of then catch when using async await
 		try {
 			const user = await postRegistration(e);
+			console.log(user);
 			setLoggedInUser(user);
 			history.push("/map");
 			e.target.reset();
 		} catch (e) {
 			// e.response.data is the error message, set in the server.
-			alert(e.response.data);
+			// alert(e.response.data);
+			console.log(e);
 		}
 	};
 

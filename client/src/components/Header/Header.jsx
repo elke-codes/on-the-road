@@ -5,6 +5,7 @@ import { Link, useHistory, Redirect } from "react-router-dom";
 import { getLoggedInUserFromStorage } from "../../utils/getLoggedInUserFromStorage";
 import { deleteLoggedInUser } from "../../utils/deleteLoggedInUser";
 import { setLoggedInUserIntoStorage } from "../../utils/setLoggedInUserIntoStorage";
+import { getUserData } from "../../utils/forms/getUserData";
 
 const Header = ({ loggedInUser, setLoggedInUser }) => {
 	const history = useHistory();
@@ -19,8 +20,9 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 			return alert("please enter your username");
 		}
 
-		setLoggedInUserIntoStorage(e.target.userName.value);
-		setLoggedInUser();
+		const user = getUserData(e.target.userName.value);
+		setLoggedInUserIntoStorage(user.userName);
+		setLoggedInUser(user);
 		history.push("/map");
 	};
 
@@ -50,7 +52,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 							onClick={handleLogOut}>
 							logout
 						</button>
-						<p>{loggedInUser}</p>
+						<p>{loggedInUser.userName}</p>
 
 						<div className="dropdown">
 							<div tabindex="0">
