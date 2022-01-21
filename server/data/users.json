@@ -143,22 +143,6 @@
     ]
   },
   {
-    "userName": "elkevx",
-    "firstName": "elke",
-    "lastName": "dick",
-    "email": "xvelke.dick@gmail.com",
-    "id": "8d8a57ec-e152-4b18-989d-98c6693a0e38",
-    "locations": [
-      {
-        "lat": 49.2626441,
-        "lng": -123.0788752,
-        "created_at": "2022-01-21T08:49:41.462Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
     "userName": "Heba",
     "firstName": "Heba",
     "lastName": "Al Tabbaa",
