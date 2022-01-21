@@ -13,30 +13,11 @@ import { v4 as uuid } from "uuid";
 import { getFriendsData } from "../../utils/getFriendsData";
 import FriendCard from "../FriendCard/FriendCard";
 
-const Map = ({ loggedInUser }) => {
+const Map = ({ loggedInUser, friendsData }) => {
 	const [markers, setMarkers] = useState([]);
-	const [friendsData, setFriendsData] = useState([]);
+
 	const [userPosition, setUserPosition] = useState(null);
 	const [activeFriend, setActiveFriend] = useState(null);
-
-	useEffect(async () => {
-		if (!loggedInUser) {
-			return;
-		}
-		console.log("gettting friends data");
-		const friends = await getFriendsData(loggedInUser);
-		console.log("friends to set", friends);
-		setFriendsData(friends);
-		console.log("loggedinuser", loggedInUser.userName);
-		// setUserPosition(
-		// 	loggedInUser.locations[0].lat,
-		// 	loggedInUser.locations[0].lng
-		// );
-		// const friendsMarkers = friends.map((friend) => friend.location);
-		// setMarkers(friendsMarkers);
-		// console.log("friendsmarkers", friendsMarkers);
-		// renderFriendMarkers(friends);
-	}, [loggedInUser]);
 
 	//on click asks for location and then brings your marker there so smoothly
 	const LocationMarker = () => {

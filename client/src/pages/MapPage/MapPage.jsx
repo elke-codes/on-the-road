@@ -6,7 +6,7 @@ import FriendCard from "../../components/FriendCard/FriendCard";
 import Map from "../../components/Map/Map";
 import Inbox from "../../components/Inbox/Inbox";
 
-const MapPage = ({ loggedInUser }) => {
+const MapPage = ({ loggedInUser, friendsData }) => {
 	const [showModal, setShowModal] = useState(false);
 
 	const handleClick = () => {
@@ -37,7 +37,10 @@ const MapPage = ({ loggedInUser }) => {
 				{/* <Inbox /> */}
 
 				{loggedInUser ? (
-					<Map loggedInUser={loggedInUser} />
+					<Map
+						loggedInUser={loggedInUser}
+						friendsData={friendsData}
+					/>
 				) : (
 					<h2>Please log in to continue</h2>
 				)}

@@ -4,15 +4,15 @@ import "./Inbox.scss";
 import React from "react";
 import { v4 as uuid } from "uuid";
 
-const Inbox = ({ users }) => {
+const Inbox = ({ friendsData }) => {
 	// const friends = axios.get("http://localhost:8000");
-	console.log("users from inbox", users);
+	console.log("friendsData from inbox", friendsData);
 	return (
 		<section className="inbox">
 			<h2 className="inbox__title">Inbox</h2>
 			{/* filter over people, filter out id that matches logged in id */}
-			{users &&
-				users.map((user) => {
+			{friendsData &&
+				friendsData.map((friend) => {
 					return (
 						// <article className="inbox__user" key={uuid()}>
 						<div class="collapse border rounded-box border-base-300 collapse-arrow inbox__user">
@@ -25,12 +25,12 @@ const Inbox = ({ users }) => {
 									</div>
 								</div>
 								<span className="inbox__username"></span>{" "}
-								{user.userName}
+								{friend.userName}
 							</div>
 							<div class="collapse-content">
 								<p className="inbox__location">
-									{user.locations[0].city}{" "}
-									{user.locations[0].country}
+									{friend.locations[0].city}{" "}
+									{friend.locations[0].country}
 								</p>
 							</div>
 						</div>

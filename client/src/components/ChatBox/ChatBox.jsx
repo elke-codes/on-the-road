@@ -5,11 +5,12 @@ import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { v4 as uuid } from "uuid";
 
-const ChatBox = ({ userName, socket }) => {
+const ChatBox = ({ friendsData, loggedInUser, socket }) => {
 	//keep track of message
 	const [currentMessage, setCurrentMessage] = useState("");
 	const [messageList, setMessageList] = useState([]);
 	const [room, setRoom] = useState("1");
+	const { userName } = loggedInUser;
 	//establish a connection between a user that just entered the page and the room they want to enter
 	const joinRoom = () => {
 		//set userName and room to be what's typed in the input fields
