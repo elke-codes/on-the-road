@@ -3,26 +3,40 @@
 import "./FriendCard.scss";
 import skyscanner from "../../assets/images/skyscanner.png";
 import airBnb from "../../assets/images/airbnb.png";
-
+import { distanceBetweenCoordinates } from "../../utils/distanceBetweenCoordinates";
 import React from "react";
 
-const FriendCard = ({ friend }) => {
+const FriendCard = ({ friend, loggedInUser }) => {
+	console.log("loggedinusr friendcard", loggedInUser);
 	return (
 		// <section className="friend">
 		<article className="friend-card">
 			<div className="friend-card__top-container">
-				<img src="" alt="" />
-				<h3 className="friend-card__name">{friend.name}</h3>
+				<h3 className="friend-card__name">
+					{friend.firstName} {friend.lastName}
+				</h3>
+				<div className="avatar header__avatar">
+					<div className="mb-8 rounded-full w-14 h-14">
+						<img src="http://daisyui.com/tailwind-css-component-profile-1@56w.png" />
+					</div>
+				</div>
 				{/* https://myprojects.geoapify.com/api/Uvf0Dk1JqGJgrI0OCWvD/keys */}
-				<p className="friend-card__city">{friend.locations[0].city}</p>
-				<p className="friend-card__country">
-					{friend.locations[0].country}
+				<p className="friend-card__city">
+					{friend.locations[0].city}, {friend.locations[0].country}
 				</p>
 			</div>
 			<p className="friend-card__distance">
 				We're{" "}
 				{/* https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates */}
-				<span className="friend-card__distance--bold">10,533 km </span>{" "}
+				<span className="friend-card__distance--bold">
+					{distanceBetweenCoordinates(
+						friend.locations[0].lat,
+						friend.locations[0].lng,
+						loggedInUser.locations[0].lat,
+						loggedInUser.locations[0].lng
+					)}{" "}
+					km
+				</span>{" "}
 				apart!
 			</p>
 			<p className="friend-card__distance">

@@ -18,7 +18,7 @@ const App = () => {
 	useEffect(() => {
 		const user = getLoggedInUserFromStorage();
 		setLoggedInUser(user);
-	});
+	}, []);
 
 	return (
 		<BrowserRouter>

@@ -80,6 +80,7 @@ const Map = ({ loggedInUser }) => {
 									friend.locations[0].lng
 								]}
 								key={uuid()}
+								loggedInUser={loggedInUser}
 								// onClick={() => {
 								// 	setActiveFriend(friend);
 								// }}
@@ -93,12 +94,17 @@ const Map = ({ loggedInUser }) => {
 								// }}
 							>
 								<Popup>
-									<p>{friend.userName}</p>
-									<p>
+									{/* <p>
+										{console.log("loggedInuser in popup")}
+									</p> */}
+									{/*	<p>
 										{friend.locations[0].city}{" "}
 										{friend.locations[0].county}
-									</p>
-									{/* <FriendCard />{" "} */}
+									</p> */}
+									<FriendCard
+										friend={friend}
+										loggedInUser={loggedInUser}
+									/>{" "}
 								</Popup>
 							</Marker>
 						);
