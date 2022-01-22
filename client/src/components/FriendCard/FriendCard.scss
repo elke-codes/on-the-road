@@ -1,4 +1,10 @@
 /// --- FRIENDCARD.SCSS --- ///
+
+@use "../../styles/partials/typography.scss" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/colors" as *;
+
 .friend-card {
 	// margin: 1rem;
 	border: 1px solid black;
@@ -9,9 +15,26 @@
 	width: fit-content;
 	// display: flex;
 	// @include body-copy;
-	background-color: white;
+	background: linear-gradient(
+		45deg,
+		$dark-grey,
+		$light-grey,
+		$darker-blue,
+		$darker-blue,
+		$light-blue,
+		$light-blue
+	);
+	@include body-copy;
 
 	&__top-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__user-name {
+		@include subheader;
+		font-weight: 700;
 	}
 
 	&__name {
@@ -21,25 +44,49 @@
 	}
 
 	&__location {
-		padding-bottom: 1rem;
+		padding-top: 1rem;
 	}
+
 	&__distance {
+		padding: 1rem 0;
 		&--bold {
 			font-weight: 600;
 		}
+	}
+
+	&__time {
+		padding-bottom: 1.5rem;
+		&--bold {
+			font-weight: 600;
+		}
+	}
+
+	&__chat-link {
+		color: $light-blue;
+		position: fixed;
+		bottom: 1.5rem;
+		left: 4rem;
+		&:hover {
+			// text-decoration: underline;
+			font-size: 1.5rem;
+			left: 2rem;
+		}
+		// color: $green-grey;
+		// font-weight: 700;
+		// text-shadow: 2px 2px 2px $darker-blue;
 	}
 
 	&__bottom-container {
 		// display: flex;
 	}
 
-	&__mini-map {
-		margin: 1rem 0;
-		border-radius: 20px;
-		border-radius: 20px;
-		width: 202px;
-		height: auto;
-	}
+	// &__mini-map {
+	// 	margin: 1rem 0;
+	// 	border-radius: 20px;
+	// 	border-radius: 20px;
+	// 	width: 202px;
+	// 	height: auto;
+	// }
 
 	&__links {
 		display: flex;
@@ -50,6 +97,6 @@
 		height: 3rem;
 		margin: 1rem;
 	}
-	&__friend-card__mini-map-container {
-	}
+	// &__friend-card__mini-map-container {
+	// }
 }

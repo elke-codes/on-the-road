@@ -35,6 +35,8 @@
 
 		&:hover {
 			background-color: $darker-blue;
+			color: $light-blue;
+			border: 1px solid $light-blue;
 		}
 	}
 }

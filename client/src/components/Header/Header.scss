@@ -1,5 +1,7 @@
 /// --- HEADER.SCSS --- ///
 @use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
 
 .header {
 	border-bottom: 1px solid $light-blue;
@@ -16,14 +18,64 @@
 	);
 	height: 100px;
 
+	&__nav {
+	}
+
+	&__nav-link {
+		@include subheader;
+		margin: 2rem;
+		padding: 1rem;
+		&--active {
+			// text-decoration: underline;
+			border-top: 0.125rem dotted $green-grey;
+			border-radius: 50%;
+			font-weight: 600;
+		}
+		// &:hover {
+		// 	text-decoration: underline;
+		// 	color: $green-grey;
+		// }
+
+		&:hover {
+			border-top: 0.125rem dotted $green-grey;
+			border-radius: 50%;
+			font-weight: 600;
+		}
+	}
 	&__logged-in {
 		// margin-left: 1rem;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 	}
 
+	&__left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		padding-right: 1rem;
+	}
+
+	&__copy {
+		@include body-copy;
+		font-weight: 700;
+		margin-bottom: 0.5rem;
+		// margin-left: 1rem;
+	}
+
+	&__container {
+		display: flex;
+	}
 	&__button-login {
 		margin-left: 1rem;
+		@include button;
+		background-color: $light-blue;
+		border: 1px solid $darker-blue;
+		&:hover {
+			background-color: $darker-blue;
+			color: $light-blue;
+			border: 1px solid $light-blue;
+		}
 	}
 
 	&__avatar {
@@ -31,10 +83,11 @@
 	}
 
 	&__button-add-friend {
-		margin-right: 1rem;
+		@extend .header__button-login;
 	}
 
 	&__button-logout {
+		@extend .header__button-login;
 		margin-right: 1rem;
 	}
 }

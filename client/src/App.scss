@@ -1,9 +1,9 @@
 /// --- APP SCSS --- ///
 
-// // -- GLOBAL STYLES -- //
+// -- GLOBAL STYLES -- //
 @use "./styles/partials/typography.scss" as *;
-// @use "./styles/partials/mixins" as *;
-// @use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
 @use "./styles/partials/colors" as *;
 
 *,
@@ -38,6 +38,7 @@ li {
 
 a {
 	text-decoration: none;
+	color: $primary-text;
 }
 
 ul {
@@ -47,7 +48,8 @@ ul {
 input {
 	// @include body-copy;
 	// font-family: "AvenirNext LT Pro", Arial, sans-serif;
-	border-radius: 0.25rem;
+	// border-radius: 0.25rem;
+	@include border-radius;
 	padding: 0.75rem;
 	margin: 0.5rem 0;
 	// border: 1px solid $mercury;
@@ -58,24 +60,36 @@ input {
 	//error state #d22d2d;
 	// @include tablet {
 	// 	margin: 0;
-
+	background-color: $light-blue;
 	// 	padding: 1rem;
 	// }
 	&--active {
-		border: 1px solid;
-		border-color: rgba(255, 196, 0, 0.5);
+		// border: 1px solid;
+		// border-color: rgba(255, 196, 0, 0.5);
 		// $action-hover;
+
+		// border-color: $darker-blue;
 	}
 
 	&--error {
-		border-color: #d22d2d;
+		border-color: $orange;
 	}
 	&--error-message {
-		color: #d22d2d;
+		color: $orange;
 	}
 	//overwriting this default setting that seems to be applied on the "ouline"
 	&:focus-visible {
-		outline-color: rgba(255, 196, 0, 0.5);
+		outline-color: $darker-blue;
+		background-color: #fff;
+		// background-color: $light-blue;
 		// $action-hover;
 	}
+}
+// -- LEFLET ADJUSTMENTS
+.leaflet-popup-content p {
+	margin: 0;
+}
+
+.leaflet-container a {
+	color: $light-blue;
 }

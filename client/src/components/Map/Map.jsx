@@ -51,6 +51,7 @@ const Map = ({ loggedInUser, friendsData, setSelectedFriend }) => {
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 					// id="mapbox/streets-v11"
 					id="mapbox://styles/mapbox/satellite-v9"
+					projection="naturalEarth" // starting projection
 				/>
 				{friendsData &&
 					friendsData.map((friend) => {

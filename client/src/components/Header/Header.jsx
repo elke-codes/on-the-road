@@ -1,12 +1,13 @@
 /// --- HEADER.JSX --- ///
 import "./Header.scss";
 import React, { useEffect, useState } from "react";
-import { Link, useHistory, Redirect } from "react-router-dom";
+import { Link, useHistory, Redirect, NavLink } from "react-router-dom";
 import { getLoggedInUserFromStorage } from "../../utils/getLoggedInUserFromStorage";
 import { deleteLoggedInUser } from "../../utils/deleteLoggedInUser";
 import { setLoggedInUserIntoStorage } from "../../utils/setLoggedInUserIntoStorage";
 import { getUserData } from "../../utils/forms/getUserData";
 import logo from "../../assets/images/logo3.png";
+import Avatar from "../Avatar/Avatar";
 
 const Header = ({ loggedInUser, setLoggedInUser }) => {
 	const history = useHistory();
@@ -42,45 +43,46 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 					className="logo"
 				/>
 			</Link>
+			<nav className="header__nav">
+				<NavLink
+					className={"header__nav-link"}
+					activeClassName={"header__nav-link--active"}
+					to="/map">
+					MAP
+				</NavLink>
+				<NavLink
+					className={"header__nav-link"}
+					activeClassName={"header__nav-link--active"}
+					to="/chat">
+					CHAT
+				</NavLink>
+				<NavLink
+					className={"header__nav-link"}
+					activeClassName={"header__nav-link--active"}
+					to="/about">
+					ABOUT
+				</NavLink>
+			</nav>
 			<div className="header__logged-in">
 				{loggedInUser ? (
 					<>
-						{/* <Redirect to="/map" />; */}
-						{/* <div className="header__logged-in"> */}
-
-						<button className="header__button-add-friend btn btn-primary">
-							Find friends
-						</button>
-						<button
-							className="header__button-logout btn btn-primary"
-							onClick={handleLogOut}>
-							logout
-						</button>
-						<p>Welcome, {loggedInUser.userName}</p>
-						<div className="dropdown">
-							<div tabIndex="0">
-								<div className="avatar header__avatar">
-									<div className="mb-8 rounded-full w-14 h-14">
-										<img src="http://daisyui.com/tailwind-css-component-profile-1@56w.png" />
-									</div>
-								</div>
+						<div className="header__left">
+							<p className="header__copy">
+								Welcome, {loggedInUser.userName}
+							</p>
+							<div className="header__container">
+								{" "}
+								<button className="header__button-add-friend ">
+									Find friends
+								</button>
+								<button
+									className="header__button-logout "
+									onClick={handleLogOut}>
+									Logout
+								</button>
+								<Avatar />
 							</div>
-							<ul
-								tabIndex="0"
-								className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
-								<li>
-									<a>Item 1</a>
-								</li>
-								<li>
-									<a>Item 2</a>
-								</li>
-								<li>
-									<a>Item 3</a>
-								</li>
-							</ul>
 						</div>
-
-						{/* </div> */}
 					</>
 				) : (
 					<form className="header__login-form" onSubmit={handleLogin}>
@@ -96,7 +98,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 						/>
 						<button
 							type="submit"
-							className="header__button-login btn btn-primary"
+							className="header__button-login"
 							// onSubmit={handleLogin}
 						>
 							LOGIN

@@ -6,6 +6,7 @@ import airBnb from "../../assets/images/airbnb.png";
 import { distanceBetweenCoordinates } from "../../utils/distanceBetweenCoordinates";
 import React from "react";
 import { Link } from "react-router-dom";
+import Avatar from "../Avatar/Avatar";
 
 const FriendCard = ({ friend, loggedInUser, setSelectedFriend }) => {
 	// console.log("loggedinusr friendcard", loggedInUser);
@@ -18,17 +19,13 @@ const FriendCard = ({ friend, loggedInUser, setSelectedFriend }) => {
 		// <section className="friend">
 		<article className="friend-card">
 			<div className="friend-card__top-container">
-				<h3 className="friend-card__name">
-					<p>@{friend.userName}</p>
+				<p className="friend-card__user-name">@{friend.userName}</p>
+				<p className="friend-card__name">
 					{friend.firstName} {friend.lastName}
-				</h3>
-				<div className="avatar header__avatar">
-					<div className="mb-8 rounded-full w-14 h-14">
-						<img src="http://daisyui.com/tailwind-css-component-profile-1@56w.png" />
-					</div>
-				</div>
+				</p>
+				<Avatar />
 				{/* https://myprojects.geoapify.com/api/Uvf0Dk1JqGJgrI0OCWvD/keys */}
-				<p className="friend-card__city">
+				<p className="friend-card__location">
 					{friend.locations[0].city}, {friend.locations[0].country}
 				</p>
 			</div>
@@ -46,19 +43,16 @@ const FriendCard = ({ friend, loggedInUser, setSelectedFriend }) => {
 				</span>{" "}
 				apart!
 			</p>
-			<p className="friend-card__distance">
+			<p className="friend-card__time">
 				It's {/* api s for timezone...  */}
-				<span className="friend-card__distance--bold">
-					3:22pm{" "}
-				</span>{" "}
-				here
+				<span className="friend-card__time--bold">3:22pm </span> here
 			</p>
 			<Link
 				to="/chat"
 				// onClick={(friend) => {
 				// 	handleClick(friend);
 				// }}
-			>
+				className="friend-card__chat-link">
 				Chat with me!
 			</Link>
 			<div className="friend-card__bottom-container">

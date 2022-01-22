@@ -9,6 +9,7 @@ import socket from "../../utils/socket/socket-client";
 import FriendCard from "../../components/FriendCard/FriendCard";
 
 import Inbox from "../../components/Inbox/Inbox";
+import Footer from "../../components/Footer/Footer";
 
 //establish connection to backend
 //link to where running socket.io server
@@ -72,30 +73,33 @@ const ChatPage = ({
 	// });
 
 	return (
-		<main className="chat-page">
-			{loggedInUser ? (
-				<>
-					<Inbox
-						friendsData={friendsData}
-						loggedInUser={loggedInUser}
-						selectedFriend={selectedFriend}
-						setSelectedFriend={setSelectedFriend}
-						room={room}
-						setRoom={setRoom}
-					/>
-					<ChatBox
-						loggedInUser={loggedInUser}
-						socket={socket}
-						selectedFriend={selectedFriend}
-						room={room}
-						setRoom={setRoom}
-						socket={socket}
-					/>
-				</>
-			) : (
-				<h2>Please log in to continue</h2>
-			)}
-		</main>
+		<>
+			<main className="chat-page">
+				{loggedInUser ? (
+					<>
+						<Inbox
+							friendsData={friendsData}
+							loggedInUser={loggedInUser}
+							selectedFriend={selectedFriend}
+							setSelectedFriend={setSelectedFriend}
+							room={room}
+							setRoom={setRoom}
+						/>
+						<ChatBox
+							loggedInUser={loggedInUser}
+							socket={socket}
+							selectedFriend={selectedFriend}
+							room={room}
+							setRoom={setRoom}
+							socket={socket}
+						/>
+					</>
+				) : (
+					<h2>Please log in to continue</h2>
+				)}
+			</main>
+			<Footer />
+		</>
 	);
 };
 
