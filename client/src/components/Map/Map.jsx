@@ -13,7 +13,7 @@ import { v4 as uuid } from "uuid";
 import { getFriendsData } from "../../utils/getFriendsData";
 import FriendCard from "../FriendCard/FriendCard";
 
-const Map = ({ loggedInUser, friendsData }) => {
+const Map = ({ loggedInUser, friendsData, setSelectedFriend }) => {
 	const [markers, setMarkers] = useState([]);
 
 	const [userPosition, setUserPosition] = useState(null);
@@ -85,6 +85,7 @@ const Map = ({ loggedInUser, friendsData }) => {
 									<FriendCard
 										friend={friend}
 										loggedInUser={loggedInUser}
+										setSelectedFriend={setSelectedFriend}
 									/>{" "}
 								</Popup>
 							</Marker>

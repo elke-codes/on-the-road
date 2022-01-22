@@ -4,30 +4,42 @@ import "./ChatBox.scss";
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { v4 as uuid } from "uuid";
+// import { generateRoomName } from "../../utils/socket/generateRoomName";
 
-const ChatBox = ({ friendsData, loggedInUser, socket }) => {
+const ChatBox = ({
+	friendsData,
+	loggedInUser,
+	socket,
+	selectedFriend,
+	room,
+	setRoom
+}) => {
 	//keep track of message
 	const [currentMessage, setCurrentMessage] = useState("");
 	const [messageList, setMessageList] = useState([]);
-	const [room, setRoom] = useState("1");
+
 	const { userName } = loggedInUser;
+
+	//usr rrom naam is = logged in user id + selected user id
+	//for the other user it has to be selectted user id + logged in user
+
 	//establish a connection between a user that just entered the page and the room they want to enter
 	const joinRoom = () => {
 		//set userName and room to be what's typed in the input fields
 		//
 		//check if fields aren't empty
-		if (userName !== "" && room !== "") {
-			//emit event from frontend
-			//see index.js socket.on("join_room")
-			// where room is the data we 're passing back to server
-			socket.emit("join_room", room);
-		}
+		// if (userName !== "" && room !== "") {
+		//emit event from frontend
+		//see index.js socket.on("join_room")
+		// where room is the data we 're passing back to server
+		socket.emit("join_room", room);
+		// }
 	};
 
 	//listen for changes in room
 	useEffect(() => {
 		joinRoom();
-	}, [room]);
+	}, [selectedFriend]);
 	//allow messages to be sent through socket
 	//async because you want to wait for the state to be set
 	//...can do with useEffect listening to the currentMessage to change?
@@ -37,10 +49,7 @@ const ChatBox = ({ friendsData, loggedInUser, socket }) => {
 				room: room,
 				author: userName,
 				message: currentMessage,
-				time:
-					new Date(Date.now()).getHours() +
-					":" +
-					new Date(Date.now()).getMinutes()
+				time: new Date().getTime()
 			};
 			//see index.js for listener listening to "send_message"
 			//send the message data to the backend after the current message has been changed
@@ -48,27 +57,31 @@ const ChatBox = ({ friendsData, loggedInUser, socket }) => {
 			//to send message to both, update both messaglists
 			setMessageList((list) => [...list, messageData]);
 			//empty the container after sending the message
-			setCurrentMessage("");
+			// setCurrentMessage("");
 		}
 	};
 	// listen to whenever there s changes to our socket server
 	useEffect(() => {
 		//listen for event emitted from server "receive_message", receive data sent from backend
 		socket.on("receive_message", (data) => {
-			console.log(data);
+			console.log("receive message data from client", data);
 			//grab current/previous messagelist, return that with the message added
 			setMessageList((list) => [...list, data]);
 		});
 	}, [socket]);
+
 	return (
 		<section className="chat-box">
 			{/* header talking to? */}
 			<article className="chat-box__header">
-				Live Chat with activeFriend
+				{selectedFriend
+					? `Live Chat with ${selectedFriend.userName}`
+					: "Live Chat"}
 			</article>
 			<article className="chat-box__body">
 				<ScrollToBottom className="message-container">
 					{messageList.map((messageContent) => {
+						console.log("messageContent", messageContent);
 						{
 							/* where messagecontent is the data received back from the server  */
 						}

@@ -9,29 +9,35 @@ import MapPage from "./pages/MapPage/MapPage";
 import ChatPage from "./pages/ChatPage/ChatPage";
 import Footer from "./components/Footer/Footer";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { getLoggedInUserFromStorage } from "./utils/getLoggedInUserFromStorage";
 import { getFriendsData } from "./utils/getFriendsData";
 
 const App = () => {
 	const [loggedInUser, setLoggedInUser] = useState();
 	const [friendsData, setFriendsData] = useState([]);
+	const [selectedFriend, setSelectedFriend] = useState(null);
+	const [room, setRoom] = useState();
+	// console.log("selectedFriend", selectedFriend);
 
 	useEffect(() => {
 		const user = getLoggedInUserFromStorage();
 		setLoggedInUser(user);
 	}, []);
 
+	// useEffect(() => {
+	// 	console.log(selectedFriend);
+	// }, [selectedFriend]);
+
 	// getFriendsData
 	useEffect(async () => {
 		if (!loggedInUser) {
 			return;
 		}
-		console.log("gettting friends data");
+		// console.log("gettting friends data");
 		const friends = await getFriendsData(loggedInUser);
-		console.log("friends to set", friends);
+		// console.log("friends to set", friends);
 		setFriendsData(friends);
-		console.log("loggedinuser", loggedInUser.userName);
+		// console.log("loggedinuser", loggedInUser.userName);
 		// setUserPosition(
 		// 	loggedInUser.locations[0].lat,
 		// 	loggedInUser.locations[0].lng
@@ -60,6 +66,8 @@ const App = () => {
 					<MapPage
 						loggedInUser={loggedInUser}
 						friendsData={friendsData}
+						setSelectedFriend={setSelectedFriend}
+						setRoom={setRoom}
 					/>
 				</Route>
 
@@ -67,6 +75,10 @@ const App = () => {
 					<ChatPage
 						loggedInUser={loggedInUser}
 						friendsData={friendsData}
+						selectedFriend={selectedFriend}
+						setSelectedFriend={setSelectedFriend}
+						setRoom={setRoom}
+						room={room}
 					/>
 				</Route>
 			</Switch>

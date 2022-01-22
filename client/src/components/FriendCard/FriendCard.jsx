@@ -7,13 +7,19 @@ import { distanceBetweenCoordinates } from "../../utils/distanceBetweenCoordinat
 import React from "react";
 import { Link } from "react-router-dom";
 
-const FriendCard = ({ friend, loggedInUser }) => {
-	console.log("loggedinusr friendcard", loggedInUser);
+const FriendCard = ({ friend, loggedInUser, setSelectedFriend }) => {
+	// console.log("loggedinusr friendcard", loggedInUser);
+
+	// const handleClick = (friend) => {
+	// 	setSelectedFriend(friend);
+	// };
+
 	return (
 		// <section className="friend">
 		<article className="friend-card">
 			<div className="friend-card__top-container">
 				<h3 className="friend-card__name">
+					<p>@{friend.userName}</p>
 					{friend.firstName} {friend.lastName}
 				</h3>
 				<div className="avatar header__avatar">
@@ -47,7 +53,14 @@ const FriendCard = ({ friend, loggedInUser }) => {
 				</span>{" "}
 				here
 			</p>
-			<Link to="/chat">Chat with me!</Link>
+			<Link
+				to="/chat"
+				// onClick={(friend) => {
+				// 	handleClick(friend);
+				// }}
+			>
+				Chat with me!
+			</Link>
 			<div className="friend-card__bottom-container">
 				{/* give classname to not show when on map */}
 				{/* <div className="friend-card__mini-map-container">

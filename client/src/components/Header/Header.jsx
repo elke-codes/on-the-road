@@ -54,7 +54,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 						</button>
 						<p>Welcome, {loggedInUser.userName}</p>
 						<div className="dropdown">
-							<div tabindex="0">
+							<div tabIndex="0">
 								<div className="avatar header__avatar">
 									<div className="mb-8 rounded-full w-14 h-14">
 										<img src="http://daisyui.com/tailwind-css-component-profile-1@56w.png" />
@@ -62,7 +62,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 								</div>
 							</div>
 							<ul
-								tabindex="0"
+								tabIndex="0"
 								className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
 								<li>
 									<a>Item 1</a>

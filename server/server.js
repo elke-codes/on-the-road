@@ -26,7 +26,7 @@ const io = new Server(server, {
 // listening for event "connection" in socket server
 io.on("connection", (socket) => {
 	console.log(`User connected ${socket.id}`);
-	console.log("socket", socket);
+	// console.log("socket", socket);
 
 	//create event listener
 	//listen for event("join_room") on client side
@@ -38,10 +38,12 @@ io.on("connection", (socket) => {
 
 	//listening for event send_message, receive messageData object
 	socket.on("send_message", (data) => {
-		console.log(data);
+		console.log("data.room", data.room);
 		//send received messageData back to frontend, to "receive message"
 		//send only to the room, to all other users who are listening in the same room
 		socket.to(data.room).emit("receive_message", data);
+		console.log("");
+		//TODO write messages to json here data.message and data.time
 	});
 
 	//listen for event "disconnent" when user disconnects from server
