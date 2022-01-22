@@ -82,7 +82,7 @@ const App = () => {
 					/>
 				</Route>
 			</Switch>
-			<Footer />
+			{/* <Footer /> */}
 		</BrowserRouter>
 	);
 };

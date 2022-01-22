@@ -9,19 +9,31 @@ import { getLoggedInUserFromStorage } from "../../utils/getLoggedInUserFromStora
 // import Map from "../../components/Map/Map";
 
 const HomePage = ({ loggedInUser, setLoggedInUser }) => {
+	const [register, setRegister] = useState(false);
 	return (
 		<main className="homepage">
 			{/* <button onClick={handleOpenRegister}>Register! </button> */}
-			<h1 className="homepage__title">On the road ...</h1>
-			<p className="homepage__copy"></p>
+			{!register && (
+				<>
+					<h1 className="homepage__title">reconnect...</h1>
+					<div className="homepage__buttons">
+						<button
+							className="homepage__button"
+							onClick={() => setRegister(true)}>
+							Register
+						</button>
+						<button className="homepage__button">Login</button>
+					</div>
+				</>
+			)}
 
 			{/* <Map className="homepage__map" /> */}
-			{/* {!loggedInUser && (
+			{!loggedInUser && register && (
 				<Register
 					setLoggedInUser={setLoggedInUser}
 					className="homepage__register"
 				/>
-			)} */}
+			)}
 			{/* <Hero /> */}
 		</main>
 	);

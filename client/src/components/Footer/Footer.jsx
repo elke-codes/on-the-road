@@ -9,8 +9,8 @@ const Footer = () => {
 		<footer className="footer">
 			<p className="footer__copy">A project by Elke Dick 2022 </p>
 
-			<ul className="footer__list">
-				<li className="footer__list-item">
+			<ul className="footer__link-list">
+				<li className="footer__link-list-item">
 					<a
 						href="https://github.com/elke-codes/on-the-road"
 						target="_blank"
@@ -23,21 +23,21 @@ const Footer = () => {
 						/>
 					</a>
 				</li>
-				<li className="footer__list-item">
+				<li className="footer__link-list-item">
 					<a
 						href="mailto:elke.codes@gmail.com"
 						target="_blank"
 						rel="noopener noreferrer"
-						title="Get in touch!"
+						title="Send me cloud mail"
 						className="footer__link-email">
 						📨
 					</a>
 				</li>
-				<li className="footer__list-item">
+				<li className="footer__link-list-item">
 					<a
 						href="https://www.linkedin.com/in/elke-dick/"
 						target="_blank"
-						title="Check this and other projects out on GitHub"
+						title="Connect on LinkedIn"
 						className="footer__link">
 						<img
 							src={linkedIn}

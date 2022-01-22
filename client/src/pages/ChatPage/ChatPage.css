@@ -1,9 +1,0 @@
-.chat-page {
-  display: flex;
-  background-image: url("../../assets/images/desk-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 100%;
-  background: linear-gradient(45deg, rgba(16, 6, 187, 0.2) 22%, rgba(255, 196, 0, 0.2) 70%), url("../../assets/images/desk-bg.jpg");
-  background-size: cover;
-}/*# sourceMappingURL=ChatPage.css.map */

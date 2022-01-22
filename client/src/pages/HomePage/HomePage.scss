@@ -1,7 +1,40 @@
 /// --- HOMEPAGE.SCSS --- ///
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+
 .homepage {
-	background-image: url(https://images.unsplash.com/photo-1533587851505-d119e13fa0d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80);
+	height: 90vh;
+
+	background-image: url("../../assets/images/hero.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 9rem;
+
+	&__title {
+		// @include page-header;
+		font-size: 4.5rem;
+	}
+
+	&__buttons {
+		padding-right: 3rem;
+	}
+
+	&__button {
+		@include button;
+		// color: $light-blue;
+		color: $green-grey;
+		background-color: $light-blue;
+		border: 1px solid $darker-blue;
+		margin: 2rem;
+
+		&:hover {
+			background-color: $darker-blue;
+		}
+	}
 }

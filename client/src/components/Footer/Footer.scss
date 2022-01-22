@@ -1,44 +1,50 @@
 /// --- FOOTER.SCSS --- ///
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
 .footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 2rem 0;
-	background-color: Black;
+	padding: 1rem 0;
+	border-top: 1px solid $light-blue;
+	// background: linear-gradient(45deg, rgb(215, 230, 235), rgb(151, 179, 200));
+	background: linear-gradient(
+		45deg,
+		$dark-grey,
+		$light-grey,
+		$darker-blue,
+		$light-blue
+	);
+	// height: 100px;
 	width: 100vw;
 	// height: 15vh;
-	align-self: flex-end;
-	color: #fff;
-	position: absolute;
+	// align-self: flex-end;
+	// color: #fff;
+	position: fixed;
 	bottom: 0;
 	left: 0;
 
 	&__copy {
-		padding-bottom: 1rem;
-		font-size: 20px; // TODO why is this &-- not working?
-		&--bstn {
-			padding-top: 1rem;
-			font-size: 14px;
-		}
+		@include body-copy;
 	}
 
-	&__list {
+	&__link-list {
 		display: flex;
 		align-items: center;
 	}
 
-	&__list-item {
-		padding-right: 2rem;
+	&__link-list-item {
+		padding: 0 1rem;
 		&:hover {
 			transform: scale(1.2);
 		}
 	}
 
-	&__link {
-	}
+	// &__link {
+	// }
 
 	&__link-image {
-		height: 60px;
+		height: 30px;
 	}
 
 	&__link-email {
