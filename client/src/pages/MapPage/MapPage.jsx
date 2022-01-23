@@ -77,12 +77,14 @@ const MapPage = ({ loggedInUser, friendsData, setLoggedInUser }) => {
 							<ul>
 								<li>
 									drag and zoom around the map to see where
-									your friends are
+									your connections are
 								</li>
 								<li>
-									click on a marker to see more info about
-									your friend
+									the darker the shadow below the marker, the
+									more connections are there, zoom in and
+									check it out!
 								</li>
+								<li>click on a marker to see more info</li>
 								<li>
 									click anywhere on the map to go to zoom back
 									to your location

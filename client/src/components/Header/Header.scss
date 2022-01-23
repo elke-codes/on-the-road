@@ -69,6 +69,8 @@
 	&__button-login {
 		margin-left: 1rem;
 		@include button;
+		@include labels-buttons-copy;
+		color: $dark-grey;
 		background-color: $light-blue;
 		border: 1px solid $darker-blue;
 		&:hover {

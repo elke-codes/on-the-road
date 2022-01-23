@@ -24,14 +24,14 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 		const user = await getUserData(e.target.userName.value);
 		// console.log("user", user);
 		setLoggedInUser(user);
-		history.push("/map");
+		// history.push("/map");
 	};
 
 	const handleLogOut = () => {
 		deleteLoggedInUser();
 		setLoggedInUser(null);
 
-		// history.push("/");
+		history.push("/");
 	};
 
 	return (

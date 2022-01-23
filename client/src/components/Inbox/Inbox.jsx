@@ -50,7 +50,10 @@ const Inbox = ({
 								// );
 								// console.log("room", room);
 							}}>
-							<input type="checkbox" />
+							<input
+								type="checkbox"
+								className="inbox__friend-active"
+							/>
 
 							<div className="collapse-title text-xl font-medium inbox__user-identity">
 								<div className="avatar online">

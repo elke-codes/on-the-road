@@ -48,5 +48,8 @@
 		color: $dark-brown;
 		background-color: rgb(138, 145, 164, 0.1);
 		margin: 0.75rem;
+		&:hover {
+			border-bottom: 0.25rem dotted $primary-text;
+		}
 	}
 }

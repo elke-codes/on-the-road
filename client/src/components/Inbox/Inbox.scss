@@ -1,4 +1,7 @@
-// /// --- INBOX.SCSS --- ///
+/// --- INBOX.SCSS --- ///
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
 
 .inbox {
 	margin: 2rem;
@@ -9,12 +12,16 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
 	padding: 1rem;
-	background-color: white;
+	background-color: #fff;
+	height: 70%;
 
 	&__title {
 		font-weight: 500;
 	}
 
+	&__friend-active {
+		background-color: $light-brown;
+	}
 	&__user {
 		margin-bottom: 0.5rem;
 	}

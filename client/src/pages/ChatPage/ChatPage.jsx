@@ -10,6 +10,7 @@ import FriendCard from "../../components/FriendCard/FriendCard";
 
 import Inbox from "../../components/Inbox/Inbox";
 import Footer from "../../components/Footer/Footer";
+import Register from "../../components/Register/Register";
 
 //establish connection to backend
 //link to where running socket.io server
@@ -22,8 +23,10 @@ const ChatPage = ({
 	selectedFriend,
 	setSelectedFriend,
 	room,
-	setRoom
+	setRoom,
+	setLoggedInUser
 }) => {
+	const [register, setRegister] = useState(false);
 	// console.log("loggedinUser chatpage", loggedInUser);
 
 	// when there s a logged in user, set the socket auth to user name and connect
@@ -75,6 +78,34 @@ const ChatPage = ({
 	return (
 		<>
 			<main className="chat-page">
+				{!loggedInUser && !register && (
+					<>
+						<div className="chat-page__not-logged-in">
+							<h2 className="chat-page__copy">
+								Please log in to continue...
+							</h2>
+							<div className="homepage__buttons">
+								<button
+									className="homepage__button"
+									onClick={() => setRegister(true)}>
+									Register
+								</button>
+								<button className="homepage__button">
+									Login
+								</button>
+							</div>
+						</div>
+					</>
+				)}
+
+				{/* <Map className="homepage__map" /> */}
+				{!loggedInUser && register && (
+					<Register
+						setLoggedInUser={setLoggedInUser}
+						className="homepage__register"
+					/>
+				)}
+
 				{loggedInUser ? (
 					<>
 						<Inbox
@@ -94,9 +125,7 @@ const ChatPage = ({
 							socket={socket}
 						/>
 					</>
-				) : (
-					<h2>Please log in to continue</h2>
-				)}
+				) : null}
 			</main>
 			<Footer />
 		</>

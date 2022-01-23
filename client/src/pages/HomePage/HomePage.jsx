@@ -39,10 +39,10 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 			{loggedInUser && (
 				<>
 					<Link to="/map" className="homepage__get-started">
-						Explore where your connections are >
+						Explore where your connections are {" >"}
 					</Link>
 					<Link to="/chat" className="homepage__get-started">
-						Chat with your friends >
+						Chat with your friends {" >"}
 					</Link>
 				</>
 			)}
