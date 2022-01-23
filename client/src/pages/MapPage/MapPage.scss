@@ -17,6 +17,8 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 
+	&__not-logged-in {
+	}
 	&__open-modal-button {
 		@include border-radius;
 		height: 2rem;

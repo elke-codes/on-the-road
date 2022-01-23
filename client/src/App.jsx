@@ -65,6 +65,7 @@ const App = () => {
 				<Route path="/map">
 					<MapPage
 						loggedInUser={loggedInUser}
+						setLoggedInUser={setLoggedInUser}
 						friendsData={friendsData}
 						setSelectedFriend={setSelectedFriend}
 						setRoom={setRoom}

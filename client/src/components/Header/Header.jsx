@@ -31,7 +31,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 		deleteLoggedInUser();
 		setLoggedInUser(null);
 
-		history.push("/");
+		// history.push("/");
 	};
 
 	return (

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { postRegistration } from "../../utils/forms/postRegistration";
 
-const Register = ({ setLoggedInUser }) => {
+const Register = ({ setLoggedInUser, setshowRegisterModal }) => {
 	const history = useHistory();
 
 	// TODO provide the option to manually set location
@@ -31,6 +31,13 @@ const Register = ({ setLoggedInUser }) => {
 	return (
 		<section className="register-modal">
 			<div className="register-modal__container">
+				<p
+					className="register-modal__close-modal"
+					onClick={() => {
+						setshowRegisterModal(false);
+					}}>
+					X
+				</p>
 				<h1 className="register-modal__title text-3xl underline">
 					Register
 				</h1>
@@ -76,21 +83,27 @@ const Register = ({ setLoggedInUser }) => {
 						placeholder="password"
 					/> */}
 
-					<input
-						type="checkbox"
-						name="locationPermission"
-						value="false"
-					/>
-					<label htmlFor="locationPermission">
-						I'd rather enter my location manually
-					</label>
+					<div className="register-modal__permission">
+						<input
+							type="checkbox"
+							name="locationPermission"
+							value="false"
+						/>
+						<label
+							htmlFor="locationPermission"
+							className="register-modal__permission-text">
+							I'd rather enter my location manually
+						</label>
+					</div>
 
 					<p className="register-modal__disclaimer">
 						When signing up you will be asked by your browser to
 						allow us to use your location. This is needed for our
 						app to work.
 					</p>
-					<button type="submit" className="btn btn-primary">
+					<button
+						type="submit"
+						className="register-modal__sign-up-button">
 						Sign up
 					</button>
 				</form>

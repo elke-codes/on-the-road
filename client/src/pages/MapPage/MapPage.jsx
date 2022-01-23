@@ -6,14 +6,43 @@ import FriendCard from "../../components/FriendCard/FriendCard";
 import Map from "../../components/Map/Map";
 import Inbox from "../../components/Inbox/Inbox";
 import Footer from "../../components/Footer/Footer";
+import Register from "../../components/Register/Register";
 
-const MapPage = ({ loggedInUser, friendsData }) => {
+const MapPage = ({ loggedInUser, friendsData, setLoggedInUser }) => {
 	const [showModal, setShowModal] = useState(false);
+	const [register, setRegister] = useState(false);
 
 	return (
 		<>
 			<main className="map-page">
-				{!loggedInUser && <h2>Please log in to continue</h2>}
+				{!loggedInUser && !register && (
+					<>
+						<div className="map-page__not-logged-in">
+							<h2 className="map-page__copy">
+								Please log in to continue...
+							</h2>
+							<div className="homepage__buttons">
+								<button
+									className="homepage__button"
+									onClick={() => setRegister(true)}>
+									Register
+								</button>
+								<button className="homepage__button">
+									Login
+								</button>
+							</div>
+						</div>
+					</>
+				)}
+
+				{/* <Map className="homepage__map" /> */}
+				{!loggedInUser && register && (
+					<Register
+						setLoggedInUser={setLoggedInUser}
+						className="homepage__register"
+					/>
+				)}
+
 				{loggedInUser && !showModal && (
 					<>
 						<button
