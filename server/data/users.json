@@ -13,7 +13,8 @@
         "city": "Glencoe",
         "country": "Scotland"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "John's Wife",
@@ -22,14 +23,15 @@
     "email": "johns.wife@email.com",
     "id": "8dc067ec-dc59-47d9-8a14-9453a4ec70b9",
     "locations": [
-      {  
+      {
         "lat": -4.63331947813454,
         "lng": 55.493661131440554,
         "created_at": "2022-01-20T01:20:28.690Z",
         "city": "Providence",
         "country": "Seychelles"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Phoebe",
@@ -38,31 +40,32 @@
     "email": "phoebe.chang@email.com",
     "id": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
     "locations": [
-      {  
+      {
         "lat": 40.42475816967518,
         "lng": -3.71374905795704,
         "created_at": "2022-01-20T01:20:45.690Z",
         "city": "Madrid",
         "country": "Spain"
       }
-    ]
+    ],
+    "messages": []
   },
-   {
+  {
     "userName": "Kevin",
     "firstName": "Kevin",
     "lastName": "Vanstone",
     "email": "Kevin.Vanstone@email.com",
     "id": "000ac753-de0c-47d7-8181-59a235da6ebd",
     "locations": [
-      {  
-         
+      {
         "lat": 21.46059269151658,
         "lng": -157.833410011691,
         "created_at": "2022-01-20T01:20:45.690Z",
         "city": "Hawaii",
         "country": "USA"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Shayne",
@@ -71,15 +74,15 @@
     "email": "shayne.LaRochelle@email.com",
     "id": "740808a4-84fe-4553-ab9c-a14a38fab8fc",
     "locations": [
-      {  
-     
+      {
         "lat": 48.85940775143071,
         "lng": 2.3937454831937885,
         "created_at": "2022-01-20T01:20:45.690Z",
         "city": "Paris",
         "country": "France"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Heba",
@@ -95,7 +98,8 @@
         "city": "London",
         "country": "United Kingdom"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Brent",
@@ -111,7 +115,8 @@
         "city": "Vancouver",
         "country": "Canada"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Alex",
@@ -126,6 +131,35 @@
         "created_at": "2022-01-20T02:34:37.006Z",
         "city": "Havana",
         "country": "Cuba"
+      }
+    ],
+    "messages": [
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Alex",
+        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "sdfsdfsf",
+        "time": 1642972102566
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Alex",
+        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "hello",
+        "time": 1642972187864
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Alex",
+        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "message": "hi daniel",
+        "time": 1642972203902
       }
     ]
   },
@@ -143,8 +177,27 @@
         "city": "Tokyo",
         "country": "Japan"
       }
+    ],
+    "messages": [
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Alex",
+        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "hello",
+        "time": 1642972187864
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Alex",
+        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "message": "hi daniel",
+        "time": 1642972203902
+      }
     ]
-    
   },
   {
     "userName": "Carol",
@@ -154,15 +207,14 @@
     "id": "39ea881e-16c3-4d34-b2dc-f06f78642b5d",
     "locations": [
       {
-         
         "lat": -37.8721204194075,
         "lng": 175.68294836658913,
         "created_at": "2022-01-20T02:34:37.006Z",
         "city": "MataMata",
         "country": "New Zealand"
       }
-    ]
-    
+    ],
+    "messages": []
   },
   {
     "userName": "Natalie",
@@ -172,15 +224,14 @@
     "id": "dac3d58d-9623-4cb4-aa66-ad77d07e0a96",
     "locations": [
       {
-          
         "lat": 37.79543459570026,
         "lng": 23.882535084671208,
         "created_at": "2022-01-20T02:34:37.006Z",
         "city": "Athens",
         "country": "Greece"
       }
-    ]
-    
+    ],
+    "messages": []
   },
   {
     "userName": "Erin",
@@ -196,7 +247,8 @@
         "city": "Glencoe",
         "country": "Scotland"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Kaz",
@@ -212,7 +264,8 @@
         "city": "Glencoe",
         "country": "Scotland"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Jamie",
@@ -228,7 +281,8 @@
         "city": "Savaneta",
         "country": "Aruba"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Jeff",
@@ -244,7 +298,8 @@
         "city": "Lisbon",
         "country": "Portugal"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Rob",
@@ -260,7 +315,8 @@
         "city": "Vancouver",
         "country": "Canada"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Jesi",
@@ -276,7 +332,8 @@
         "city": "Vancouver",
         "country": "Canada"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Ghinwa",
@@ -292,7 +349,8 @@
         "city": "Beirut",
         "country": "Lebanon"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Anais",
@@ -308,7 +366,8 @@
         "city": "Tinghir Province",
         "country": "Morocco"
       }
-    ]
+    ],
+    "messages": []
   },
   {
     "userName": "Karen",
@@ -324,6 +383,7 @@
         "city": "Gent",
         "country": "Belgium"
       }
-    ]
+    ],
+    "messages": []
   }
 ]

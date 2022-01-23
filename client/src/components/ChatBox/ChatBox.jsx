@@ -4,6 +4,7 @@ import "./ChatBox.scss";
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { v4 as uuid } from "uuid";
+import axios from "axios";
 // import { generateRoomName } from "../../utils/socket/generateRoomName";
 
 const ChatBox = ({
@@ -20,26 +21,18 @@ const ChatBox = ({
 
 	const { userName } = loggedInUser;
 
-	//usr rrom naam is = logged in user id + selected user id
-	//for the other user it has to be selectted user id + logged in user
-
 	//establish a connection between a user that just entered the page and the room they want to enter
 	const joinRoom = () => {
-		//set userName and room to be what's typed in the input fields
-		//
-		//check if fields aren't empty
-		// if (userName !== "" && room !== "") {
 		//emit event from frontend
 		//see index.js socket.on("join_room")
 		// where room is the data we 're passing back to server
 		socket.emit("join_room", room);
-		// }
 	};
 
 	//listen for changes in room
 	useEffect(() => {
 		joinRoom();
-	}, [selectedFriend]);
+	}, [room]);
 	//allow messages to be sent through socket
 	//async because you want to wait for the state to be set
 	//...can do with useEffect listening to the currentMessage to change?
@@ -47,7 +40,10 @@ const ChatBox = ({
 		if (currentMessage !== "") {
 			const messageData = {
 				room: room,
-				author: userName,
+				author: loggedInUser.userName,
+				authorID: loggedInUser.id,
+				receivedBy: selectedFriend.userName,
+				receivedByID: selectedFriend.id,
 				message: currentMessage,
 				time: new Date().getTime()
 			};
@@ -57,7 +53,7 @@ const ChatBox = ({
 			//to send message to both, update both messaglists
 			setMessageList((list) => [...list, messageData]);
 			//empty the container after sending the message
-			// setCurrentMessage("");
+			setCurrentMessage("");
 		}
 	};
 	// listen to whenever there s changes to our socket server
@@ -81,7 +77,7 @@ const ChatBox = ({
 			<article className="chat-box__body">
 				<ScrollToBottom className="message-container">
 					{messageList.map((messageContent) => {
-						console.log("messageContent", messageContent);
+						// console.log("messageContent", messageContent);
 						{
 							/* where messagecontent is the data received back from the server  */
 						}

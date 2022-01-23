@@ -5,10 +5,23 @@ const app = express();
 const http = require("http");
 const cors = require("cors");
 const userRouter = require("./routes/userRoute");
+const chatRouter = require("./routes/chatRoutes");
+const fs = require("fs");
+const { v4: uuid } = require("uuid");
 //server is a class on socket.io
 const { Server } = require("socket.io");
 
 app.use(cors());
+
+const readData = () => {
+	const usersData = fs.readFileSync("./data/users.json");
+	return JSON.parse(usersData);
+};
+
+const writeData = (usersData) => {
+	// JSON.stringify takes additional parameters, that allow us to specify the amounts of white space (ie, indentation) in the file
+	fs.writeFileSync("./data/users.json", JSON.stringify(usersData, null, 2));
+};
 
 // -- SOCKETS -- //
 
@@ -38,12 +51,31 @@ io.on("connection", (socket) => {
 
 	//listening for event send_message, receive messageData object
 	socket.on("send_message", (data) => {
-		console.log("data.room", data.room);
 		//send received messageData back to frontend, to "receive message"
 		//send only to the room, to all other users who are listening in the same room
 		socket.to(data.room).emit("receive_message", data);
-		console.log("");
-		//TODO write messages to json here data.message and data.time
+		console.log("data", data.authorID);
+
+		//write messages to json
+		const users = readData();
+
+		const author = users.find((user) => {
+			console.log(user.id === data.authorID);
+			return user.id === data.authorID;
+		});
+
+		author.messages.push(data);
+
+		const receiver = users.find((user) => {
+			console.log(user.id === data.receivedByID);
+			return user.id === data.receivedByID;
+		});
+
+		receiver.messages.push(data);
+
+		writeData(users);
+
+		console.log("author", author);
 	});
 
 	//listen for event "disconnent" when user disconnects from server
@@ -65,6 +97,7 @@ require("dotenv").config();
 // const PORT = process.env.PORT;
 
 app.use("/users", userRouter);
+app.use("/chat", chatRouter);
 
 // Listen on PORT CLIENT__URL and provide a success callback function
 // app.listen(process.env.PORT, () => {

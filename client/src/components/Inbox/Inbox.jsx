@@ -15,20 +15,17 @@ const Inbox = ({
 	loggedInUser
 }) => {
 	const handleSelectedFriend = async (friend) => {
-		// console.log("loggedinuser.id", loggedInUser.id);
-		// console.log("selecterdfriend", selectedFriend);
 		await setSelectedFriend(friend);
 		const loggedInUserID = loggedInUser.id;
-		// console.log("selectedFriend", selectedFriend);
 		const selectedFriendID = selectedFriend.id;
-		const generatedRoom = generateRoomName(
-			loggedInUserID,
-			selectedFriendID
-		);
-		await setRoom(generatedRoom);
-
+		//to make sure both users end up in the same room : generate a room id that is the logged in users' id + the secelected friends' id, sorted alphabetically, to get the same result every time the room is generated, whichever of the two users opens the conversation
 		await setRoom(generateRoomName(loggedInUserID, selectedFriendID));
-		// console.log("room", room);
+		console.log("room", room);
+		// const generatedRoom = generateRoomName(
+		// 	loggedInUserID,
+		// 	selectedFriendID
+		// );
+		// await setRoom(generatedRoom);
 	};
 
 	return (

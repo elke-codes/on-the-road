@@ -4,18 +4,16 @@ import "./ChatPage.scss";
 import React, { useEffect, useState } from "react";
 
 import ChatBox from "../../components/ChatBox/ChatBox";
-import { io } from "socket.io-client";
-import socket from "../../utils/socket/socket-client";
-import FriendCard from "../../components/FriendCard/FriendCard";
 
+// import socket from "../../utils/socket/socket-client";
+import { io } from "socket.io-client";
 import Inbox from "../../components/Inbox/Inbox";
 import Footer from "../../components/Footer/Footer";
 import Register from "../../components/Register/Register";
-
-//establish connection to backend
-//link to where running socket.io server
-//SERVER_URL
-// const socket = io.connect("http://localhost:3001");
+// establish connection to backend
+// link to where running socket.io server
+// SERVER_URL
+const socket = io.connect("http://localhost:3001");
 
 const ChatPage = ({
 	loggedInUser,
@@ -29,7 +27,7 @@ const ChatPage = ({
 	const [register, setRegister] = useState(false);
 	// console.log("loggedinUser chatpage", loggedInUser);
 
-	// when there s a logged in user, set the socket auth to user name and connect
+	// // when there s a logged in user, set the socket auth to user name and connect
 	// useEffect(() => {
 	// 	if (!loggedInUser) {
 	// 		return;
