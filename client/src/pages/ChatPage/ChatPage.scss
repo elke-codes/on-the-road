@@ -2,8 +2,38 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
-
+.background {
+	// background:
+	// // linear-gradient(
+	// // 		45deg,
+	// // 		rgba(16, 6, 187, 0.2),
+	// // 		rgba(255, 196, 0, 0.2),
+	// // 		rgb(215, 230, 235, 0.2) 50%
+	// // 	),
+	// 	url("../../assets/images/_DSC5329.JPG");
+	// // background-size: cover;
+	// box-shadow: inset 0 0 0 1000px rgb(215, 230, 235, 0.2);
+	// background-repeat: no-repeat;
+	// background-size: cover;
+	// background-position: center;
+}
 .chat-page {
+	background:
+	// linear-gradient(
+	// 		45deg,
+	// 		rgba(16, 6, 187, 0.2),
+	// 		rgba(255, 196, 0, 0.2),
+	// 		rgb(215, 230, 235, 0.2) 50%
+	// 	),
+		url("../../assets/images/_DSC5329.JPG");
+	// background-size: cover;
+	box-shadow: inset 0 0 0 1000px rgb(215, 230, 235, 0.2);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	// background-color: $light-blue;
+
 	// height: 90vh;
 
 	// display: flex;
@@ -21,19 +51,6 @@
 	justify-content: center;
 	padding: 3rem;
 	height: 80vh;
-	background: 
-	// linear-gradient(
-	// 		45deg,
-	// 		rgba(16, 6, 187, 0.2),
-	// 		rgba(255, 196, 0, 0.2),
-	// 		rgb(215, 230, 235, 0.2) 50%
-	// 	),
-		url("../../assets/images/_DSC5329.JPG");
-	// background-size: cover;
-	box-shadow: inset 0 0 0 1000px rgb(215, 230, 235, 0.2);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
 
 	&__not-logged-in {
 		display: flex;
@@ -44,5 +61,26 @@
 
 	&__copy {
 		@include page-header;
+		color: $dark-brown;
+	}
+
+	&__buttons {
+		padding-right: 3rem;
+	}
+
+	&__button {
+		@include button;
+		@include labels-buttons-copy;
+		// color: $light-blue;
+		color: $green-grey;
+		background-color: $light-blue;
+		border: 1px solid $darker-blue;
+		margin: 2rem;
+
+		&:hover {
+			background-color: $darker-blue;
+			color: $light-blue;
+			border: 1px solid $light-blue;
+		}
 	}
 }

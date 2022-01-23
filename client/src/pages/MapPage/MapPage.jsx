@@ -10,6 +10,7 @@ import Register from "../../components/Register/Register";
 
 const MapPage = ({ loggedInUser, friendsData, setLoggedInUser }) => {
 	const [showModal, setShowModal] = useState(false);
+
 	const [register, setRegister] = useState(false);
 
 	return (
@@ -86,8 +87,8 @@ const MapPage = ({ loggedInUser, friendsData, setLoggedInUser }) => {
 								</li>
 								<li>click on a marker to see more info</li>
 								<li>
-									click anywhere on the map to go to zoom back
-									to your location
+									click anywhere on the map to go back to your
+									location
 								</li>
 							</ul>
 						</article>

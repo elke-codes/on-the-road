@@ -93,3 +93,8 @@ input {
 .leaflet-container a {
 	color: $light-blue;
 }
+
+.collapse-content {
+	display: flex;
+	justify-content: space-between;
+}

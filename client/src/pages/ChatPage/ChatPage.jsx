@@ -84,13 +84,13 @@ const ChatPage = ({
 							<h2 className="chat-page__copy">
 								Please log in to continue...
 							</h2>
-							<div className="homepage__buttons">
+							<div className="chat-page__buttons">
 								<button
-									className="homepage__button"
+									className="chat-page__button"
 									onClick={() => setRegister(true)}>
 									Register
 								</button>
-								<button className="homepage__button">
+								<button className="chat-page__button">
 									Login
 								</button>
 							</div>
@@ -98,11 +98,11 @@ const ChatPage = ({
 					</>
 				)}
 
-				{/* <Map className="homepage__map" /> */}
+				{/* <Map className="chat-page__map" /> */}
 				{!loggedInUser && register && (
 					<Register
 						setLoggedInUser={setLoggedInUser}
-						className="homepage__register"
+						className="chat-page__register"
 					/>
 				)}
 

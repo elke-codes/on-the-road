@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { getLoggedInUserFromStorage } from "./utils/getLoggedInUserFromStorage";
 import { getFriendsData } from "./utils/getFriendsData";
+import AboutPage from "./pages/AboutPage/AboutPage";
 
 const App = () => {
 	const [loggedInUser, setLoggedInUser] = useState();
@@ -81,6 +82,10 @@ const App = () => {
 						setRoom={setRoom}
 						room={room}
 					/>
+				</Route>
+
+				<Route path="/about">
+					<AboutPage />
 				</Route>
 			</Switch>
 			{/* <Footer /> */}

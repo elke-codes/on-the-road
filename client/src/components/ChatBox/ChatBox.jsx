@@ -75,8 +75,8 @@ const ChatBox = ({
 			{/* header talking to? */}
 			<article className="chat-box__header">
 				{selectedFriend
-					? `Live Chat with ${selectedFriend.userName}`
-					: "Live Chat"}
+					? `Chat with ${selectedFriend.userName}`
+					: "Chat"}
 			</article>
 			<article className="chat-box__body">
 				<ScrollToBottom className="message-container">

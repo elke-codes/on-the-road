@@ -41,6 +41,14 @@
 		}
 	}
 
+	&__about {
+		margin-right: 3rem;
+		font-size: 1.5rem;
+		&:hover {
+			border-bottom: 0.25rem dotted $primary-text;
+		}
+	}
+
 	&__get-started {
 		@include border-radius;
 		@include labels-buttons-copy;

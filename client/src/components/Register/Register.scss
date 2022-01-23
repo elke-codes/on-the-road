@@ -34,6 +34,8 @@
 	}
 
 	&__title {
+		@include page-header;
+		color: $dark-brown;
 	}
 
 	&__permission-text {

@@ -38,9 +38,7 @@ const Register = ({ setLoggedInUser, setshowRegisterModal }) => {
 					}}>
 					X
 				</p>
-				<h1 className="register-modal__title text-3xl underline">
-					Register
-				</h1>
+				<h1 className="register-modal__title ">Register</h1>
 
 				<form
 					className="register-modal__form"

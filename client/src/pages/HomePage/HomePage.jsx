@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 
 const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 	const [register, setRegister] = useState(false);
+
 	return (
 		<main className="homepage">
 			<h1 className="homepage__title">reconnect...</h1>
@@ -25,6 +26,9 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 						</button>
 						<button className="homepage__button">Login</button>
 					</div>
+					<Link to="/about" className="homepage__about">
+						Tell me more.
+					</Link>
 				</>
 			)}
 
