@@ -8,7 +8,12 @@ import Inbox from "../../components/Inbox/Inbox";
 import Footer from "../../components/Footer/Footer";
 import Register from "../../components/Register/Register";
 
-const MapPage = ({ loggedInUser, friendsData, setLoggedInUser }) => {
+const MapPage = ({
+	loggedInUser,
+	friendsData,
+	setLoggedInUser,
+	setSelectedFriend
+}) => {
 	const [showModal, setShowModal] = useState(false);
 
 	const [register, setRegister] = useState(false);
@@ -57,6 +62,7 @@ const MapPage = ({ loggedInUser, friendsData, setLoggedInUser }) => {
 							<Map
 								loggedInUser={loggedInUser}
 								friendsData={friendsData}
+								setSelectedFriend={setSelectedFriend}
 							/>
 						</article>
 					</>
@@ -96,6 +102,7 @@ const MapPage = ({ loggedInUser, friendsData, setLoggedInUser }) => {
 							<Map
 								loggedInUser={loggedInUser}
 								friendsData={friendsData}
+								setSelectedFriend={setSelectedFriend}
 								className="map-page__map"
 							/>
 						</article>

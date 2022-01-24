@@ -14,18 +14,21 @@ const Inbox = ({
 	setRoom,
 	loggedInUser
 }) => {
-	const handleSelectedFriend = async (friend) => {
-		await setSelectedFriend(friend);
+	useEffect(() => {
+		console.log("sel frien id", selectedFriend);
+		if (!selectedFriend) {
+			return;
+		}
 		const loggedInUserID = loggedInUser.id;
 		const selectedFriendID = selectedFriend.id;
 		//to make sure both users end up in the same room : generate a room id that is the logged in users' id + the secelected friends' id, sorted alphabetically, to get the same result every time the room is generated, whichever of the two users opens the conversation
-		await setRoom(generateRoomName(loggedInUserID, selectedFriendID));
+		setRoom(generateRoomName(loggedInUserID, selectedFriendID));
+
 		console.log("room", room);
-		// const generatedRoom = generateRoomName(
-		// 	loggedInUserID,
-		// 	selectedFriendID
-		// );
-		// await setRoom(generatedRoom);
+	}, [selectedFriend]);
+
+	const handleSelectedFriend = (friend) => {
+		setSelectedFriend(friend);
 	};
 
 	return (
@@ -41,7 +44,7 @@ const Inbox = ({
 							<div
 								key={uuid()}
 								className="collapse border rounded-box border-base-300 collapse-arrow inbox__user"
-								onClick={async () => {
+								onClick={() => {
 									handleSelectedFriend(friend);
 									// setSelectedFriend(friend);
 									// generateRoomName(

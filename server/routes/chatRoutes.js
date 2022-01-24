@@ -15,25 +15,22 @@ const writeData = (usersData) => {
 	fs.writeFileSync("./data/users.json", JSON.stringify(usersData, null, 2));
 };
 
-router.post("", (req, res) => {
-	// console.log("res", res);
-	console.log("req.body", req.body);
+router.get("/:loggedInUserID/:roomID", (req, res) => {
+	const usersData = readData();
 
-	const users = readData();
-	console.log("users", users);
-	const currentUser = users.filter((user) => {
-		return user.id === req.body.authorID;
+	const loggedInUserID = req.params.loggedInUserID;
+	const loggedInUser = usersData.find((user) => {
+		return user.id === loggedInUserID;
 	});
-	// const sentTo = users.find((user)=>{
-	//    user.id === req.body.receivedByID
-	// })
 
-	// console.log("currentUser",)
-	// const messageList = req.body;
-	// currentUser.push(messageList);
-	console.log("currentUser", currentUser);
-	// check if messages are already in the list, if not, add them
-	return res.status(201).send("messages added... wip");
+	const loggedInUsersMessages = loggedInUser.messages;
+	const messagesInThisRoom = loggedInUsersMessages.filter((message) => {
+		return message.room === req.params.roomID;
+	});
+
+	console.log("messagesinthis room", messagesInThisRoom);
+	console.log("loggedinuser", loggedInUser);
+
+	res.status(200).json(messagesInThisRoom);
 });
-
 module.exports = router;

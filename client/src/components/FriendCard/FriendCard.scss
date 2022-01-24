@@ -6,24 +6,26 @@
 @use "../../styles/partials/colors" as *;
 
 .friend-card {
+	font-family: "AvenirNext LT Pro", Arial, sans-serif;
 	// margin: 1rem;
 	border: 1px solid black;
 	border-radius: 20px;
 	padding: 1rem;
 	text-align: center;
-	height: fit-content;
-	width: fit-content;
+	// height: fit-content;
+	// width: fit-content;
 	// display: flex;
 	// @include body-copy;
-	background: linear-gradient(
-		45deg,
-		$dark-grey,
-		$light-grey,
-		$darker-blue,
-		$darker-blue,
-		$light-blue,
-		$light-blue
-	);
+	// background: linear-gradient(
+	// 	45deg,
+	// 	$dark-grey,
+	// 	$light-grey,
+	// 	$darker-blue,
+	// 	$darker-blue,
+	// 	$light-blue,
+	// 	$light-blue
+	// );
+	// background-color: rgb(223, 209, 170);
 	@include body-copy;
 
 	&__top-container {
@@ -62,7 +64,9 @@
 	}
 
 	&__chat-link {
-		color: $light-blue;
+		// color: rgb(170, 211, 223);
+		color: $primary-text;
+
 		position: fixed;
 		bottom: 1.5rem;
 		left: 4rem;

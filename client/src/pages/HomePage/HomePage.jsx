@@ -27,7 +27,7 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 						<button className="homepage__button">Login</button>
 					</div>
 					<Link to="/about" className="homepage__about">
-						Tell me more.
+						Tell me more!
 					</Link>
 				</>
 			)}

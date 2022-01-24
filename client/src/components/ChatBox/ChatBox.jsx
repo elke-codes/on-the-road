@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
+import { timeAgo } from "../../utils/timeAgo";
 // import { generateRoomName } from "../../utils/socket/generateRoomName";
 
 const ChatBox = ({
@@ -19,20 +20,53 @@ const ChatBox = ({
 	const [currentMessage, setCurrentMessage] = useState("");
 	const [messageList, setMessageList] = useState([]);
 
+	const loggedInUserID = loggedInUser.id;
+
+	//listen for changes in room,
+	// clear the messagelist in state,
+	// join the selected room
+	// get all the previous messages sent in that room from the data in the backend
+	// set the messagelist to contain all the old messages from the room
+	useEffect(() => {
+		if (!room) {
+			return;
+		}
+		setMessageList([]);
+		joinRoom(room);
+		console.log("room before get", room);
+		const getMessageList = axios
+			.get(`http://localhost:8000/chat/${loggedInUserID}/${room}`)
+			.then((result) => {
+				console.log("axios get chat", result);
+				// update messagelist with all previous messages
+				if (result.data.length) {
+					setMessageList(result.data);
+				}
+			});
+
+		// setMessageList(getMessageList);
+	}, [room]);
+
+	// useEffect(() => {
+	// 	console.log("messageList", messageList);
+	// }, [messageList]);
+
 	const { userName } = loggedInUser;
 
 	//establish a connection between a user that just entered the page and the room they want to enter
-	const joinRoom = () => {
+	const joinRoom = (room) => {
 		//emit event from frontend
 		//see index.js socket.on("join_room")
 		// where room is the data we 're passing back to server
 		socket.emit("join_room", room);
 	};
 
-	//listen for changes in room
-	useEffect(() => {
-		joinRoom();
-	}, [room]);
+	//listen for changes in room, clear the messagelist, join the room
+	// useEffect(() => {
+	// 	setMessageList([]);
+	// 	joinRoom(room);
+	// }, [room]);
+
 	//allow messages to be sent through socket
 	//async because you want to wait for the state to be set
 	//...can do with useEffect listening to the currentMessage to change?
@@ -75,7 +109,7 @@ const ChatBox = ({
 					: "Chat"}
 			</article>
 			<article className="chat-box__body">
-				<ScrollToBottom className="message-container">
+				<div className="message-container">
 					{messageList.map((messageContent) => {
 						// console.log("messageContent", messageContent);
 						{
@@ -100,10 +134,13 @@ const ChatBox = ({
 										<div>
 											{" "}
 											<p className="message__meta-time">
-												{messageContent.time}
+												{timeAgo(messageContent.time)}
 											</p>
 											<p className="message__meta-author">
-												{messageContent.author}
+												{(userName ===
+												messageContent.author)
+													? messageContent.author
+													: messageContent.receivedBy}
 											</p>
 										</div>
 									</div>
@@ -111,7 +148,7 @@ const ChatBox = ({
 							</div>
 						);
 					})}
-				</ScrollToBottom>
+				</div>
 			</article>
 			<article className="chat-box__footer">
 				<input

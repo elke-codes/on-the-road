@@ -19,7 +19,7 @@ const Register = ({ setLoggedInUser, setshowRegisterModal }) => {
 			const user = await postRegistration(e);
 			console.log(user);
 			setLoggedInUser(user);
-			history.push("/map");
+			// history.push("/map");
 			e.target.reset();
 		} catch (e) {
 			// e.response.data is the error message, set in the server.

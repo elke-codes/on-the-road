@@ -1,7 +1,7 @@
 [
   {
     "userName": "Ashley",
-    "firstName": "Asley",
+    "firstName": "Ashley",
     "lastName": "Chiu",
     "email": "ashley.chiu@email.com",
     "id": "c5aa090d-9dc1-466b-828a-dc91d20b85cf",
@@ -10,11 +10,48 @@
         "lat": 56.68338659555295,
         "lng": -5.117055182931919,
         "created_at": "2022-01-20T01:20:28.690Z",
-        "city": "Glencoe",
-        "country": "Scotland"
+        "city": "Hong Kong",
+        "country": "China"
       }
     ],
-    "messages": []
+    "messages": [
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aec5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "author": "Ashley",
+        "authorID": "c5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "Hi Phoebe!",
+        "time": 1642983420102
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aec5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "author": "Phoebe",
+        "authorID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "receivedBy": "Ashley",
+        "receivedByID": "c5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "message": "Hi Ash!",
+        "time": 1642983426613
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aec5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "author": "Ashley",
+        "authorID": "c5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "Phoebe! I heard you moved to Madrid?!",
+        "time": 1642983545086
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883c5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "author": "Ashley",
+        "authorID": "c5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "Hi daniel! What s up?",
+        "time": 1642983569920
+      }
+    ]
   },
   {
     "userName": "John's Wife",
@@ -31,7 +68,17 @@
         "country": "Seychelles"
       }
     ],
-    "messages": []
+    "messages": [
+      {
+        "room": "62937cc2-191b-4222-bc68-a8acb042844c8dc067ec-dc59-47d9-8a14-9453a4ec70b9",
+        "author": "Rob",
+        "authorID": "62937cc2-191b-4222-bc68-a8acb042844c",
+        "receivedBy": "John's Wife",
+        "receivedByID": "8dc067ec-dc59-47d9-8a14-9453a4ec70b9",
+        "message": ".jdhfalkjsdhflkjashdlf",
+        "time": 1642992628609
+      }
+    ]
   },
   {
     "userName": "Phoebe",
@@ -48,7 +95,107 @@
         "country": "Spain"
       }
     ],
-    "messages": []
+    "messages": [
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aec5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "author": "Ashley",
+        "authorID": "c5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "Hi Phoebe!",
+        "time": 1642983420102
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aec5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "author": "Phoebe",
+        "authorID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "receivedBy": "Ashley",
+        "receivedByID": "c5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "message": "Hi Ash!",
+        "time": 1642983426613
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8ae6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Phoebe",
+        "authorID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "Hi Daniel",
+        "time": 1642983453202
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8ae6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "Hi Phoebe",
+        "time": 1642983468067
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8ae6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "phoebe how s madrid?",
+        "time": 1642983505723
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aedac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "author": "Phoebe",
+        "authorID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "receivedBy": "Natalie",
+        "receivedByID": "dac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "message": "Hi Natalie! ",
+        "time": 1642983520173
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aedac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "author": "Phoebe",
+        "authorID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "receivedBy": "Natalie",
+        "receivedByID": "dac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "message": "Are you around?",
+        "time": 1642983525314
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aec5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "author": "Ashley",
+        "authorID": "c5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "Phoebe! I heard you moved to Madrid?!",
+        "time": 1642983545086
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8ae6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Phoebe",
+        "authorID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "Omg Daniel, it's the best! ",
+        "time": 1642983582511
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aedac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "author": "Natalie",
+        "authorID": "dac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "Am now!",
+        "time": 1642983800177
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aedac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "author": "Natalie",
+        "authorID": "dac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "What's up?",
+        "time": 1642983806039
+      }
+    ]
   },
   {
     "userName": "Kevin",
@@ -136,12 +283,12 @@
     "messages": [
       {
         "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "author": "Alex",
-        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "receivedBy": "Daniel",
-        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
-        "message": "sdfsdfsf",
-        "time": 1642972102566
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Alex",
+        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "message": "Hi Alex",
+        "time": 1642983433824
       },
       {
         "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
@@ -149,8 +296,8 @@
         "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
         "receivedBy": "Daniel",
         "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
-        "message": "hello",
-        "time": 1642972187864
+        "message": "Hi Daniel",
+        "time": 1642983439020
       },
       {
         "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
@@ -158,8 +305,44 @@
         "authorID": "6990a539-c950-422a-9baa-2829eec19883",
         "receivedBy": "Alex",
         "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "message": "hi daniel",
-        "time": 1642972203902
+        "message": "hey alex...",
+        "time": 1642983484494
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Alex",
+        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "yes daniel",
+        "time": 1642983489746
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Alex",
+        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "message": "I just wanted to ask if you wanted to go to Singapore with me?",
+        "time": 1642983611407
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Alex",
+        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "message": "To start a new life",
+        "time": 1642983616886
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Alex",
+        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "eum... what?",
+        "time": 1642983625007
       }
     ]
   },
@@ -181,12 +364,39 @@
     "messages": [
       {
         "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Alex",
+        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "message": "Hi Alex",
+        "time": 1642983433824
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
         "author": "Alex",
         "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
         "receivedBy": "Daniel",
         "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
-        "message": "hello",
-        "time": 1642972187864
+        "message": "Hi Daniel",
+        "time": 1642983439020
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8ae6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Phoebe",
+        "authorID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "Hi Daniel",
+        "time": 1642983453202
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8ae6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "Hi Phoebe",
+        "time": 1642983468067
       },
       {
         "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
@@ -194,8 +404,89 @@
         "authorID": "6990a539-c950-422a-9baa-2829eec19883",
         "receivedBy": "Alex",
         "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "message": "hi daniel",
-        "time": 1642972203902
+        "message": "hey alex...",
+        "time": 1642983484494
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Alex",
+        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "yes daniel",
+        "time": 1642983489746
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8ae6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "phoebe how s madrid?",
+        "time": 1642983505723
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883c5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "author": "Ashley",
+        "authorID": "c5aa090d-9dc1-466b-828a-dc91d20b85cf",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "Hi daniel! What s up?",
+        "time": 1642983569920
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8ae6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Phoebe",
+        "authorID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "Omg Daniel, it's the best! ",
+        "time": 1642983582511
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Alex",
+        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "message": "I just wanted to ask if you wanted to go to Singapore with me?",
+        "time": 1642983611407
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Daniel",
+        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
+        "receivedBy": "Alex",
+        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "message": "To start a new life",
+        "time": 1642983616886
+      },
+      {
+        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "author": "Alex",
+        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "eum... what?",
+        "time": 1642983625007
+      },
+      {
+        "room": "62937cc2-191b-4222-bc68-a8acb042844c6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Rob",
+        "authorID": "62937cc2-191b-4222-bc68-a8acb042844c",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "jhgkjhgkjhg\\",
+        "time": 1642995817720
+      },
+      {
+        "room": "62937cc2-191b-4222-bc68-a8acb042844c6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Rob",
+        "authorID": "62937cc2-191b-4222-bc68-a8acb042844c",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "gfjhgj]",
+        "time": 1642996402713
       }
     ]
   },
@@ -231,7 +522,44 @@
         "country": "Greece"
       }
     ],
-    "messages": []
+    "messages": [
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aedac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "author": "Phoebe",
+        "authorID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "receivedBy": "Natalie",
+        "receivedByID": "dac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "message": "Hi Natalie! ",
+        "time": 1642983520173
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aedac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "author": "Phoebe",
+        "authorID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "receivedBy": "Natalie",
+        "receivedByID": "dac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "message": "Are you around?",
+        "time": 1642983525314
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aedac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "author": "Natalie",
+        "authorID": "dac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "Am now!",
+        "time": 1642983800177
+      },
+      {
+        "room": "00194f36-f8f8-4105-89cd-6690d0efd8aedac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "author": "Natalie",
+        "authorID": "dac3d58d-9623-4cb4-aa66-ad77d07e0a96",
+        "receivedBy": "Phoebe",
+        "receivedByID": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
+        "message": "What's up?",
+        "time": 1642983806039
+      }
+    ]
   },
   {
     "userName": "Erin",
@@ -299,7 +627,26 @@
         "country": "Portugal"
       }
     ],
-    "messages": []
+    "messages": [
+      {
+        "room": "592281bb-4b9a-4796-b1dc-091327be366e62937cc2-191b-4222-bc68-a8acb042844c",
+        "author": "Rob",
+        "authorID": "62937cc2-191b-4222-bc68-a8acb042844c",
+        "receivedBy": "Jeff",
+        "receivedByID": "592281bb-4b9a-4796-b1dc-091327be366e",
+        "message": "Jeff! How's Lisbon!! ",
+        "time": 1642992720085
+      },
+      {
+        "room": "592281bb-4b9a-4796-b1dc-091327be366e62937cc2-191b-4222-bc68-a8acb042844c",
+        "author": "Jeff",
+        "authorID": "592281bb-4b9a-4796-b1dc-091327be366e",
+        "receivedBy": "Rob",
+        "receivedByID": "62937cc2-191b-4222-bc68-a8acb042844c",
+        "message": "Rob! It s awesome!",
+        "time": 1642992754245
+      }
+    ]
   },
   {
     "userName": "Rob",
@@ -316,7 +663,53 @@
         "country": "Canada"
       }
     ],
-    "messages": []
+    "messages": [
+      {
+        "room": "62937cc2-191b-4222-bc68-a8acb042844c8dc067ec-dc59-47d9-8a14-9453a4ec70b9",
+        "author": "Rob",
+        "authorID": "62937cc2-191b-4222-bc68-a8acb042844c",
+        "receivedBy": "John's Wife",
+        "receivedByID": "8dc067ec-dc59-47d9-8a14-9453a4ec70b9",
+        "message": ".jdhfalkjsdhflkjashdlf",
+        "time": 1642992628609
+      },
+      {
+        "room": "592281bb-4b9a-4796-b1dc-091327be366e62937cc2-191b-4222-bc68-a8acb042844c",
+        "author": "Rob",
+        "authorID": "62937cc2-191b-4222-bc68-a8acb042844c",
+        "receivedBy": "Jeff",
+        "receivedByID": "592281bb-4b9a-4796-b1dc-091327be366e",
+        "message": "Jeff! How's Lisbon!! ",
+        "time": 1642992720085
+      },
+      {
+        "room": "592281bb-4b9a-4796-b1dc-091327be366e62937cc2-191b-4222-bc68-a8acb042844c",
+        "author": "Jeff",
+        "authorID": "592281bb-4b9a-4796-b1dc-091327be366e",
+        "receivedBy": "Rob",
+        "receivedByID": "62937cc2-191b-4222-bc68-a8acb042844c",
+        "message": "Rob! It s awesome!",
+        "time": 1642992754245
+      },
+      {
+        "room": "62937cc2-191b-4222-bc68-a8acb042844c6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Rob",
+        "authorID": "62937cc2-191b-4222-bc68-a8acb042844c",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "jhgkjhgkjhg\\",
+        "time": 1642995817720
+      },
+      {
+        "room": "62937cc2-191b-4222-bc68-a8acb042844c6990a539-c950-422a-9baa-2829eec19883",
+        "author": "Rob",
+        "authorID": "62937cc2-191b-4222-bc68-a8acb042844c",
+        "receivedBy": "Daniel",
+        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
+        "message": "gfjhgj]",
+        "time": 1642996402713
+      }
+    ]
   },
   {
     "userName": "Jesi",
