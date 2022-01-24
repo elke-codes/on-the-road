@@ -4,7 +4,7 @@ import "./Inbox.scss";
 import React, { useEffect } from "react";
 import { v4 as uuid } from "uuid";
 import { generateRoomName } from "../../utils/socket/generateRoomName";
-import { distanceBetweenCoordinates } from "../../utils/distanceBetweenCoordinates";
+import { distanceBetweenCoordinates } from "../../utils/location/distanceBetweenCoordinates";
 
 const Inbox = ({
 	friendsData,

@@ -9,8 +9,8 @@ import MapPage from "./pages/MapPage/MapPage";
 import ChatPage from "./pages/ChatPage/ChatPage";
 import Footer from "./components/Footer/Footer";
 import { useState, useEffect } from "react";
-import { getLoggedInUserFromStorage } from "./utils/getLoggedInUserFromStorage";
-import { getFriendsData } from "./utils/getFriendsData";
+import { getLoggedInUserFromStorage } from "./utils/users/getLoggedInUserFromStorage";
+import { getFriendsData } from "./utils/users/getFriendsData";
 import AboutPage from "./pages/AboutPage/AboutPage";
 
 const App = () => {

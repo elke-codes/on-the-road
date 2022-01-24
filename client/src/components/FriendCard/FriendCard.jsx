@@ -3,7 +3,7 @@
 import "./FriendCard.scss";
 import skyscanner from "../../assets/images/skyscanner.png";
 import airBnb from "../../assets/images/airbnb.png";
-import { distanceBetweenCoordinates } from "../../utils/distanceBetweenCoordinates";
+import { distanceBetweenCoordinates } from "../../utils/location/distanceBetweenCoordinates";
 import React from "react";
 import { Link } from "react-router-dom";
 import Avatar from "../Avatar/Avatar";

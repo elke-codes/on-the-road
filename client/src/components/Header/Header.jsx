@@ -2,9 +2,9 @@
 import "./Header.scss";
 import React, { useEffect, useState } from "react";
 import { Link, useHistory, Redirect, NavLink } from "react-router-dom";
-import { getLoggedInUserFromStorage } from "../../utils/getLoggedInUserFromStorage";
-import { deleteLoggedInUser } from "../../utils/deleteLoggedInUser";
-import { setLoggedInUserIntoStorage } from "../../utils/setLoggedInUserIntoStorage";
+import { getLoggedInUserFromStorage } from "../../utils/users/getLoggedInUserFromStorage";
+import { deleteLoggedInUser } from "../../utils/users/deleteLoggedInUser";
+import { setLoggedInUserIntoStorage } from "../../utils/users/setLoggedInUserIntoStorage";
 import { getUserData } from "../../utils/forms/getUserData";
 import logo from "../../assets/images/logo3.png";
 import Avatar from "../Avatar/Avatar";

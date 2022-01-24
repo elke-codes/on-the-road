@@ -10,7 +10,7 @@ import {
 	useMapEvents
 } from "react-leaflet";
 import { v4 as uuid } from "uuid";
-import { getFriendsData } from "../../utils/getFriendsData";
+import { getFriendsData } from "../../utils/users/getFriendsData";
 import FriendCard from "../FriendCard/FriendCard";
 
 const Map = ({ loggedInUser, friendsData, setSelectedFriend }) => {

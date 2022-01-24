@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
-import { timeAgo } from "../../utils/timeAgo";
+import { timeAgo } from "../../utils/time/timeAgo";
 // import { generateRoomName } from "../../utils/socket/generateRoomName";
 
 const ChatBox = ({

@@ -1,6 +1,6 @@
-import { getLocation } from "../getLocation";
-import { reverseGeoCodeLocation } from "../reverseGeoCodeLocation";
-import { setLoggedInUserIntoStorage } from "../setLoggedInUserIntoStorage";
+import { getLocation } from "../location/getLocation";
+import { reverseGeoCodeLocation } from "../location/reverseGeoCodeLocation";
+import { setLoggedInUserIntoStorage } from "../users/setLoggedInUserIntoStorage";
 import axios from "axios";
 
 export const postRegistration = async (e) => {

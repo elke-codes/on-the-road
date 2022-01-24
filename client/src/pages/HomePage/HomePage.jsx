@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Register from "../../components/Register/Register";
 import Map from "../../components/Map/Map";
 import Hero from "../../components/Hero/Hero";
-import { getLoggedInUserFromStorage } from "../../utils/getLoggedInUserFromStorage";
+import { getLoggedInUserFromStorage } from "../../utils/users/getLoggedInUserFromStorage";
 import { Link } from "react-router-dom";
 
 // import Map from "../../components/Map/Map";
