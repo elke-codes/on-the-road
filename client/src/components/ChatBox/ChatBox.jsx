@@ -126,23 +126,21 @@ const ChatBox = ({
 										: "other"
 								}>
 								<div>
+									<div className="message__meta">
+										{/* <div> */}{" "}
+										<p className="message__meta-author">
+											{messageContent.author}
+										</p>
+										<p className="message__meta-time">
+											{timeAgo(messageContent.time)}
+										</p>
+										{/* </div> */}
+									</div>
 									<div className="message__content">
 										{" "}
-										<p>{messageContent.message}</p>
-									</div>
-									<div className="message__meta">
-										<div>
-											{" "}
-											<p className="message__meta-time">
-												{timeAgo(messageContent.time)}
-											</p>
-											<p className="message__meta-author">
-												{(userName ===
-												messageContent.author)
-													? messageContent.author
-													: messageContent.receivedBy}
-											</p>
-										</div>
+										<p className="message__message">
+											{messageContent.message}
+										</p>
 									</div>
 								</div>
 							</div>
