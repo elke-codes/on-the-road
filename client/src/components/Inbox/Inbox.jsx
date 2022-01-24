@@ -5,6 +5,8 @@ import React, { useEffect } from "react";
 import { v4 as uuid } from "uuid";
 import { generateRoomName } from "../../utils/socket/generateRoomName";
 import { distanceBetweenCoordinates } from "../../utils/location/distanceBetweenCoordinates";
+import DividerLine from "../DividerLine/DividerLine";
+import FriendCard from "../FriendCard/FriendCard";
 
 const Inbox = ({
 	friendsData,
@@ -57,57 +59,27 @@ const Inbox = ({
 									type="checkbox"
 									className="inbox__friend-active"
 								/>
-
 								<div className="collapse-title text-xl font-medium inbox__user-identity">
 									<div className="avatar online">
 										<div className="rounded-full w-10 h-10">
 											<img src="http://daisyui.com/tailwind-css-component-profile-1@40w.png" />
 										</div>
 									</div>
-									<span className="inbox__username"></span> @
-									{friend.userName}
+
+									<span className="inbox__username">
+										{" "}
+										@{friend.userName}
+									</span>
 								</div>
-								<div className="collapse-content">
-									{/* <div className="inbox__details"> */}
-									<div className="inbox__details-left">
-										<p>
-											{" "}
-											{friend.firstName} {friend.lastName}
-										</p>
-										<p className="inbox__details-location">
-											{friend.locations[0].city}{" "}
-											{friend.locations[0].country}
-										</p>
-									</div>
-									{/* </div> */}
-									<div className="inbox__details-calculations">
-										<p className="inbox__details-calculations-distance">
-											We're{" "}
-											<span className="friend-card__distance--bold">
-												{distanceBetweenCoordinates(
-													friend.locations[0].lat,
-													friend.locations[0].lng,
-													loggedInUser.locations[0]
-														.lat,
-													loggedInUser.locations[0]
-														.lng
-												)}{" "}
-												km
-											</span>{" "}
-											apart!
-										</p>
-										<p className="inbox__details-calculations-time">
-											It's{" "}
-											{/* TODO api s for timezone...  */}
-											<span className="friend-card__time--bold">
-												3:22pm{" "}
-											</span>{" "}
-											here
-										</p>
-									</div>
-								</div>
+								{/* <div className="collapse-content">
+									{" "}
+									<FriendCard
+										friend={friend}
+										loggedInUser={loggedInUser}
+										setSelectedFriend={setSelectedFriend}
+									/>
+								</div> */}
 							</div>
-							// </div>
 							/* <img
 								className="inbox__image"
 								src="https://placedog.net/50"
@@ -123,3 +95,47 @@ const Inbox = ({
 };
 
 export default Inbox;
+
+{
+	/* <div className="inbox__details"> */
+}
+{
+	/* <div className="inbox__details-left">
+										<p>
+											{" "}
+											{friend.firstName} {friend.lastName}
+										</p>
+										<p className="inbox__details-location">
+											{friend.locations[0].city}{" "}
+											{friend.locations[0].country}
+										</p>
+									</div>
+									{/* </div> */
+}
+// 	<div className="inbox__details-calculations">
+// 		<p className="inbox__details-calculations-distance">
+// 			We're{" "}
+// 			<span className="friend-card__distance--bold">
+// 				{distanceBetweenCoordinates(
+// 					friend.locations[0].lat,
+// 					friend.locations[0].lng,
+// 					loggedInUser.locations[0]
+// 						.lat,
+// 					loggedInUser.locations[0]
+// 						.lng
+// 				)}{" "}
+// 				km
+// 			</span>{" "}
+// 			apart!
+// 		</p>
+// 		<p className="inbox__details-calculations-time">
+// 			It's{" "}
+// 			{/* TODO api s for timezone...  */}
+// 			<span className="friend-card__time--bold">
+// 				3:22pm{" "}
+// 			</span>{" "}
+// 			here
+// 		</p>
+// 	</div>{" "}
+// 	*/}
+// </div>

@@ -64,16 +64,11 @@
 		height: 3rem;
 		padding: 0 1rem;
 		border: none;
-		border-top: 1px solid black;
 	}
 
 	&__footer-button {
 		&:hover {
-			background: linear-gradient(
-				90deg,
-				rgba(16, 6, 187, 1) 22%,
-				rgba(255, 196, 0, 1) 70%
-			);
+			transform: scale(1.3);
 		}
 	}
 }

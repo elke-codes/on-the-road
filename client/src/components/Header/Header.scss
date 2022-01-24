@@ -66,6 +66,15 @@
 	&__container {
 		display: flex;
 	}
+
+	&__input--error {
+		// @include body-copy;
+		font-size: 0.75rem;
+		line-height: 16px;
+		color: $orange;
+		margin-top: -0.5rem;
+		// margin-left: 1rem;
+	}
 	&__button-login {
 		margin-left: 1rem;
 		@include button;

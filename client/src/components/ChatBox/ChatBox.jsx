@@ -16,13 +16,14 @@ const ChatBox = ({
 	room,
 	setRoom
 }) => {
-	//keep track of message
+	//keep track of current message
 	const [currentMessage, setCurrentMessage] = useState("");
+	//store all messages
 	const [messageList, setMessageList] = useState([]);
 
 	const loggedInUserID = loggedInUser.id;
 
-	//listen for changes in room,
+	//listen for changes in room, then:
 	// clear the messagelist in state,
 	// join the selected room
 	// get all the previous messages sent in that room from the data in the backend
@@ -31,9 +32,11 @@ const ChatBox = ({
 		if (!room) {
 			return;
 		}
+
 		setMessageList([]);
+
 		joinRoom(room);
-		console.log("room before get", room);
+
 		const getMessageList = axios
 			.get(`http://localhost:8000/chat/${loggedInUserID}/${room}`)
 			.then((result) => {
@@ -43,15 +46,7 @@ const ChatBox = ({
 					setMessageList(result.data);
 				}
 			});
-
-		// setMessageList(getMessageList);
 	}, [room]);
-
-	// useEffect(() => {
-	// 	console.log("messageList", messageList);
-	// }, [messageList]);
-
-	const { userName } = loggedInUser;
 
 	//establish a connection between a user that just entered the page and the room they want to enter
 	const joinRoom = (room) => {
@@ -90,6 +85,7 @@ const ChatBox = ({
 			setCurrentMessage("");
 		}
 	};
+
 	// listen to whenever there s changes to our socket server
 	useEffect(() => {
 		//listen for event emitted from server "receive_message", receive data sent from backend
@@ -99,6 +95,8 @@ const ChatBox = ({
 			setMessageList((list) => [...list, data]);
 		});
 	}, [socket]);
+
+	const { userName } = loggedInUser;
 
 	return (
 		<section className="chat-box">

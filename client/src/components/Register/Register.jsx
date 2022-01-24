@@ -4,9 +4,13 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { postRegistration } from "../../utils/forms/postRegistration";
 
-const Register = ({ setLoggedInUser, setshowRegisterModal }) => {
+const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 	const history = useHistory();
-
+	const [userNameInvalid, setUserNameInvalid] = useState(false);
+	const [firstNameInvalid, setFirstNameInvalid] = useState(false);
+	const [lastNameInvalid, setLastNameInvalid] = useState(false);
+	const [emailInvalid, setEmailInvalid] = useState(false);
+	const [errorMessage, setErrorMessage] = useState("");
 	// TODO provide the option to manually set location
 	//on formsubmit
 	//TO DO FORMVALIDATION
@@ -14,17 +18,31 @@ const Register = ({ setLoggedInUser, setshowRegisterModal }) => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		// try catch instead of then catch when using async await
-		try {
-			const user = await postRegistration(e);
-			console.log(user);
-			setLoggedInUser(user);
-			// history.push("/map");
-			e.target.reset();
-		} catch (e) {
-			// e.response.data is the error message, set in the server.
-			// alert(e.response.data);
-			console.log(e);
+
+		//check if there is a  value in the e.target field, if there is, the state of ....InputInvalid will be set to false, if there is no valid value ...InputInvalid state will be set to true, which will trigger the error message to be displayed
+		setUserNameInvalid(e.target.userName.value ? false : true);
+		setFirstNameInvalid(e.target.firstName.value ? false : true);
+		setLastNameInvalid(e.target.lastName.value ? false : true);
+		setEmailInvalid(e.target.email.value ? false : true);
+
+		if (
+			e.target.userName.value &&
+			e.target.firstName.value &&
+			e.target.lastName.value &&
+			e.target.email.value
+		) {
+			// 	// try catch instead of then catch when using async await
+			try {
+				const user = await postRegistration(e);
+				console.log(user);
+				setLoggedInUser(user);
+				// history.push("/map");
+				e.target.reset();
+			} catch (e) {
+				// e.response.data is the error message, set in the server.
+				// alert(e.response.data);
+				console.log("error handling registrationform", e);
+			}
 		}
 	};
 
@@ -34,7 +52,7 @@ const Register = ({ setLoggedInUser, setshowRegisterModal }) => {
 				<p
 					className="register-modal__close-modal"
 					onClick={() => {
-						setshowRegisterModal(false);
+						setShowRegisterModal(false);
 					}}>
 					X
 				</p>
@@ -54,6 +72,16 @@ const Register = ({ setLoggedInUser, setshowRegisterModal }) => {
 						placeholder="User name"
 						name="userName"
 					/>
+					{userNameInvalid && (
+						<p className="register-modal__input--error">
+							Please enter a username.
+						</p>
+					)}
+					{errorMessage !== "" && (
+						<p className="register-modal__input--error">
+							{errorMessage}
+						</p>
+					)}
 
 					<input
 						className="register-modal__input"
@@ -61,13 +89,22 @@ const Register = ({ setLoggedInUser, setshowRegisterModal }) => {
 						placeholder="First name"
 						name="firstName"
 					/>
-
+					{firstNameInvalid && (
+						<p className="register-modal__input--error">
+							Please enter a first name.
+						</p>
+					)}
 					<input
 						className="register-modal__input"
 						type="text"
 						placeholder="Last Name"
 						name="lastName"
 					/>
+					{lastNameInvalid && (
+						<p className="register-modal__input--error">
+							Please enter a last name.
+						</p>
+					)}
 
 					<input
 						className="register-modal__input"
@@ -75,6 +112,16 @@ const Register = ({ setLoggedInUser, setshowRegisterModal }) => {
 						placeholder="Email"
 						name="email"
 					/>
+					{emailInvalid && (
+						<p className="register-modal__input--error">
+							Please enter a valid email address.
+						</p>
+					)}
+					{errorMessage !== "" && (
+						<p className="register-modal__input--error">
+							{errorMessage}
+						</p>
+					)}
 					{/* <input
 						type="password"
 						name="password"

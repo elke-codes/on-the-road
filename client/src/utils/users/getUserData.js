@@ -1,5 +1,5 @@
 import axios from "axios";
-import { setLoggedInUserIntoStorage } from "../users/setLoggedInUserIntoStorage";
+import { setLoggedInUserIntoStorage } from "./setLoggedInUserIntoStorage";
 
 export const getUserData = async (userName) => {
 	const user = await axios

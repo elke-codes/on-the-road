@@ -5,12 +5,13 @@ import { Link, useHistory, Redirect, NavLink } from "react-router-dom";
 import { getLoggedInUserFromStorage } from "../../utils/users/getLoggedInUserFromStorage";
 import { deleteLoggedInUser } from "../../utils/users/deleteLoggedInUser";
 import { setLoggedInUserIntoStorage } from "../../utils/users/setLoggedInUserIntoStorage";
-import { getUserData } from "../../utils/forms/getUserData";
+import { getUserData } from "../../utils/users/getUserData";
 import logo from "../../assets/images/logo3.png";
 import Avatar from "../Avatar/Avatar";
 
 const Header = ({ loggedInUser, setLoggedInUser }) => {
 	const history = useHistory();
+	const [userNameInvalid, setUserNameInvalid] = useState(false);
 
 	const handleLogin = async (e) => {
 		// console.log(e.target.userName.value);

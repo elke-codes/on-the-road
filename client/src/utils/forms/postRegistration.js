@@ -17,16 +17,23 @@ export const postRegistration = async (e) => {
 	);
 
 	console.log("e.target.userName.value", e.target.userName.value);
-	const response = await axios.post("http://localhost:8000/users/register", {
-		userName: e.target.userName.value,
-		firstName: e.target.firstName.value,
-		lastName: e.target.lastName.value,
-		email: e.target.email.value,
-		lat: coords.lat,
-		lng: coords.lng,
-		city: reversedGeoCode.data.addresses[0].address.municipality,
-		country: reversedGeoCode.data.addresses[0].address.country
-	});
+	const response = await axios
+		.post("http://localhost:8000/users/register", {
+			userName: e.target.userName.value,
+			firstName: e.target.firstName.value,
+			lastName: e.target.lastName.value,
+			email: e.target.email.value,
+			lat: coords.lat,
+			lng: coords.lng,
+			city: reversedGeoCode.data.addresses[0].address.municipality,
+			country: reversedGeoCode.data.addresses[0].address.country
+		})
+		.then((result) => console.log("postregistration", result.data))
+		.catch((error) => {
+			console.log("error in postRegistration", error);
+			//TODO
+			// setErrorMessage(error.result.data.message);
+		});
 	setLoggedInUserIntoStorage(response.data);
 	console.log(response.data);
 

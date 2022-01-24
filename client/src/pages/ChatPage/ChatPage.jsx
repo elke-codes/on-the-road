@@ -11,6 +11,8 @@ import Inbox from "../../components/Inbox/Inbox";
 import Footer from "../../components/Footer/Footer";
 import Register from "../../components/Register/Register";
 import axios from "axios";
+import FriendCardCopy from "../../components/FriendCardCopy/FriendCardCopy";
+
 // // establish connection to backend
 // // link to where running socket.io server
 // // SERVER_URL
@@ -89,6 +91,9 @@ const ChatPage = ({
 							setRoom={setRoom}
 							socket={socket}
 						/>
+						{friendsData.map((friend) => {
+							<FriendCardCopy friend={friend} />;
+						})}
 					</>
 				) : null}
 			</main>
