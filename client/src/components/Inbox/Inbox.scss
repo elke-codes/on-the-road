@@ -2,7 +2,9 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
-
+.active {
+	background-color: yellow;
+}
 .inbox {
 	margin: 2rem;
 	border: 2px solid $darker-blue;

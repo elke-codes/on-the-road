@@ -3,28 +3,10 @@
 @use "../../styles/partials/mixins" as *;
 /* using react leaflet this is how you set the map hight */
 .leaflet-container {
-	// height: 600px;
-	// width: 1600px;
 	height: 80vh;
 	width: 100vw;
-	// width: 80vw;
-	// height: 70vh;
-	// border: 1px solid black;
-	// border-radius: 20px;
-	// TODO background something cool, space? miliways, restaurant at the end of the universe
-	// background-color: black;
-	// background: url("https://cdna.artstation.com/p/assets/images/images/006/519/308/large/alessandro-emanuelli-028.jpg?1499210379");
-	// background-image: url("../../assets/images/IMG_20131218_171051.jpg");
-	// background-image: url("../../assets/images/IMG_20131218_171426.jpg");
-	// background-image: url("../../assets/images/IMG_20131218_170009.jpg");
-	// box-shadow: inset 0 0 0 1000px rgb(215, 230, 235, 0.2);
-	// background-position: center;
-	// background-size: cover;
-	// background-repeat: no-repeat;
 	z-index: 0;
 	@include box-shadow;
-	// @include border-radius;
-	// border: 5px solid $darker-blue;
 	background-color: $map-blue;
 }
 

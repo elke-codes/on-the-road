@@ -17,10 +17,11 @@
 	// 	$dark-grey
 	// );
 	height: 100px;
-
+	&__title-link {
+		width: 30%;
+	}
 	&__title {
 		font-size: 3rem;
-		width: 30%;
 	}
 
 	&__nav {

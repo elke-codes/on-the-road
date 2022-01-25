@@ -1,7 +1,7 @@
 /// --- INBOX.JSX --- ///
 
 import "./Inbox.scss";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 import { generateRoomName } from "../../utils/socket/generateRoomName";
 import { distanceBetweenCoordinates } from "../../utils/location/distanceBetweenCoordinates";
@@ -17,6 +17,8 @@ const Inbox = ({
 	setRoom,
 	loggedInUser
 }) => {
+	const [active, setActive] = useState(false);
+
 	useEffect(() => {
 		console.log("sel frien id", selectedFriend);
 		if (!selectedFriend) {
@@ -24,6 +26,7 @@ const Inbox = ({
 		}
 		const loggedInUserID = loggedInUser.id;
 		const selectedFriendID = selectedFriend.id;
+
 		//to make sure both users end up in the same room : generate a room id that is the logged in users' id + the secelected friends' id, sorted alphabetically, to get the same result every time the room is generated, whichever of the two users opens the conversation
 		setRoom(generateRoomName(loggedInUserID, selectedFriendID));
 
@@ -31,7 +34,9 @@ const Inbox = ({
 	}, [selectedFriend]);
 
 	const handleSelectedFriend = (friend) => {
+		setActive(false);
 		setSelectedFriend(friend);
+		setActive(true);
 	};
 
 	return (

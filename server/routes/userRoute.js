@@ -83,6 +83,7 @@ router.post("/register", async (req, res) => {
 		email: req.body.email,
 		password: hashedPassword,
 		id: uuid(),
+		messages: [],
 		locations: [
 			{
 				lat: req.body.lat,
@@ -107,6 +108,10 @@ router.post("/login", async (req, res) => {
 		//TODO add logic for when username not found to be set to front end, wich is already set up to display the error message
 		return userName === user.userName;
 	});
+
+	if (!user) {
+		return res.status(404).send("user not found");
+	}
 
 	const passwordValid = await bcrypt.compare(password, user.password);
 	console.log("passwordvalid", passwordValid);

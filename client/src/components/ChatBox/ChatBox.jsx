@@ -37,7 +37,7 @@ const ChatBox = ({
 
 		joinRoom(room);
 
-		const getMessageList = axios
+		axios
 			.get(`http://localhost:8000/chat/${loggedInUserID}/${room}`)
 			.then((result) => {
 				console.log("axios get chat", result);
@@ -107,7 +107,7 @@ const ChatBox = ({
 					: "Chat"}
 			</article>
 			<article className="chat-box__body">
-				<div className="message-container">
+				<ScrollToBottom className="message-container">
 					{messageList.map((messageContent) => {
 						// console.log("messageContent", messageContent);
 						{
@@ -144,7 +144,7 @@ const ChatBox = ({
 							</div>
 						);
 					})}
-				</div>
+				</ScrollToBottom>
 			</article>
 			<article className="chat-box__footer">
 				<input

@@ -1,96 +1,291 @@
 [
   {
+    "userName": "Alex",
+    "firstName": "Alex",
+    "lastName": "Kenedy",
+    "email": "alex@email.com",
+    "password": "$2b$08$bwqm1wf9mN4aXQJsqRBG/OmDFx3q9PgVUewQxpknQ5iyj2M80ywLG",
+    "id": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+    "messages": [
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "hi alex",
+        "time": 1643153723036
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "hey ashley",
+        "time": 1643153727518
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "how's it going?",
+        "time": 1643153732592
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "very good",
+        "time": 1643153737153
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "this is such an inspirational conversation",
+        "time": 1643153747482
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "yes it it, i just want to see the styling on this thing when we type more things",
+        "time": 1643153763236
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "oh i see! ",
+        "time": 1643153772700
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "i wonder what happens when we reach the bottom!",
+        "time": 1643153784417
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "does it just keep scrolling down showing the last message or do i have to scroll down myself?",
+        "time": 1643154039766
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "I wonder, seems like it 's about to happen though",
+        "time": 1643154063690
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "o look! a scrollbar appeared! ",
+        "time": 1643154076389
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "pretty cool, but also ugly",
+        "time": 1643154087838
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "need to make that disapear",
+        "time": 1643154093006
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "ah, it 's not too bad :)",
+        "time": 1643154217462
+      }
+    ],
+    "locations": [
+      {
+        "lat": 49.2634112,
+        "lng": -123.0831616,
+        "created_at": "2022-01-25T21:54:44.818Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
     "userName": "Ashley",
     "firstName": "Ashley",
     "lastName": "Chiu",
-    "email": "ashley.chiu@email.com",
-    "id": "c5aa090d-9dc1-466b-828a-dc91d20b85cf",
-    "locations": [
-      {
-        "lat": 56.68338659555295,
-        "lng": -5.117055182931919,
-        "created_at": "2022-01-20T01:20:28.690Z",
-        "city": "Hong Kong",
-        "country": "China"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "John's Wife",
-    "firstName": "John's",
-    "lastName": "Wife",
-    "email": "johns.wife@email.com",
-    "id": "8dc067ec-dc59-47d9-8a14-9453a4ec70b9",
-    "locations": [
-      {
-        "lat": -4.63331947813454,
-        "lng": 55.493661131440554,
-        "created_at": "2022-01-20T01:20:28.690Z",
-        "city": "Providence",
-        "country": "Seychelles"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Phoebe",
-    "firstName": "Phoebe",
-    "lastName": "Chang",
-    "email": "phoebe.chang@email.com",
-    "id": "00194f36-f8f8-4105-89cd-6690d0efd8ae",
-    "locations": [
-      {
-        "lat": 40.42475816967518,
-        "lng": -3.71374905795704,
-        "created_at": "2022-01-20T01:20:45.690Z",
-        "city": "Madrid",
-        "country": "Spain"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Kevin",
-    "firstName": "Kevin",
-    "lastName": "Vanstone",
-    "email": "Kevin.Vanstone@email.com",
-    "id": "000ac753-de0c-47d7-8181-59a235da6ebd",
-    "locations": [
-      {
-        "lat": 21.46059269151658,
-        "lng": -157.833410011691,
-        "created_at": "2022-01-20T01:20:45.690Z",
-        "city": "Hawaii",
-        "country": "USA"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Shayne",
-    "firstName": "Shayne",
-    "lastName": "LaRochelle",
-    "email": "shayne.LaRochelle@email.com",
-    "id": "740808a4-84fe-4553-ab9c-a14a38fab8fc",
-    "locations": [
-      {
-        "lat": 48.85940775143071,
-        "lng": 2.3937454831937885,
-        "created_at": "2022-01-20T01:20:45.690Z",
-        "city": "Paris",
-        "country": "France"
-      }
-    ],
+    "email": "ashley@email.com",
+    "password": "$2b$08$GDBupFN1xI8NKBFlDKWTNe8oPeaelkIxSp83Uci1JUFO/bcGzrggO",
+    "id": "1eebb058-4104-48db-a462-5e5172b22809",
     "messages": [
       {
-        "room": "6990a539-c950-422a-9baa-2829eec19883740808a4-84fe-4553-ab9c-a14a38fab8fc",
-        "author": "Daniel",
-        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
-        "receivedBy": "Shayne",
-        "receivedByID": "740808a4-84fe-4553-ab9c-a14a38fab8fc",
-        "message": "cbvbxcvbcv",
-        "time": 1643088751774
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "hi alex",
+        "time": 1643153723036
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "hey ashley",
+        "time": 1643153727518
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "how's it going?",
+        "time": 1643153732592
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "very good",
+        "time": 1643153737153
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "this is such an inspirational conversation",
+        "time": 1643153747482
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "yes it it, i just want to see the styling on this thing when we type more things",
+        "time": 1643153763236
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "oh i see! ",
+        "time": 1643153772700
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "i wonder what happens when we reach the bottom!",
+        "time": 1643153784417
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "does it just keep scrolling down showing the last message or do i have to scroll down myself?",
+        "time": 1643154039766
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "I wonder, seems like it 's about to happen though",
+        "time": 1643154063690
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "o look! a scrollbar appeared! ",
+        "time": 1643154076389
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "pretty cool, but also ugly",
+        "time": 1643154087838
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "need to make that disapear",
+        "time": 1643154093006
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "ah, it 's not too bad :)",
+        "time": 1643154217462
+      }
+    ],
+    "locations": [
+      {
+        "lat": 49.2634112,
+        "lng": -123.0831616,
+        "created_at": "2022-01-25T21:56:56.849Z",
+        "city": "Vancouver",
+        "country": "Canada"
       }
     ]
   },
@@ -98,572 +293,87 @@
     "userName": "Heba",
     "firstName": "Heba",
     "lastName": "Al Tabbaa",
-    "email": "h.altabbaa@email.com",
-    "id": "985e976c-4d4e-4d9e-8865-a9ecbb6a059b",
+    "email": "heba@email.com",
+    "password": "$2b$08$7FRNts2gM6pmpNDyF1xdHe6ykgUyldZhbtOzRi11m/Fz0bzUP0gk2",
+    "id": "408e13b4-a2e7-468e-b929-a22f8a75b54d",
+    "messages": [],
     "locations": [
       {
-        "lat": 51.50342269371164,
-        "lng": -0.1346896375848147,
-        "created_at": "2022-01-20T02:34:37.006Z",
-        "city": "London",
-        "country": "United Kingdom"
+        "lat": 49.2634112,
+        "lng": -123.0831616,
+        "created_at": "2022-01-25T21:58:00.168Z",
+        "city": "Vancouver",
+        "country": "Canada"
       }
-    ],
-    "messages": []
+    ]
   },
   {
     "userName": "Brent",
     "firstName": "Brent",
     "lastName": "Carey",
-    "email": "bcarey@email.com",
-    "id": "4f9bfc7d-1100-4d40-879f-9b8b82aef104",
+    "email": "brent@email.com",
+    "password": "$2b$08$7MvJcDk8Kt5/tp5M5XNozO5Fz3EIoTWcvjRKL.xWOXXcOD0qK4BKK",
+    "id": "86673c66-ef2e-4a80-8abb-23b1740d3d09",
+    "messages": [],
     "locations": [
       {
-        "lat": 49.395480321027954,
-        "lng": -123.20531257276923,
-        "created_at": "2022-01-20T02:34:37.006Z",
+        "lat": 49.2634112,
+        "lng": -123.0831616,
+        "created_at": "2022-01-25T21:58:41.548Z",
         "city": "Vancouver",
         "country": "Canada"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Alex",
-    "firstName": "Alex",
-    "lastName": "Kennedy",
-    "email": "alexander.k@email.com",
-    "id": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-    "locations": [
-      {
-        "lat": 23.00074780417925,
-        "lng": -82.40786776277042,
-        "created_at": "2022-01-20T02:34:37.006Z",
-        "city": "Havana",
-        "country": "Cuba"
-      }
-    ],
-    "messages": [
-      {
-        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "author": "Daniel",
-        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
-        "receivedBy": "Alex",
-        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "message": "Hi Alex",
-        "time": 1642983433824
-      },
-      {
-        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "author": "Alex",
-        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "receivedBy": "Daniel",
-        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
-        "message": "Hi Daniel",
-        "time": 1642983439020
-      },
-      {
-        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "author": "Daniel",
-        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
-        "receivedBy": "Alex",
-        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "message": "hey alex...",
-        "time": 1642983484494
-      },
-      {
-        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "author": "Alex",
-        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "receivedBy": "Daniel",
-        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
-        "message": "yes daniel",
-        "time": 1642983489746
-      },
-      {
-        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "author": "Daniel",
-        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
-        "receivedBy": "Alex",
-        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "message": "I just wanted to ask if you wanted to go to Singapore with me?",
-        "time": 1642983611407
-      },
-      {
-        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "author": "Daniel",
-        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
-        "receivedBy": "Alex",
-        "receivedByID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "message": "To start a new life",
-        "time": 1642983616886
-      },
-      {
-        "room": "6990a539-c950-422a-9baa-2829eec19883a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "author": "Alex",
-        "authorID": "a34f27b4-46c5-413b-bc31-fc4d30010af1",
-        "receivedBy": "Daniel",
-        "receivedByID": "6990a539-c950-422a-9baa-2829eec19883",
-        "message": "eum... what?",
-        "time": 1642983625007
       }
     ]
   },
   {
-    "userName": "Daniel",
-    "firstName": "Daniel",
+    "userName": "John",
+    "firstName": "John",
+    "lastName": "Anderson",
+    "email": "john@email.com",
+    "password": "$2b$08$pH68n1Hkm/FQLkpmvLeVFO4gzkAut2oF8..B7fqqkY5SIrzen5B.W",
+    "id": "bf8ec41d-b80a-4ac5-9d83-af5514814728",
+    "messages": [],
+    "locations": [
+      {
+        "lat": 49.2634112,
+        "lng": -123.0831616,
+        "created_at": "2022-01-25T21:59:21.593Z",
+        "city": "Vancouver",
+        "country": "Canada"
+      }
+    ]
+  },
+  {
+    "userName": "Phoebe",
+    "firstName": "Phoebe",
     "lastName": "Chang",
-    "email": "daniel.chang.k@email.com",
-    "id": "6990a539-c950-422a-9baa-2829eec19883",
-    "locations": [
-      {
-        "lat": 35.6802403682393,
-        "lng": 139.7692456292992,
-        "created_at": "2022-01-20T02:34:37.006Z",
-        "city": "Tokyo",
-        "country": "Japan"
-      }
-    ],
-    "messages": [
-      {
-        "room": "6990a539-c950-422a-9baa-2829eec19883740808a4-84fe-4553-ab9c-a14a38fab8fc",
-        "author": "Daniel",
-        "authorID": "6990a539-c950-422a-9baa-2829eec19883",
-        "receivedBy": "Shayne",
-        "receivedByID": "740808a4-84fe-4553-ab9c-a14a38fab8fc",
-        "message": "cbvbxcvbcv",
-        "time": 1643088751774
-      }
-    ]
-  },
-  {
-    "userName": "Carol",
-    "firstName": "Carol",
-    "lastName": "DeWeger",
-    "email": "Carol.deweger@email.com",
-    "id": "39ea881e-16c3-4d34-b2dc-f06f78642b5d",
-    "locations": [
-      {
-        "lat": -37.8721204194075,
-        "lng": 175.68294836658913,
-        "created_at": "2022-01-20T02:34:37.006Z",
-        "city": "MataMata",
-        "country": "New Zealand"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Natalie",
-    "firstName": "Natalie",
-    "lastName": "One",
-    "email": "natalie.one@email.com",
-    "id": "dac3d58d-9623-4cb4-aa66-ad77d07e0a96",
-    "locations": [
-      {
-        "lat": 37.79543459570026,
-        "lng": 23.882535084671208,
-        "created_at": "2022-01-20T02:34:37.006Z",
-        "city": "Athens",
-        "country": "Greece"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Erin",
-    "firstName": "Erin",
-    "lastName": "Dunno",
-    "email": "erin.dunno@email.com",
-    "id": "9e5b0a03-ce91-4864-87cb-2a87cb8e35a0",
-    "locations": [
-      {
-        "lat": 56.68338659555295,
-        "lng": -5.117055182931919,
-        "created_at": "2022-01-20T01:20:28.690Z",
-        "city": "Glencoe",
-        "country": "Scotland"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Kaz",
-    "firstName": "Kaz",
-    "lastName": "Kaz",
-    "email": "kaz.kaz@email.com",
-    "id": "a077cfa0-d0ff-4417-97f9-8c2b2d08e8f7",
-    "locations": [
-      {
-        "lat": 56.68338659555295,
-        "lng": -5.117055182931919,
-        "created_at": "2022-01-20T01:23:33.795Z",
-        "city": "Glencoe",
-        "country": "Scotland"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Jamie",
-    "firstName": "Jamie",
-    "lastName": "Jamie",
-    "email": "jamie.jamie@email.com",
-    "id": "c41a9589-eb3e-421f-89de-cef1f8028a9e",
-    "locations": [
-      {
-        "lat": 12.466598133888956,
-        "lng": -69.95279488218297,
-        "created_at": "2022-01-20T02:29:45.366Z",
-        "city": "Savaneta",
-        "country": "Aruba"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Jeff",
-    "firstName": "Jeff",
-    "lastName": "Walsh",
-    "email": "elke.dick@email.com",
-    "id": "592281bb-4b9a-4796-b1dc-091327be366e",
-    "locations": [
-      {
-        "lat": 38.71301885813053,
-        "lng": -9.143733378717352,
-        "created_at": "2022-01-20T02:30:40.646Z",
-        "city": "Lisbon",
-        "country": "Portugal"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Rob",
-    "firstName": "Rob",
-    "lastName": "Katerwol",
-    "email": "rob.katerwol@email.com",
-    "id": "62937cc2-191b-4222-bc68-a8acb042844c",
-    "locations": [
-      {
-        "lat": 49.28276395901426,
-        "lng": -123.05882433013782,
-        "created_at": "2022-01-20T02:31:00.261Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Jesi",
-    "firstName": "Jesi",
-    "lastName": "Jesi",
-    "email": "jesi.jesi@email.com",
-    "id": "354d5801-e8c6-4342-a746-eac03fd06f9f",
-    "locations": [
-      {
-        "lat": 49.305217755374365,
-        "lng": -123.15661947422305,
-        "created_at": "2022-01-20T02:32:15.031Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Ghinwa",
-    "firstName": "Ghinwa",
-    "lastName": "Yassine",
-    "email": "ghinwa.yassine@email.com",
-    "id": "13d12e3b-1cdd-44c4-9b39-8caa537531d6",
-    "locations": [
-      {
-        "lat": 33.902139778786434,
-        "lng": 35.491046126215444,
-        "created_at": "2022-01-20T02:33:18.748Z",
-        "city": "Beirut",
-        "country": "Lebanon"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Anais",
-    "firstName": "Anais",
-    "lastName": "Azzaro-e",
-    "email": "anais.azzaro-e@email.com",
-    "id": "ca94b1c7-121f-4f49-b207-73c84bbff5e7",
-    "locations": [
-      {
-        "lat": 31.645048209027657,
-        "lng": -6.026930279757645,
-        "created_at": "2022-01-20T02:34:37.006Z",
-        "city": "Tinghir Province",
-        "country": "Morocco"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Karen",
-    "firstName": "Karen",
-    "lastName": "Dick",
-    "email": "karen.dick@email.com",
-    "id": "cb49ae05-1a6a-4371-a95d-7125d8800161",
-    "locations": [
-      {
-        "lat": 51.05984087257862,
-        "lng": 3.6989808409266614,
-        "created_at": "2022-01-20T02:34:37.006Z",
-        "city": "Gent",
-        "country": "Belgium"
-      }
-    ],
-    "messages": []
-  },
-  {
-    "userName": "Danielerfg",
-    "firstName": "gfsdfgsdfg",
-    "lastName": "dfgsdfgs",
-    "email": "elke.dick@gmail.com",
-    "id": "c65f285c-852e-4bf2-a4c3-0144b9c6b441",
+    "email": "phoebe@email.com",
+    "password": "$2b$08$/W0XSvs2haus7T8Hmw9AXePwWT2UzFHEG0wN1LGxPvCfynW7/om5e",
+    "id": "71270f3d-7ca4-4039-96de-7279958c2d97",
+    "messages": [],
     "locations": [
       {
         "lat": 49.2634112,
         "lng": -123.0831616,
-        "created_at": "2022-01-25T05:33:46.447Z",
+        "created_at": "2022-01-25T21:59:57.991Z",
         "city": "Vancouver",
         "country": "Canada"
       }
     ]
   },
   {
-    "userName": "fgdsgsd",
-    "firstName": "gfsfdg",
-    "lastName": "fgsdfg",
-    "email": "eldsafke.dick@gmail.com",
-    "id": "8fbefc22-d36a-42a6-87d9-c7ea9761f661",
+    "userName": "Kevin",
+    "firstName": "Kevin",
+    "lastName": "Vanstone",
+    "email": "kevin@email.com",
+    "password": "$2b$08$YY77aS/UGfrdXP7MAC5IkeKNqiAjX2zJK/eUqgAU/EeBTcNU5EgOq",
+    "id": "8330a09c-f6b8-46b0-b5da-e905bdca990f",
+    "messages": [],
     "locations": [
       {
         "lat": 49.2634112,
         "lng": -123.0831616,
-        "created_at": "2022-01-25T05:35:26.447Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "dasdadasaa",
-    "firstName": "elke",
-    "lastName": "codes",
-    "email": "elke.dick@gmail.comaaa",
-    "id": "a74502c6-c562-4652-a374-c4070a33aeec",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T05:49:23.098Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "elke",
-    "firstName": "elke",
-    "lastName": "elke",
-    "email": "elke.dick@gmasssil.com",
-    "id": "95d5e586-023e-4fd0-afdb-719208469ab7",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T06:08:03.834Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "Danielsss",
-    "firstName": "elke",
-    "lastName": "dick",
-    "email": "elke.dsaxaadsick@gmail.com",
-    "id": "ac2c26b8-b106-4b6d-9256-0bc639ae029e",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T06:08:55.463Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "Danielasd",
-    "firstName": "elke",
-    "lastName": "elke",
-    "email": "elke.dick@gmail.cosdadam",
-    "id": "5bb2e8ca-cfd4-4841-9f84-96e17f01debb",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T06:09:51.739Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "fsdf",
-    "firstName": "elke",
-    "lastName": "codes",
-    "email": "elke.dick@gmjjjjjjjjjjjjjjjjjjjjail.com",
-    "id": "713ffe4d-3bd4-4168-a99d-7b1fb43ec954",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T06:10:33.958Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "Danielsda",
-    "firstName": "elke",
-    "lastName": "dick",
-    "email": "elke.dixZXZXck@gmail.com",
-    "id": "0c0baaf7-6477-4113-81ee-a9bdbcf25692",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T06:17:34.929Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "dasdadasiuipo",
-    "firstName": "elke",
-    "lastName": "codes",
-    "email": "elke.dick@gmpooiail.com",
-    "id": "185da9c1-e89e-468e-9dd6-5a059a17cd24",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T06:20:39.385Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "Danielwfwr",
-    "firstName": "asdf",
-    "lastName": "elke",
-    "email": "elke.derwerwick@gmail.com",
-    "password": "$2b$08$liB.qZzZC0Koeo2RPSVlNuBu.WZnVQUBA4zXf6YQfZDVzlRLX7q1e",
-    "id": "fa5a4ee1-fc38-4fbb-83ba-8d499c284d9b",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T07:09:50.707Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "asdfadfad",
-    "firstName": "adfasdf",
-    "lastName": "adsfasdfasdf",
-    "email": "elke.dick@gdfasdfasdfasdfasdfmail.com",
-    "password": "$2b$08$ubhAd5oJNsmDWtuFt3MCF.2xMSKw7rH/j8z7PIxSMWrUkcYLe8D0u",
-    "id": "750e0236-551b-4f69-974e-ab3515465dec",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T07:10:35.425Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "me",
-    "firstName": "me",
-    "lastName": "me",
-    "email": "me@email.com",
-    "password": "$2b$08$cQTKM2r5QNbka1hXthvJEuy56xUcEMjQiorw84n0y4cnu75agOgpW",
-    "id": "439c0ca8-e42a-4452-b405-9e5e354b21a7",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T07:11:56.193Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "you",
-    "firstName": "you",
-    "lastName": "you",
-    "email": "you@email.com",
-    "password": "$2b$08$otMCqmOwK6EOyh9FpC6GA.yuoBWbD7zXxxjCr06QTml7WKGpCpDf.",
-    "id": "ab802c27-73e0-42a9-99d6-9b7809334908",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T07:12:54.706Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "miles",
-    "firstName": "miles",
-    "lastName": "miles",
-    "email": "miles@email.com",
-    "password": "$2b$08$rvROr/cUkw43whheFqph2uDqEtBl03h.F.vPMMGkwPonPVmoSm.Li",
-    "id": "fa1815a7-4bce-416a-bb4d-9a93abc6b78f",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T07:42:48.489Z",
-        "city": "Vancouver",
-        "country": "Canada"
-      }
-    ]
-  },
-  {
-    "userName": "elkesfsdfsdf",
-    "firstName": "elke",
-    "lastName": "dick",
-    "email": "elke.dick@gmail.comxzczc",
-    "password": "$2b$08$Jgwu4konHA1R7k/JkHYLZO2DbVBgs5WmsL8p3nVWKLwL6yFtgEace",
-    "id": "0395b3fd-e6df-491f-9c2c-b2f53e340168",
-    "locations": [
-      {
-        "lat": 49.2634112,
-        "lng": -123.0831616,
-        "created_at": "2022-01-25T19:16:20.005Z",
+        "created_at": "2022-01-25T22:00:32.819Z",
         "city": "Vancouver",
         "country": "Canada"
       }

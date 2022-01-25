@@ -59,6 +59,13 @@ const AboutPage = () => {
 						<h2 className="about__me-title">About me</h2>
 						<img src={me} alt="" className="about__me-img" />
 					</div>
+					<p>
+						Passionate, full-stack Web Developer who thrives in
+						solving real-world problems elegantly with modern best
+						practices. Loves a good challenge and putting her head
+						down with a team of like-minded engineers to produce a
+						great, useful product.
+					</p>
 				</aside>
 			</main>
 			<Footer />

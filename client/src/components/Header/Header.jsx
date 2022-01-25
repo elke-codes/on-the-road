@@ -44,16 +44,16 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 			})
 			.then((user) => setLoggedInUser(user))
 			.catch((e) => {
-				if (
-					e.response.data.message.toLowerCase().includes("password")
-				) {
-					setLoginPasswordErrorMessage(e.response.data.message);
-				} else if (
-					e.response.data.message.toLowerCase().includes("username")
-				) {
-					setLoginUserNameErrorMessage(e.response.data.message);
-				}
-				console.log("error message", e.response.data.message);
+				// if (
+				// 	e.response.data.message.toLowerCase().includes("password")
+				// ) {
+				// 	setLoginPasswordErrorMessage(e.response.data.message);
+				// } else if (
+				// 	e.response.data.message.toLowerCase().includes("username")
+				// ) {
+				// 	setLoginUserNameErrorMessage(e.response.data.message);
+				// }
+				console.log("error message", e.response.data.message, e);
 			});
 
 		// history.push("/map");
@@ -83,7 +83,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 
 	return (
 		<section className="header">
-			<Link to="/">
+			<Link to="/" className="header__title-link">
 				<h1 className="header__title">wayward</h1>
 				{/* <img
 					src={logo}
