@@ -9,20 +9,22 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 1rem 2rem;
-	background: linear-gradient(
-		45deg,
-		$light-blue,
-		$darker-blue,
-		$light-grey,
-		$dark-grey
-	);
+	// background: linear-gradient(
+	// 	45deg,
+	// 	$light-blue,
+	// 	$darker-blue,
+	// 	$light-grey,
+	// 	$dark-grey
+	// );
 	height: 100px;
 
 	&__title {
 		font-size: 3rem;
+		width: 30%;
 	}
 
 	&__nav {
+		width: 30%;
 	}
 
 	&__nav-link {
@@ -51,6 +53,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 30%;
 	}
 
 	&__right {
@@ -66,12 +69,23 @@
 		font-weight: 700;
 		margin-bottom: 0.5rem;
 		// margin-left: 1rem;
-		color: $light-blue;
+		color: $primary-text;
 	}
 
 	&__container {
 		display: flex;
 		align-items: center;
+	}
+
+	&__login-form {
+		display: flex;
+		align-items: center;
+	}
+
+	&__input {
+		margin-left: 1rem;
+		height: 2.5rem;
+		width: 8rem;
 	}
 
 	&__input--error {
@@ -80,7 +94,7 @@
 		line-height: 16px;
 		color: $orange;
 		margin-top: -0.5rem;
-		// margin-left: 1rem;
+		margin-left: 1.5rem;
 	}
 	&__button-login {
 		margin-left: 1rem;

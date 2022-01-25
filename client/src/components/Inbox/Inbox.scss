@@ -8,6 +8,7 @@
 	border: 2px solid $darker-blue;
 	// border-radius: 20px;
 	// box-shadow: 4px 4px 9px 4px $light-grey;
+	@include border-radius;
 	@include box-shadow;
 	width: 400px;
 	// height: 400px;

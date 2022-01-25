@@ -7,6 +7,13 @@ const { v4: uuid } = require("uuid");
 const emailExists = require("../utils/validations/emailExists");
 const userNameExists = require("../utils/validations/userNameExists");
 const emailValid = require("../utils/validations/emailValid");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
+
+require("dotenv").config();
+
+const SALT_ROUNDS = 8;
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // -- Helper functions -- //
 const readData = () => {
@@ -41,7 +48,7 @@ router.get("/:userName", (req, res) => {
 	res.status(200).json(loggedInUser);
 });
 
-router.post("/register", (req, res) => {
+router.post("/register", async (req, res) => {
 	const userData = readData();
 
 	// .getTimezoneOffset() to get timezone to be able to say what time it is at their location
@@ -63,11 +70,18 @@ router.post("/register", (req, res) => {
 		});
 	}
 
+	// do something with password
+	let { password } = req.body;
+	console.log("password", password);
+	const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
+	console.log("hashed", hashedPassword);
+
 	const newUser = {
 		userName: req.body.userName,
 		firstName: req.body.firstName,
 		lastName: req.body.lastName,
 		email: req.body.email,
+		password: hashedPassword,
 		id: uuid(),
 		locations: [
 			{
@@ -83,6 +97,24 @@ router.post("/register", (req, res) => {
 	userData.push(newUser);
 	writeData(userData);
 	res.status(201).json(newUser);
+});
+
+router.post("/login", async (req, res) => {
+	const { userName, password } = req.body;
+	const users = readData();
+
+	const user = users.find((user) => {
+		//TODO add logic for when username not found to be set to front end, wich is already set up to display the error message
+		return userName === user.userName;
+	});
+
+	const passwordValid = await bcrypt.compare(password, user.password);
+	console.log("passwordvalid", passwordValid);
+	if (!passwordValid) {
+		return res.status(422).json({ message: "password not correct" });
+	}
+
+	res.status(200).send(passwordValid);
 });
 
 module.exports = router;

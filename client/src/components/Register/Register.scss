@@ -20,6 +20,8 @@
 		border: 20px;
 		width: 30%;
 		@include border-radius;
+		border: none;
+		@include box-shadow;
 	}
 
 	&__close-modal {

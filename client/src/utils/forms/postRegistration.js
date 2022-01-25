@@ -16,7 +16,7 @@ export const postRegistration = async (e) => {
 		reversedGeoCode.data.addresses[0].address.country
 	);
 
-	console.log("e.target.userName.value", e.target.userName.value);
+	// console.log("e.target.userName.value", e.target.userName.value);
 	const response = await axios.post("http://localhost:8000/users/register", {
 		userName: e.target.userName.value,
 		firstName: e.target.firstName.value,
@@ -25,7 +25,8 @@ export const postRegistration = async (e) => {
 		lat: coords.lat,
 		lng: coords.lng,
 		city: reversedGeoCode.data.addresses[0].address.municipality,
-		country: reversedGeoCode.data.addresses[0].address.country
+		country: reversedGeoCode.data.addresses[0].address.country,
+		password: e.target.password.value
 	});
 	setLoggedInUserIntoStorage(response.data);
 	console.log(response.data);

@@ -18,20 +18,6 @@
 	// background-position: center;
 }
 .chat-page {
-	background:
-	// linear-gradient(
-	// 		45deg,
-	// 		rgba(16, 6, 187, 0.2),
-	// 		rgba(255, 196, 0, 0.2),
-	// 		rgb(215, 230, 235, 0.2) 50%
-	// 	),
-		url("../../assets/images/_DSC5329.JPG");
-	// background-size: cover;
-	box-shadow: inset 0 0 0 1000px rgb(215, 230, 235, 0.3);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-
 	// background-color: $light-blue;
 
 	// height: 90vh;
@@ -42,21 +28,31 @@
 	// // background-image: url("../../assets/images/_DSC5282.JPG");
 	// background-repeat: no-repeat;
 	// // background-position: cover;
-
+	box-shadow: inset 0 0 0 1000px rgb(215, 230, 235, 0.3);
 	// background-size: contain;
 	// min-height: 100%;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 3rem;
+	// padding: 3rem;
 	height: 80vh;
 
 	&__not-logged-in {
+		height: 100%;
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 		color: $dark-grey;
+		background: url("../../assets/images/_DSC5329.JPG");
+		// background-size: cover;
+		box-shadow: inset 0 0 0 1000px rgb(215, 230, 235, 0.3);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		padding: 0;
 	}
 
 	&__copy {

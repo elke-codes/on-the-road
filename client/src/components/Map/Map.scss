@@ -3,8 +3,10 @@
 @use "../../styles/partials/mixins" as *;
 /* using react leaflet this is how you set the map hight */
 .leaflet-container {
-	height: 600px;
-	width: 1600px;
+	// height: 600px;
+	// width: 1600px;
+	height: 80vh;
+	width: 100vw;
 	// width: 80vw;
 	// height: 70vh;
 	// border: 1px solid black;
@@ -21,7 +23,8 @@
 	background-repeat: no-repeat;
 	z-index: 0;
 	@include box-shadow;
-	@include border-radius;
+	// @include border-radius;
+	// border: 5px solid $darker-blue;
 }
 
 .map {

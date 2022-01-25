@@ -122,15 +122,11 @@ const Map = ({ loggedInUser, friendsData, setSelectedFriend }) => {
 		<section className="map">
 			<MapContainer
 				center={[51.505, -0.09]}
-				zoom={2}
+				zoom={3}
 				scrollWheelZoom={true}>
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-					// id="mapbox/streets-v11"
-					// id="mapbox://styles/mapbox/satellite-v9"
-					id="mapbox://styles/mapbox/dark-v10"
-					projection="naturalEarth" // starting projection
 				/>
 				{friendsData &&
 					friendsData.map((friend) => {

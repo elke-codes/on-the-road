@@ -95,3 +95,8 @@ input {
 	display: flex;
 	justify-content: space-between;
 }
+
+.collapse > input[type="checkbox"] {
+	padding: 0rem 3rem 0rem 1rem;
+	min-height: 2.75rem;
+}

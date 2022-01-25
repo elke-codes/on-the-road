@@ -43,10 +43,13 @@ const MapPage = ({
 
 				{/* <Map className="homepage__map" /> */}
 				{!loggedInUser && register && (
-					<Register
-						setLoggedInUser={setLoggedInUser}
-						className="homepage__register"
-					/>
+					<main className="log-in">
+						{" "}
+						<Register
+							setLoggedInUser={setLoggedInUser}
+							className="homepage__register"
+						/>
+					</main>
 				)}
 
 				{loggedInUser && !showModal && (

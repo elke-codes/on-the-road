@@ -9,6 +9,7 @@ import { getUserData } from "../../utils/users/getUserData";
 import logo from "../../assets/images/logo3.png";
 import Avatar from "../Avatar/Avatar";
 import SearchBar from "../SearchBar/SearchBar";
+import axios from "axios";
 
 const Header = ({ loggedInUser, setLoggedInUser }) => {
 	const history = useHistory();
@@ -16,6 +17,10 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 	const [showSearchBar, setShowSearchBar] = useState(false);
 	const [showFindFriendButton, setShowFindFriendButton] = useState(true);
 	const [showSearchFriendButton, setShowSearchFriendButton] = useState(false);
+	const [loginPasswordErrorMessage, setLoginPasswordErrorMessage] =
+		useState("");
+	const [loginUserNameErrorMessage, setLoginUserNameErrorMessage] =
+		useState("");
 
 	const handleLogin = async (e) => {
 		// console.log(e.target.userName.value);
@@ -25,11 +30,36 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 		if (!e.target.userName.value) {
 			return alert("please enter your username");
 		}
+		axios
+			.post("http://localhost:8000/users/login", {
+				userName: e.target.userName.value,
+				password: e.target.password.value
+			})
+			.then((result) => {
+				console.log("result login axios", result);
 
-		const user = await getUserData(e.target.userName.value);
-		// console.log("user", user);
-		setLoggedInUser(user);
+				const user = getUserData(e.target.userName.value);
+				// console.log("user", user);
+				return user;
+			})
+			.then((user) => setLoggedInUser(user))
+			.catch((e) => {
+				if (
+					e.response.data.message.toLowerCase().includes("password")
+				) {
+					setLoginPasswordErrorMessage(e.response.data.message);
+				} else if (
+					e.response.data.message.toLowerCase().includes("username")
+				) {
+					setLoginUserNameErrorMessage(e.response.data.message);
+				}
+				console.log("error message", e.response.data.message);
+			});
+
 		// history.push("/map");
+		setLoggedInUser(false);
+		setLoginPasswordErrorMessage(false);
+		setLoginUserNameErrorMessage(false);
 	};
 
 	const handleLogOut = () => {
@@ -54,7 +84,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 	return (
 		<section className="header">
 			<Link to="/">
-				<h1 className="header__title">reconnect</h1>
+				<h1 className="header__title">wayward</h1>
 				{/* <img
 					src={logo}
 					alt="two markers connected by dots and an airplane in the middle, on the road text underneath"
@@ -119,13 +149,34 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 						{/* <label className="header__input-label" htmlFor="userName">
 					Username
 				</label> */}
-						<input
-							className="header__input"
-							type="text"
-							placeholder="enter your username"
-							name="userName"
-							// onChange={handleChange}
-						/>
+						<div className="input__wrapper">
+							<input
+								className="header__input"
+								type="text"
+								placeholder="username"
+								name="userName"
+								// onChange={handleChange}
+							/>
+							{loginUserNameErrorMessage && (
+								<p className="header__input--error">
+									{loginUserNameErrorMessage}
+								</p>
+							)}
+						</div>
+						<div className="input__wrapper">
+							<input
+								className="header__input"
+								type="password"
+								placeholder="password"
+								name="password"
+								// onChange={handleChange}
+							/>
+							{loginPasswordErrorMessage && (
+								<p className="header__input--error">
+									{loginPasswordErrorMessage}
+								</p>
+							)}
+						</div>
 						<button
 							type="submit"
 							className="header__button-login"

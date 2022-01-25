@@ -66,7 +66,7 @@
 // -- GENERAL
 
 @mixin border-radius {
-	border-radius: 0px;
+	border-radius: 30px;
 	border: 2px solid $darker-blue;
 }
 
@@ -91,10 +91,10 @@
 	background-color: $light-blue;
 	border: 1px solid $darker-blue;
 	&:hover {
-		background-color: $darker-blue;
-		color: $light-blue;
+		background-color: white;
+		// color: $light-blue;
 		border: 1px solid $light-blue;
-		transform: scale(1.1);
+		// transform: scale(1.1);
 	}
 }
 // //

@@ -10,7 +10,10 @@ const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 	const [firstNameInvalid, setFirstNameInvalid] = useState(false);
 	const [lastNameInvalid, setLastNameInvalid] = useState(false);
 	const [emailInvalid, setEmailInvalid] = useState(false);
-	const [errorMessage, setErrorMessage] = useState("");
+	const [passwordInvalid, setPasswordInvalid] = useState(false);
+	const [confirmPasswordInvalid, setConfirmPasswordInvalid] = useState(false);
+	const [emailErrorMessage, setEmailErrorMessage] = useState("");
+	const [userNameErrorMessage, setUserNameErrorMessage] = useState("");
 	// TODO provide the option to manually set location
 	//on formsubmit
 	//TO DO FORMVALIDATION
@@ -19,31 +22,60 @@ const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
-		//check if there is a  value in the e.target field, if there is, the state of ....InputInvalid will be set to false, if there is no valid value ...InputInvalid state will be set to true, which will trigger the error message to be displayed
-		// setUserNameInvalid(e.target.userName.value ? false : true);
-		// setFirstNameInvalid(e.target.firstName.value ? false : true);
-		// setLastNameInvalid(e.target.lastName.value ? false : true);
-		// setEmailInvalid(e.target.email.value ? false : true);
+		// check if there is a  value in the e.target field, if there is, the state of ....InputInvalid will be set to false, if there is no valid value ...InputInvalid state will be set to true, which will trigger the error message to be displayed
+		setUserNameInvalid(e.target.userName.value ? false : true);
+		setFirstNameInvalid(e.target.firstName.value ? false : true);
+		setLastNameInvalid(e.target.lastName.value ? false : true);
+		setEmailInvalid(e.target.email.value ? false : true);
+		setPasswordInvalid(e.target.password.value ? false : true);
+		setConfirmPasswordInvalid(e.target.password ? false : true);
 
-		// if (
-		// 	e.target.userName.value &&
-		// 	e.target.firstName.value &&
-		// 	e.target.lastName.value &&
-		// 	e.target.email.value
-		// ) {
-		// 	// try catch instead of then catch when using async await
-		try {
-			const user = await postRegistration(e);
-			console.log(user);
-			setLoggedInUser(user);
-			// history.push("/map");
-			e.target.reset();
-		} catch (e) {
-			// e.response.data is the error message, set in the server.
-			// alert(e.response.data);
-			console.log("error handling registrationform", e);
-			// }
+		if (e.target.password.value !== e.target.confirmPassword.value) {
+			// alert("passwords don't match");
+			return setConfirmPasswordInvalid(true);
 		}
+
+		if (
+			e.target.userName.value &&
+			e.target.firstName.value &&
+			e.target.lastName.value &&
+			e.target.email.value &&
+			e.target.password.value &&
+			e.target.confirmPassword.value
+		) {
+			// try catch instead of then catch when using async await
+			try {
+				const user = await postRegistration(e);
+				console.log(user);
+				setLoggedInUser(user);
+				// history.push("/map");
+				e.target.reset();
+			} catch (e) {
+				// e.response.data is the error message, set in the server.
+				// alert(e.response.data.message);
+				if (
+					e.response.data.message.toLowerCase().includes("username")
+				) {
+					setUserNameErrorMessage(e.response.data.message);
+				} else if (
+					e.response.data.message.toLowerCase().includes("first")
+				) {
+					setFirstNameInvalid(true);
+				} else if (
+					e.response.data.message.toLowerCase().includes("last")
+				) {
+					setLastNameInvalid(true);
+				} else if (
+					e.response.data.message.toLowerCase().includes("email")
+				) {
+					setEmailErrorMessage(e.response.data.message);
+				} else console.log("error handling registrationform", e);
+			}
+		}
+		// setEmailInvalid(false);
+		// setFirstNameInvalid(false);
+		// setFirstNameInvalid(false);
+		// setUserNameInvalid(false);
 	};
 
 	return (
@@ -77,9 +109,10 @@ const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 							Please enter a username.
 						</p>
 					)}
-					{errorMessage !== "" && (
+
+					{userNameErrorMessage && (
 						<p className="register-modal__input--error">
-							{errorMessage}
+							{userNameErrorMessage}
 						</p>
 					)}
 
@@ -117,35 +150,52 @@ const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 							Please enter a valid email address.
 						</p>
 					)}
-					{errorMessage !== "" && (
-						<p className="register-modal__input--error">
-							{errorMessage}
-						</p>
-					)}
-					{/* <input
+
+					<input
 						type="password"
 						name="password"
-						placeholder="password"
-					/> */}
+						placeholder="Password"
+					/>
+					{passwordInvalid && (
+						<p className="register-modal__input--error">
+							Please enter a password.
+						</p>
+					)}
+					<input
+						type="password"
+						name="confirmPassword"
+						placeholder="Confirm password"
+					/>
+					{confirmPasswordInvalid && (
+						<p className="register-modal__input--error">
+							Please make sure passwords match.
+						</p>
+					)}
 
-					<div className="register-modal__permission">
-						<input
-							type="checkbox"
-							name="locationPermission"
-							value="false"
-						/>
-						<label
-							htmlFor="locationPermission"
-							className="register-modal__permission-text">
-							I'd rather enter my location manually
-						</label>
-					</div>
+					{emailErrorMessage && (
+						<p className="register-modal__input--error">
+							{emailErrorMessage}
+						</p>
+					)}
 
 					<p className="register-modal__disclaimer">
 						When signing up you will be asked by your browser to
 						allow us to use your location. This is needed for our
 						app to work.
 					</p>
+					<div className="register-modal__permission">
+						<input
+							type="checkbox"
+							name="locationPermission"
+							value="false"
+						/>
+
+						<label
+							htmlFor="locationPermission"
+							className="register-modal__permission-text">
+							I'd rather enter my location manually
+						</label>
+					</div>
 					<button
 						type="submit"
 						className="register-modal__sign-up-button">

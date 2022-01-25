@@ -7,8 +7,19 @@ import linkedIn from "../../assets/icons/linkedin.png";
 const Footer = () => {
 	return (
 		<footer className="footer">
-			<p className="footer__copy">A project by Elke Dick 2022 </p>
+			<p className="footer__copy">
+				{" "}
+				<a
+					href="mailto:elke.codes@gmail.com"
+					target="_blank"
+					rel="noopener noreferrer"
+					title="Send me cloud mail"
+					className="footer__link-email">
+					Elke Dick &#169; 2022{" "}
+				</a>
+			</p>
 
+			{/* 
 			<ul className="footer__link-list">
 				<li className="footer__link-list-item">
 					<a
@@ -30,7 +41,7 @@ const Footer = () => {
 						rel="noopener noreferrer"
 						title="Send me cloud mail"
 						className="footer__link-email">
-						📨
+						// 
 					</a>
 				</li>
 				<li className="footer__link-list-item">
@@ -46,7 +57,7 @@ const Footer = () => {
 						/>
 					</a>
 				</li>
-			</ul>
+			</ul> */}
 			{/* <p className="footer__copy--bstn">With Thanks to Brainstation </p> */}
 		</footer>
 	);
