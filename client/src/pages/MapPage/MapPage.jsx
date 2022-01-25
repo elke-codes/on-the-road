@@ -51,14 +51,14 @@ const MapPage = ({
 
 				{loggedInUser && !showModal && (
 					<>
-						<button
-							className="map-page__open-modal-button"
-							onClick={() => {
-								setShowModal(true);
-							}}>
-							?
-						</button>
 						<article className="map-page__container">
+							<button
+								className="map-page__open-modal-button"
+								onClick={() => {
+									setShowModal(true);
+								}}>
+								?
+							</button>
 							<Map
 								loggedInUser={loggedInUser}
 								friendsData={friendsData}

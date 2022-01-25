@@ -8,7 +8,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem;
+	padding: 1rem 2rem;
 	background: linear-gradient(
 		45deg,
 		$light-blue,
@@ -17,6 +17,10 @@
 		$dark-grey
 	);
 	height: 100px;
+
+	&__title {
+		font-size: 3rem;
+	}
 
 	&__nav {
 	}
@@ -62,6 +66,7 @@
 		font-weight: 700;
 		margin-bottom: 0.5rem;
 		// margin-left: 1rem;
+		color: $light-blue;
 	}
 
 	&__container {
@@ -82,13 +87,6 @@
 		@include button;
 		@include labels-buttons-copy;
 		color: $dark-grey;
-		background-color: $light-blue;
-		border: 1px solid $darker-blue;
-		&:hover {
-			background-color: $darker-blue;
-			color: $light-blue;
-			border: 1px solid $light-blue;
-		}
 	}
 
 	&__avatar {

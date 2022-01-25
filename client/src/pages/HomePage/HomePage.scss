@@ -52,15 +52,15 @@
 	}
 
 	&__get-started {
-		@include border-radius;
+		// @include border-radius;
 		@include labels-buttons-copy;
 		font-size: 1rem;
-		color: $dark-brown;
-		background-color: rgb(138, 145, 164, 0.1);
+		color: $light-blue;
+		// background-color: rgb(138, 145, 164, 0.1);
 		border-bottom: 0.25rem dotted rgba(250, 250, 250, 0);
 		margin: 0.75rem;
 		&:hover {
-			border-bottom: 0.25rem dotted $primary-text;
+			border-bottom: 0.25rem dotted $light-blue;
 		}
 	}
 }

@@ -1,13 +1,14 @@
 /// --- MAP.SCSS --- ///
 @use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
 /* using react leaflet this is how you set the map hight */
 .leaflet-container {
-	height: 500px;
-	width: 900px;
+	height: 600px;
+	width: 1600px;
 	// width: 80vw;
 	// height: 70vh;
-	border: 1px solid black;
-	border-radius: 20px;
+	// border: 1px solid black;
+	// border-radius: 20px;
 	// TODO background something cool, space? miliways, restaurant at the end of the universe
 	// background-color: black;
 	// background: url("https://cdna.artstation.com/p/assets/images/images/006/519/308/large/alessandro-emanuelli-028.jpg?1499210379");
@@ -19,7 +20,8 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	z-index: 0;
-	box-shadow: 4px 4px 9px 4px $light-grey;
+	@include box-shadow;
+	@include border-radius;
 }
 
 .map {

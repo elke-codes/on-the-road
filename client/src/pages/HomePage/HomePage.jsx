@@ -14,11 +14,12 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 
 	return (
 		<main className="homepage">
-			<h1 className="homepage__title">reconnect...</h1>
+			<h1 className="homepage__title">reconnect</h1>
 			{/* <button onClick={handleOpenRegister}>Register! </button> */}
 			{!register && !loggedInUser && (
 				<>
 					<div className="homepage__buttons">
+						<h1 className="homepage__title">reconnect</h1>
 						<button
 							className="homepage__button"
 							onClick={() => setRegister(true)}>

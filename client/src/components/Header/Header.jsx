@@ -54,11 +54,12 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 	return (
 		<section className="header">
 			<Link to="/">
-				<img
+				<h1 className="header__title">reconnect</h1>
+				{/* <img
 					src={logo}
 					alt="two markers connected by dots and an airplane in the middle, on the road text underneath"
 					className="logo"
-				/>
+				/> */}
 			</Link>
 			<nav className="header__nav">
 				<NavLink

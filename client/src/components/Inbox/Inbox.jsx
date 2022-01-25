@@ -37,9 +37,10 @@ const Inbox = ({
 	return (
 		<>
 			<section className="inbox">
-				<h2 className="inbox__title">
+				{/* <h2 className="inbox__title">
 					<SearchBar />
-				</h2>
+				</h2> */}
+				<SearchBar />
 
 				{/* filter over people, filter out id that matches logged in id */}
 
@@ -49,7 +50,7 @@ const Inbox = ({
 							// <article className="inbox__user" key={uuid()}>
 							<div
 								key={uuid()}
-								className="collapse border rounded-box border-base-300 collapse-arrow inbox__user"
+								className="collapse border  border-base-300 inbox__user"
 								onClick={() => {
 									handleSelectedFriend(friend);
 									// setSelectedFriend(friend);
