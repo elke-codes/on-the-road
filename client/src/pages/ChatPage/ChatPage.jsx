@@ -91,9 +91,9 @@ const ChatPage = ({
 							setRoom={setRoom}
 							socket={socket}
 						/>
-						{friendsData.map((friend) => {
-							<FriendCardCopy friend={friend} />;
-						})}
+						{selectedFriend && (
+							<FriendCardCopy selectedFriend={selectedFriend} />
+						)}
 					</>
 				) : null}
 			</main>

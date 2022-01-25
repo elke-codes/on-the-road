@@ -20,29 +20,29 @@ const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 		e.preventDefault();
 
 		//check if there is a  value in the e.target field, if there is, the state of ....InputInvalid will be set to false, if there is no valid value ...InputInvalid state will be set to true, which will trigger the error message to be displayed
-		setUserNameInvalid(e.target.userName.value ? false : true);
-		setFirstNameInvalid(e.target.firstName.value ? false : true);
-		setLastNameInvalid(e.target.lastName.value ? false : true);
-		setEmailInvalid(e.target.email.value ? false : true);
+		// setUserNameInvalid(e.target.userName.value ? false : true);
+		// setFirstNameInvalid(e.target.firstName.value ? false : true);
+		// setLastNameInvalid(e.target.lastName.value ? false : true);
+		// setEmailInvalid(e.target.email.value ? false : true);
 
-		if (
-			e.target.userName.value &&
-			e.target.firstName.value &&
-			e.target.lastName.value &&
-			e.target.email.value
-		) {
-			// 	// try catch instead of then catch when using async await
-			try {
-				const user = await postRegistration(e);
-				console.log(user);
-				setLoggedInUser(user);
-				// history.push("/map");
-				e.target.reset();
-			} catch (e) {
-				// e.response.data is the error message, set in the server.
-				// alert(e.response.data);
-				console.log("error handling registrationform", e);
-			}
+		// if (
+		// 	e.target.userName.value &&
+		// 	e.target.firstName.value &&
+		// 	e.target.lastName.value &&
+		// 	e.target.email.value
+		// ) {
+		// 	// try catch instead of then catch when using async await
+		try {
+			const user = await postRegistration(e);
+			console.log(user);
+			setLoggedInUser(user);
+			// history.push("/map");
+			e.target.reset();
+		} catch (e) {
+			// e.response.data is the error message, set in the server.
+			// alert(e.response.data);
+			console.log("error handling registrationform", e);
+			// }
 		}
 	};
 

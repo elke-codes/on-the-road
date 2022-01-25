@@ -69,6 +69,13 @@
 	border-radius: 12px;
 }
 
+@mixin box-shadow {
+	--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+	--tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+		var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 // -- BUTTONS
 @mixin button {
 	@include border-radius;
@@ -76,7 +83,9 @@
 	padding: 0.5rem 1rem;
 	border: none;
 	cursor: pointer;
-	width: fit-content;
+	min-width: fit-content;
+	// min-width: 150px;
+	max-height: 2.5rem;
 	// background-color: $darker-blue;
 
 	&:hover {

@@ -24,13 +24,18 @@ const FriendCard = ({ friend, loggedInUser, setSelectedFriend }) => {
 		<section className="friend">
 			<article className="friend-card">
 				<div className="friend-card__top-container">
-					<p className="friend-card__user-name">@{friend.userName}</p>
+					<div className="friend-card__user">
+						<Avatar />
+						<p className="friend-card__user-name">
+							@{friend.userName}
+						</p>
+					</div>
 
 					<DividerLine />
 					<p className="friend-card__name">
 						{friend.firstName} {friend.lastName}
 					</p>
-					<Avatar />
+
 					{/* https://myprojects.geoapify.com/api/Uvf0Dk1JqGJgrI0OCWvD/keys */}
 					<p className="friend-card__location">
 						{friend.locations[0].city},{" "}

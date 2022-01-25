@@ -8,10 +8,14 @@ import { setLoggedInUserIntoStorage } from "../../utils/users/setLoggedInUserInt
 import { getUserData } from "../../utils/users/getUserData";
 import logo from "../../assets/images/logo3.png";
 import Avatar from "../Avatar/Avatar";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Header = ({ loggedInUser, setLoggedInUser }) => {
 	const history = useHistory();
 	const [userNameInvalid, setUserNameInvalid] = useState(false);
+	const [showSearchBar, setShowSearchBar] = useState(false);
+	const [showFindFriendButton, setShowFindFriendButton] = useState(true);
+	const [showSearchFriendButton, setShowSearchFriendButton] = useState(false);
 
 	const handleLogin = async (e) => {
 		// console.log(e.target.userName.value);
@@ -33,6 +37,18 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 		setLoggedInUser(null);
 
 		history.push("/");
+	};
+
+	const handleFindFriends = () => {
+		setShowSearchBar(true);
+		setShowSearchFriendButton(true);
+		setShowFindFriendButton(false);
+	};
+
+	const handleSearchFriends = () => {
+		setShowSearchBar(false);
+		setShowSearchFriendButton(false);
+		setShowFindFriendButton(true);
 	};
 
 	return (
@@ -67,15 +83,27 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 			<div className="header__logged-in">
 				{loggedInUser ? (
 					<>
-						<div className="header__left">
+						<div className="header__right">
 							<p className="header__copy">
 								Welcome, {loggedInUser.userName}
 							</p>
 							<div className="header__container">
 								{" "}
-								<button className="header__button-add-friend ">
-									Find friends
-								</button>
+								{showSearchBar && <SearchBar />}
+								{showFindFriendButton && (
+									<button
+										className="header__button-add-friend "
+										onClick={handleFindFriends}>
+										Find friends
+									</button>
+								)}
+								{showSearchFriendButton && (
+									<button
+										className="header__button-add-friend "
+										onClick={handleSearchFriends}>
+										Search friend!
+									</button>
+								)}
 								<button
 									className="header__button-logout "
 									onClick={handleLogOut}>

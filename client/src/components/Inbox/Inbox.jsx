@@ -7,6 +7,7 @@ import { generateRoomName } from "../../utils/socket/generateRoomName";
 import { distanceBetweenCoordinates } from "../../utils/location/distanceBetweenCoordinates";
 import DividerLine from "../DividerLine/DividerLine";
 import FriendCard from "../FriendCard/FriendCard";
+import SearchBar from "../SearchBar/SearchBar";
 
 const Inbox = ({
 	friendsData,
@@ -36,7 +37,10 @@ const Inbox = ({
 	return (
 		<>
 			<section className="inbox">
-				<h2 className="inbox__title">FRIENDS</h2>
+				<h2 className="inbox__title">
+					<SearchBar />
+				</h2>
+
 				{/* filter over people, filter out id that matches logged in id */}
 
 				{friendsData &&

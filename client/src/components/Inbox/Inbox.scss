@@ -7,7 +7,8 @@
 	margin: 2rem;
 	// border: 1px solid black;
 	border-radius: 20px;
-	box-shadow: 4px 4px 9px 4px $light-grey;
+	// box-shadow: 4px 4px 9px 4px $light-grey;
+	@include box-shadow;
 	width: 400px;
 	// height: 400px;
 	overflow-y: scroll;

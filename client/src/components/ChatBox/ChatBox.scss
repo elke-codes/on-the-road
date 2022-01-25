@@ -7,8 +7,9 @@
 	height: 300px;
 	width: 700px;
 	margin: 1rem;
+	@include box-shadow;
 	// border: 1px dotted $dark-brown;
-	box-shadow: 4px 4px 9px 4px $light-grey;
+	// box-shadow: 4px 4px 9px 4px $light-grey;
 	// border-top-left-radius: 20px;
 	// border-top-right-radius: 20px;
 	@include border-radius;

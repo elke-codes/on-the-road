@@ -8,128 +8,117 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Avatar from "../Avatar/Avatar";
 import DividerLine from "../DividerLine/DividerLine";
+import { useHistory } from "react-router";
 
-const FriendCard = ({ friend, loggedInUser, setSelectedFriend }) => {
-	// console.log("loggedinusr friendcard", loggedInUser);
+import {
+	TileLayer,
+	Popup,
+	MapContainer,
+	Marker,
+	useMapEvents
+} from "react-leaflet";
+
+const FriendCardCopy = ({
+	friend,
+	loggedInUser,
+	setSelectedFriend,
+	selectedFriend
+}) => {
+	console.log("friendcard", selectedFriend);
 
 	// const handleClick = (friend) => {
 	// 	setSelectedFriend(friend);
 	// };
-
-	const handleSelectedFriend = (friend) => {
-		setSelectedFriend(friend);
-	};
+	// const history = useHistory;
+	// const handleClickMap = (friend) => {
+	// 	history.push("/map");
+	// };
 
 	return (
-		<section className="friend">
-			<article className="friend-card">
-				<div className="friend-card__top-container">
-					<p className="friend-card__user-name">
-						"@{friend.userName}"
-					</p>
+		<div class="card text-center shadow-2xl">
+			{/* <iframe
+				style="border:none; width:100%; margin:0 auto; display:block;"
+				height="500px"
+				allowfullscreen
+				src="https://www.embed-leaflet.com/map?center=47.606011,-122.332147&zoom=8&style=&marker=true&popup=true&title=Marker&enhancedScroll=true"></iframe> */}
+			<iframe
+				className="card__mini-map"
+				id="inlineFrameExample"
+				title="Inline Frame Example"
+				width="300"
+				height="200"
+				src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"></iframe>
+			<div class="px-10 pt-10" className="mini-map">
+				{/* <MapContainer
+					center={[51.505, -0.09]}
+					zoom={2}
+					scrollWheelZoom={true}>
+					<TileLayer
+						attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+						url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+						// id="mapbox/streets-v11"
+						id="mapbox://styles/mapbox/satellite-v9"
+						projection="naturalEarth" // starting projection
+					/>
 
-					<DividerLine />
-					<p className="friend-card__name">
-						{friend.firstName} {friend.lastName}
-					</p>
+					<Marker
+						position={
+							[51.505, -0.09]
+							// [
+							// friend.locations[0].lat,
+							// friend.locations[0].lng
+							// ]
+						}
+					/>
+				</MapContainer> */}
+			</div>
+
+			<div class="card-body">
+				<div className="card-title__wrapper">
 					<Avatar />
-					{/* https://myprojects.geoapify.com/api/Uvf0Dk1JqGJgrI0OCWvD/keys */}
-					<p className="friend-card__location">
-						{friend.locations[0].city},{" "}
-						{friend.locations[0].country}
-					</p>
+					<h2 class="card-title">@{selectedFriend.userName} </h2>
 				</div>
-				<p className="friend-card__distance">
-					We're{" "}
+				<DividerLine />
+				<p className="card__name">
+					{selectedFriend.firstName} {selectedFriend.lastName}
+				</p>
+
+				{/* https://myprojects.geoapify.com/api/Uvf0Dk1JqGJgrI0OCWvD/keys */}
+				<p className="card__location">
+					{selectedFriend.locations[0].city},
+					{selectedFriend.locations[0].country}
+				</p>
+				<p className="card__distance">
+					We're
 					{/* https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates */}
-					<span className="friend-card__distance--bold">
-						{distanceBetweenCoordinates(
-							friend.locations[0].lat,
-							friend.locations[0].lng,
+					<span className="card__distance--bold">
+						{/* {distanceBetweenCoordinates(
+							selectedFriend.locations[0].lat,
+							selectedFriend.locations[0].lng,
 							loggedInUser.locations[0].lat,
 							loggedInUser.locations[0].lng
-						)}{" "}
-						km
+						)} */}{" "}
+						3456 km
 					</span>{" "}
 					apart!
 				</p>
-				<p className="friend-card__time">
+				<p className="card__time">
 					It's {/* api s for timezone...  */}
-					<span className="friend-card__time--bold">
-						3:22pm{" "}
-					</span>{" "}
+					<span className="card__time--bold">3:22pm</span>
 					here
 				</p>
-				<Link
-					to="/chat"
-					// onClick={(friend) => {
-					// 	handleClick(friend);
-					// }}
-					className="friend-card__chat-link"
-					onClick={() => {
-						handleSelectedFriend(friend);
-					}}>
-					Chat with me!
-				</Link>
-				<div className="friend-card__bottom-container">
-					{/* give classname to not show when on map */}
-					{/* <div className="friend-card__mini-map-container">
-					<iframe
-						className="friend-card__mini-map"
-						id="inlineFrameExample"
-						title="Inline Frame Example"
-						width="300"
-						height="200"
-						src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"></iframe>
+				{/* <div class="justify-center card-actions">
+					<button
+						className="chat-button"
+						onClick={() => {
+							handleClick();
+						}}>
+						CHAT
+					</button>
 				</div> */}
-					{/* <div className="friend-card__links">
-					<a
-						href="http://www.airbnb.com"
-						className="friend-card__link">
-						<img
-							src={airBnb}
-							alt="airbnb logo"
-							className="friend-card__link-image"
-						/>
-					</a>
-					<a
-						href="http://www.skyscanner.com"
-						className="friend-card__link">
-						<img
-							src={skyscanner}
-							alt="skyscanner logo"
-							className="friend-card__link-image"
-						/>
-					</a>
-				</div> */}
-				</div>
-			</article>
-		</section>
-
-		// <article className="friend-card">
-		// 	<div class="card text-center shadow-2xl">
-		// 		<figure class="px-10 pt-10">
-		// 			<img
-		// 				src="https://picsum.photos/id/1005/400/250"
-		// 				class="rounded-xl"
-		// 			/>
-		// 		</figure>
-		// 		<div class="card-body">
-		// 			<h2 class="card-title">shadow, center, padding</h2>
-		// 			<p>
-		// 				Rerum reiciendis beatae tenetur excepturi aut pariatur
-		// 				est eos. Sit sit necessitatibus veritatis sed molestiae
-		// 				voluptates incidunt iure sapiente.
-		// 			</p>
-		// 			<div class="justify-center card-actions">
-		// 				<button class="btn btn-outline btn-accent">
-		// 					More info
-		// 				</button>
-		// 			</div>
-		// 		</div>
-		// 	</div>
-		// </article>
+			</div>
+		</div>
 	);
 };
 
-export default FriendCard;
+export default FriendCardCopy;
