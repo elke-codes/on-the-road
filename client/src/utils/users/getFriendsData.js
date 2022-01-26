@@ -5,16 +5,16 @@ export const getFriendsData = async (loggedInUser) => {
 	// console.log("userName", loggedInUser);
 
 	const loggedInUserID = loggedInUser.id;
-	console.log("loggedinuserID", loggedInUserID);
-	const result = await axios
+
+	const friendsData = await axios
 		.get(`http://localhost:8000/users/${loggedInUserID}/friends`)
 		.then((result) => {
-			console.log("result get friendsdata", result);
-			return result;
+			console.log("result get friendsdata", result.data);
+			return result.data;
 		})
 		.catch((e) => console.log("error getfriendsData", e));
-	console.log("result", result);
-	return result;
+	console.log("friendsdata getfriendsdata", friendsData);
+	return friendsData;
 };
 
 // import axios from "axios";

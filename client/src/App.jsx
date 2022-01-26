@@ -54,6 +54,7 @@ const App = () => {
 			<Header
 				loggedInUser={loggedInUser}
 				setLoggedInUser={setLoggedInUser}
+				setFriendsData={setFriendsData}
 			/>
 
 			<Switch>

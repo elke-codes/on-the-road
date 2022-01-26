@@ -13,7 +13,7 @@ const bcrypt = require("bcrypt");
 require("dotenv").config();
 
 const SALT_ROUNDS = 8;
-const JWT_SECRET = process.env.JWT_SECRET;
+// const JWT_SECRET = process.env.JWT_SECRET;
 
 // -- Helper functions -- //
 const readData = () => {
@@ -29,7 +29,9 @@ const writeData = (usersData) => {
 //-- be able to send json body when post
 router.use(express.json());
 
-//-- routes --//
+//-- ROUTES --//
+
+/// GET ALL USERS
 router.get("/", (req, res) => {
 	// console.log("trying to get users");
 	const usersData = readData();
@@ -38,7 +40,7 @@ router.get("/", (req, res) => {
 	res.status(200).json(usersData);
 });
 
-//get friends
+//GET FRIEND for the logged in user
 router.get("/:loggedInUserID/friends", (req, res) => {
 	const userData = readData();
 
@@ -59,6 +61,60 @@ router.get("/:loggedInUserID/friends", (req, res) => {
 	res.status(200).json(friendsData);
 });
 
+///GET FIND FRIEND in database(json for now) and add them to the logged in users' friend list
+
+router.get("/:loggedInUserID/:friendToFindUserNameOrEmail", (req, res) => {
+	// look in db and find a user with either username or email address and return that user
+	const userData = readData();
+	const friendToFind = req.params.friendToFindUserNameOrEmail;
+	// console.log("friend to find", friendToFind);
+
+	//TODO ADD FRIEND BY EMAIL
+	const foundFriend = userData.find((user) => {
+		return user.userName === friendToFind;
+	});
+	if (!foundFriend) {
+		return res.status(404).json({
+			message:
+				"could not find your friend in out files, would you like to invite them to the Wayward.club?"
+		});
+	}
+
+	console.log("found friend", foundFriend);
+	//take the found friend user info that was returned and add them the the loggedinusers friend array
+
+	const loggedInUser = userData.find((user) => {
+		return user.id === req.params.loggedInUserID;
+	});
+	console.log("loggedinuser", loggedInUser);
+
+	const loggedInUserFriends = loggedInUser.friends;
+	console.log("loggedinuser friends", loggedInUserFriends);
+
+	loggedInUserFriends.push({
+		id: foundFriend.id,
+		userName: foundFriend.userName
+	});
+
+	console.log(
+		"loggedinuserFriends after push found friend",
+		loggedInUserFriends
+	);
+
+	// also push the loggedinuser to the foundfriend.friends array (for now there will be no confirmation TODO: email confirmation to confirm being friends? or in app on the users' profile page?)
+	const foundFriendFriends = foundFriend.friends;
+	foundFriendFriends.push({
+		id: loggedInUser.id,
+		userName: loggedInUser.userName
+	});
+
+	//write the new info to the database(jsnon for now)
+	//update only the newly added friend in the array of users
+	writeData(userData);
+	res.status(200).json(foundFriend);
+});
+
+///GET logged in user
 router.get("/:userName", (req, res) => {
 	const userData = readData();
 	// console.log("get logged in user", req.params.userName);
@@ -69,6 +125,8 @@ router.get("/:userName", (req, res) => {
 	res.status(200).json(loggedInUser);
 });
 
+//POST REGISTER new user
+//async to wait for password to be hashed
 router.post("/register", async (req, res) => {
 	const userData = readData();
 
@@ -120,6 +178,8 @@ router.post("/register", async (req, res) => {
 	writeData(userData);
 	res.status(201).json(newUser);
 });
+
+///POST LOGIN login the user if username and password are correct
 
 router.post("/login", async (req, res) => {
 	const { userName, password } = req.body;

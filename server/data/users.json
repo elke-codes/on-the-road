@@ -6,10 +6,20 @@
     "email": "alex@email.com",
     "password": "$2b$08$bwqm1wf9mN4aXQJsqRBG/OmDFx3q9PgVUewQxpknQ5iyj2M80ywLG",
     "id": "a363dacf-6920-4e12-8514-9cdea600f1f7",
-    "friends": [{
-      "id": "1eebb058-4104-48db-a462-5e5172b22809",
-      "userName":"Ashley"
-    }],
+    "friends": [
+      {
+        "id": "1eebb058-4104-48db-a462-5e5172b22809",
+        "userName": "Ashley"
+      },
+      {
+        "id": "408e13b4-a2e7-468e-b929-a22f8a75b54d",
+        "userName": "Heba"
+      },
+      {
+        "id": "86673c66-ef2e-4a80-8abb-23b1740d3d09",
+        "userName": "Brent"
+      }
+    ],
     "messages": [
       {
         "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
@@ -136,6 +146,15 @@
         "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
         "message": "ah, it 's not too bad :)",
         "time": 1643154217462
+      },
+      {
+        "room": "8330a09c-f6b8-46b0-b5da-e905bdca990fa363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Kevin",
+        "receivedByID": "8330a09c-f6b8-46b0-b5da-e905bdca990f",
+        "message": "Hi Kevin! Welcome to the Wayward.Club!!! ",
+        "time": 1643167196663
       }
     ],
     "locations": [
@@ -155,10 +174,12 @@
     "email": "ashley@email.com",
     "password": "$2b$08$GDBupFN1xI8NKBFlDKWTNe8oPeaelkIxSp83Uci1JUFO/bcGzrggO",
     "id": "1eebb058-4104-48db-a462-5e5172b22809",
-    "friends":[{
-      "id":"a363dacf-6920-4e12-8514-9cdea600f1f7",
-      "userName":"Alex"
-    }],
+    "friends": [
+      {
+        "id": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "userName": "Alex"
+      }
+    ],
     "messages": [
       {
         "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
@@ -304,7 +325,12 @@
     "email": "heba@email.com",
     "password": "$2b$08$7FRNts2gM6pmpNDyF1xdHe6ykgUyldZhbtOzRi11m/Fz0bzUP0gk2",
     "id": "408e13b4-a2e7-468e-b929-a22f8a75b54d",
-    "friends":[],
+    "friends": [
+      {
+        "id": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "userName": "Alex"
+      }
+    ],
     "messages": [],
     "locations": [
       {
@@ -323,7 +349,12 @@
     "email": "brent@email.com",
     "password": "$2b$08$7MvJcDk8Kt5/tp5M5XNozO5Fz3EIoTWcvjRKL.xWOXXcOD0qK4BKK",
     "id": "86673c66-ef2e-4a80-8abb-23b1740d3d09",
-    "friends":[],
+    "friends": [
+      {
+        "id": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "userName": "Alex"
+      }
+    ],
     "messages": [],
     "locations": [
       {
@@ -342,7 +373,7 @@
     "email": "john@email.com",
     "password": "$2b$08$pH68n1Hkm/FQLkpmvLeVFO4gzkAut2oF8..B7fqqkY5SIrzen5B.W",
     "id": "bf8ec41d-b80a-4ac5-9d83-af5514814728",
-    "friends":[],
+    "friends": [],
     "messages": [],
     "locations": [
       {
@@ -361,7 +392,7 @@
     "email": "phoebe@email.com",
     "password": "$2b$08$/W0XSvs2haus7T8Hmw9AXePwWT2UzFHEG0wN1LGxPvCfynW7/om5e",
     "id": "71270f3d-7ca4-4039-96de-7279958c2d97",
-    "friends":[],
+    "friends": [],
     "messages": [],
     "locations": [
       {
@@ -380,8 +411,18 @@
     "email": "kevin@email.com",
     "password": "$2b$08$YY77aS/UGfrdXP7MAC5IkeKNqiAjX2zJK/eUqgAU/EeBTcNU5EgOq",
     "id": "8330a09c-f6b8-46b0-b5da-e905bdca990f",
-    "friends":[],
-    "messages": [],
+    "friends": [],
+    "messages": [
+      {
+        "room": "8330a09c-f6b8-46b0-b5da-e905bdca990fa363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Kevin",
+        "receivedByID": "8330a09c-f6b8-46b0-b5da-e905bdca990f",
+        "message": "Hi Kevin! Welcome to the Wayward.Club!!! ",
+        "time": 1643167196663
+      }
+    ],
     "locations": [
       {
         "lat": 49.2634112,

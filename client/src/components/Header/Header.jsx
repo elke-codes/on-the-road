@@ -10,8 +10,9 @@ import logo from "../../assets/images/logo3.png";
 import Avatar from "../Avatar/Avatar";
 import SearchBar from "../SearchBar/SearchBar";
 import axios from "axios";
+import { getFriendsData } from "../../utils/users/getFriendsData";
 
-const Header = ({ loggedInUser, setLoggedInUser }) => {
+const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 	const history = useHistory();
 	const [userNameInvalid, setUserNameInvalid] = useState(false);
 	const [showSearchBar, setShowSearchBar] = useState(false);
@@ -75,10 +76,29 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 		setShowFindFriendButton(false);
 	};
 
-	const handleSearchFriends = () => {
+	const handleAddFriend = async (e) => {
+		e.preventDefault();
 		setShowSearchBar(false);
 		setShowSearchFriendButton(false);
 		setShowFindFriendButton(true);
+
+		console.log("handle add friend e.target....", e.target.addFriend.value);
+
+		const loggedInUserID = loggedInUser.id;
+		const friendToFind = e.target.addFriend.value;
+		// happening on the backend: look in db and find a user with either username or email address and return that user
+		//take the user returned and add them the the loggedinusers friend array + vice versa
+		await axios
+			.get(
+				`http://localhost:8000/users/${loggedInUserID}/${friendToFind}`
+			)
+			.then((result) =>
+				console.log("handleAddFriend GET request result", result)
+			);
+
+		// getfriendsdata again to update dom with all friends including new one
+		const friends = await getFriendsData(loggedInUser);
+		setFriendsData(friends);
 	};
 
 	return (
@@ -120,7 +140,7 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 							</p>
 							<div className="header__container">
 								{" "}
-								{showSearchBar && <SearchBar />}
+								{/* {showSearchBar && <SearchBar />} */}
 								{showFindFriendButton && (
 									<button
 										className="header__button-add-friend "
@@ -129,11 +149,24 @@ const Header = ({ loggedInUser, setLoggedInUser }) => {
 									</button>
 								)}
 								{showSearchFriendButton && (
-									<button
-										className="header__button-add-friend "
-										onClick={handleSearchFriends}>
-										Search friend!
-									</button>
+									<form
+										action="submit"
+										className="header__addFriend"
+										onSubmit={async (e) => {
+											await handleAddFriend(e);
+										}}>
+										<input
+											type="text"
+											name="addFriend"
+											className="search"
+											placeholder="search..."
+										/>
+										<button
+											className="header__button-add-friend"
+											type="submit">
+											Add friend!
+										</button>
+									</form>
 								)}
 								<button
 									className="header__button-logout "
