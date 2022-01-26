@@ -92,9 +92,11 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 			.get(
 				`http://localhost:8000/users/${loggedInUserID}/${friendToFind}`
 			)
-			.then((result) =>
-				console.log("handleAddFriend GET request result", result)
-			);
+			.then((result) => {
+				console.log("handleAddFriend GET request result", result);
+				//TODO modal new friend added? check out how to show modal for set amount of time and dissapear
+				alert("New Friend Added!");
+			});
 
 		// getfriendsdata again to update dom with all friends including new one
 		const friends = await getFriendsData(loggedInUser);
@@ -151,7 +153,7 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 								{showSearchFriendButton && (
 									<form
 										action="submit"
-										className="header__addFriend"
+										className="header__add-friend"
 										onSubmit={async (e) => {
 											await handleAddFriend(e);
 										}}>

@@ -18,6 +18,14 @@
       {
         "id": "86673c66-ef2e-4a80-8abb-23b1740d3d09",
         "userName": "Brent"
+      },
+      {
+        "id": "bf8ec41d-b80a-4ac5-9d83-af5514814728",
+        "userName": "John"
+      },
+      {
+        "id": "71270f3d-7ca4-4039-96de-7279958c2d97",
+        "userName": "Phoebe"
       }
     ],
     "messages": [
@@ -155,6 +163,33 @@
         "receivedByID": "8330a09c-f6b8-46b0-b5da-e905bdca990f",
         "message": "Hi Kevin! Welcome to the Wayward.Club!!! ",
         "time": 1643167196663
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "I'd love for my messages to appear on the right, and yours on the left",
+        "time": 1643168665578
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "I'm sure Elke has put that on her TODO list! ",
+        "time": 1643168791233
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "Yeah, I'm sure it's a long list, she's got huge plans for this! ",
+        "time": 1643168815702
       }
     ],
     "locations": [
@@ -306,6 +341,33 @@
         "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
         "message": "ah, it 's not too bad :)",
         "time": 1643154217462
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "I'd love for my messages to appear on the right, and yours on the left",
+        "time": 1643168665578
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Alex",
+        "authorID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "receivedBy": "Ashley",
+        "receivedByID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "message": "I'm sure Elke has put that on her TODO list! ",
+        "time": 1643168791233
+      },
+      {
+        "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "author": "Ashley",
+        "authorID": "1eebb058-4104-48db-a462-5e5172b22809",
+        "receivedBy": "Alex",
+        "receivedByID": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "message": "Yeah, I'm sure it's a long list, she's got huge plans for this! ",
+        "time": 1643168815702
       }
     ],
     "locations": [
@@ -373,7 +435,12 @@
     "email": "john@email.com",
     "password": "$2b$08$pH68n1Hkm/FQLkpmvLeVFO4gzkAut2oF8..B7fqqkY5SIrzen5B.W",
     "id": "bf8ec41d-b80a-4ac5-9d83-af5514814728",
-    "friends": [],
+    "friends": [
+      {
+        "id": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "userName": "Alex"
+      }
+    ],
     "messages": [],
     "locations": [
       {
@@ -392,7 +459,12 @@
     "email": "phoebe@email.com",
     "password": "$2b$08$/W0XSvs2haus7T8Hmw9AXePwWT2UzFHEG0wN1LGxPvCfynW7/om5e",
     "id": "71270f3d-7ca4-4039-96de-7279958c2d97",
-    "friends": [],
+    "friends": [
+      {
+        "id": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+        "userName": "Alex"
+      }
+    ],
     "messages": [],
     "locations": [
       {
