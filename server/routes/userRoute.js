@@ -162,6 +162,7 @@ router.post("/register", async (req, res) => {
 		email: req.body.email,
 		password: hashedPassword,
 		id: uuid(),
+		friends: [],
 		messages: [],
 		locations: [
 			{
