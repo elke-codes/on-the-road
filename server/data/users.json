@@ -6,6 +6,7 @@
     "email": "alex@email.com",
     "password": "$2b$08$bwqm1wf9mN4aXQJsqRBG/OmDFx3q9PgVUewQxpknQ5iyj2M80ywLG",
     "id": "a363dacf-6920-4e12-8514-9cdea600f1f7",
+    "friends":[],
     "messages": [
       {
         "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
@@ -151,6 +152,7 @@
     "email": "ashley@email.com",
     "password": "$2b$08$GDBupFN1xI8NKBFlDKWTNe8oPeaelkIxSp83Uci1JUFO/bcGzrggO",
     "id": "1eebb058-4104-48db-a462-5e5172b22809",
+    "friends":[],
     "messages": [
       {
         "room": "1eebb058-4104-48db-a462-5e5172b22809a363dacf-6920-4e12-8514-9cdea600f1f7",
@@ -296,6 +298,7 @@
     "email": "heba@email.com",
     "password": "$2b$08$7FRNts2gM6pmpNDyF1xdHe6ykgUyldZhbtOzRi11m/Fz0bzUP0gk2",
     "id": "408e13b4-a2e7-468e-b929-a22f8a75b54d",
+    "friends":[],
     "messages": [],
     "locations": [
       {
@@ -332,6 +335,7 @@
     "email": "john@email.com",
     "password": "$2b$08$pH68n1Hkm/FQLkpmvLeVFO4gzkAut2oF8..B7fqqkY5SIrzen5B.W",
     "id": "bf8ec41d-b80a-4ac5-9d83-af5514814728",
+    "friends":[],
     "messages": [],
     "locations": [
       {
@@ -350,6 +354,7 @@
     "email": "phoebe@email.com",
     "password": "$2b$08$/W0XSvs2haus7T8Hmw9AXePwWT2UzFHEG0wN1LGxPvCfynW7/om5e",
     "id": "71270f3d-7ca4-4039-96de-7279958c2d97",
+    "friends":[],
     "messages": [],
     "locations": [
       {
@@ -368,6 +373,7 @@
     "email": "kevin@email.com",
     "password": "$2b$08$YY77aS/UGfrdXP7MAC5IkeKNqiAjX2zJK/eUqgAU/EeBTcNU5EgOq",
     "id": "8330a09c-f6b8-46b0-b5da-e905bdca990f",
+    "friends":[],
     "messages": [],
     "locations": [
       {
