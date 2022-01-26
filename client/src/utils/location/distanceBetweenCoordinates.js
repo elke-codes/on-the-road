@@ -1,6 +1,7 @@
 // https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates
 
 export const distanceBetweenCoordinates = (lat1, lon1, lat2, lon2) => {
+	console.log("distance between coords", lat1, lon1, lat2, lon2);
 	var R = 6371; // Radius of the earth in km
 	var dLat = deg2rad(lat2 - lat1); // deg2rad below
 	var dLon = deg2rad(lon2 - lon1);

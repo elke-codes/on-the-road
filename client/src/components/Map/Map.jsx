@@ -22,7 +22,7 @@ const Map = ({ loggedInUser, friendsData, setSelectedFriend }) => {
 
 	const [userPosition, setUserPosition] = useState(null);
 	const [activeFriend, setActiveFriend] = useState(null);
-
+	console.log("friendsdata map", friendsData);
 	//on click asks for location and then brings your marker there so smoothly
 	const LocationMarker = () => {
 		//Save position when user signs up --> TODO add this to their location data

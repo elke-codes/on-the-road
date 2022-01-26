@@ -24,7 +24,8 @@ const FriendCardCopy = ({
 	setSelectedFriend,
 	selectedFriend
 }) => {
-	console.log("friendcard", selectedFriend);
+	console.log("friendcardcopy selectedfriend", selectedFriend.locations[0]);
+	console.log("friendcardcopy loggedInUser", loggedInUser);
 
 	// const handleClick = (friend) => {
 	// 	setSelectedFriend(friend);
@@ -92,13 +93,13 @@ const FriendCardCopy = ({
 					We're
 					{/* https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates */}
 					<span className="card__distance--bold">
-						{/* {distanceBetweenCoordinates(
+						{distanceBetweenCoordinates(
 							selectedFriend.locations[0].lat,
 							selectedFriend.locations[0].lng,
 							loggedInUser.locations[0].lat,
 							loggedInUser.locations[0].lng
-						)}{" "} */}
-						3456 km
+						)}{" "}
+						km
 					</span>{" "}
 					apart!
 				</p>

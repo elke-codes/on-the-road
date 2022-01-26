@@ -21,6 +21,7 @@ const Inbox = ({
 
 	useEffect(() => {
 		console.log("sel frien id", selectedFriend);
+		console.log("loggedininuser inbox", loggedInUser);
 		if (!selectedFriend) {
 			return;
 		}
@@ -34,9 +35,10 @@ const Inbox = ({
 	}, [selectedFriend]);
 
 	const handleSelectedFriend = (friend) => {
-		setActive(false);
+		// setActive(false);
+		console.log("loggedinuserhandeleselectedfriend", loggedInUser);
 		setSelectedFriend(friend);
-		setActive(true);
+		// setActive(true);
 	};
 
 	return (

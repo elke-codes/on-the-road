@@ -95,7 +95,10 @@ const ChatPage = ({
 							socket={socket}
 						/>
 						{selectedFriend && (
-							<FriendCardCopy selectedFriend={selectedFriend} />
+							<FriendCardCopy
+								selectedFriend={selectedFriend}
+								loggedInUser={loggedInUser}
+							/>
 						)}
 					</>
 				) : null}
