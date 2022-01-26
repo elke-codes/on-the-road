@@ -34,7 +34,7 @@ const App = () => {
 		if (!loggedInUser) {
 			return;
 		}
-		// console.log("gettting friends data");
+		console.log("gettting friends data");
 		const friends = await getFriendsData(loggedInUser);
 		// console.log("friends to set", friends);
 		setFriendsData(friends);

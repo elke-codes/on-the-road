@@ -38,6 +38,27 @@ router.get("/", (req, res) => {
 	res.status(200).json(usersData);
 });
 
+//get friends
+router.get("/:loggedInUserID/friends", (req, res) => {
+	const userData = readData();
+
+	const loggedInUser = userData.find((user) => {
+		return req.params.loggedInUserID === user.id;
+	});
+
+	const friends = loggedInUser.friends;
+	console.log("friends", friends);
+
+	//create an array of friend id;s
+	//find all the users with that id and return their data
+	const friendsData = friends
+		.map((friend) => friend.id)
+		.map((friendId) => userData.find((user) => user.id === friendId));
+
+	console.log("friendsData", friendsData);
+	res.status(200).json(friendsData);
+});
+
 router.get("/:userName", (req, res) => {
 	const userData = readData();
 	// console.log("get logged in user", req.params.userName);

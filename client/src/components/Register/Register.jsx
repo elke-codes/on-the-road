@@ -16,9 +16,9 @@ const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 	const [userNameErrorMessage, setUserNameErrorMessage] = useState("");
 	// TODO provide the option to manually set location
 	//on formsubmit
-	//TO DO FORMVALIDATION
-	//after formvalidation get location
 
+	//FORMVALIDATION
+	//after formvalidation get location
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 
