@@ -28,14 +28,19 @@ const MapPage = ({
 								Please log in to continue...
 							</h2>
 							<div className="homepage__buttons">
-								<button
-									className="homepage__button"
-									onClick={() => setRegister(true)}>
-									Register
-								</button>
-								<button className="homepage__button">
-									Login
-								</button>
+								<div>
+									<button
+										// className="homepage__button"
+										className="btn btn-success btn-sm mr-4"
+										onClick={() => setRegister(true)}>
+										Register
+									</button>
+									<button
+										// className="homepage__button"
+										className="btn btn-primary btn-sm">
+										Login
+									</button>
+								</div>
 							</div>
 						</div>
 					</>

@@ -66,8 +66,8 @@
 // -- GENERAL
 
 @mixin border-radius {
-	border-radius: 30px;
-	border: 2px solid $darker-blue;
+	border-radius: 5px;
+	// border: 2px solid $darker-blue;
 }
 
 @mixin box-shadow {
@@ -79,23 +79,23 @@
 
 // -- BUTTONS
 @mixin button {
-	@include border-radius;
-	margin: 0 1rem;
-	padding: 0.5rem 1rem;
-	border: none;
-	cursor: pointer;
-	min-width: fit-content;
-	width: 100px;
-	max-height: 2.5rem;
-	// background-color: $darker-blue;
-	background-color: $light-blue;
-	border: 1px solid $darker-blue;
-	&:hover {
-		background-color: white;
-		// color: $light-blue;
-		border: 1px solid $light-blue;
-		// transform: scale(1.1);
-	}
+	// @include border-radius;
+	// margin: 0 1rem;
+	// padding: 0.5rem 1rem;
+	// border: none;
+	// cursor: pointer;
+	// min-width: fit-content;
+	// width: 100px;
+	// max-height: 2.5rem;
+	// // background-color: $darker-blue;
+	// // background-color: $light-blue;
+	// border: 1px solid $darker-blue;
+	// &:hover {
+	// 	background-color: white;
+	// 	// color: $light-blue;
+	// 	border: 1px solid $light-blue;
+	// 	// transform: scale(1.1);
+	// }
 }
 // //
 // @mixin button {

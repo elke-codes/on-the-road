@@ -138,14 +138,15 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 					<>
 						<div className="header__right">
 							<p className="header__copy">
-								Welcome, {loggedInUser.userName}
+								{/* Welcome, {loggedInUser.userName} */}
 							</p>
 							<div className="header__container">
 								{" "}
 								{/* {showSearchBar && <SearchBar />} */}
 								{showFindFriendButton && (
 									<button
-										className="header__button-add-friend "
+										// className="header__button-add-friend "
+										className="btn btn-primary btn-sm mr-2"
 										onClick={handleFindFriends}>
 										Find friends
 									</button>
@@ -164,14 +165,16 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 											placeholder="search..."
 										/>
 										<button
-											className="header__button-add-friend"
+											// className="header__button-add-friend"
+											className="btn btn-primary btn-sm mr-2"
 											type="submit">
 											Add friend!
 										</button>
 									</form>
 								)}
 								<button
-									className="header__button-logout "
+									// className="header__button-logout "
+									className="btn btn-outline btn-sm mr-2"
 									onClick={handleLogOut}>
 									Logout
 								</button>
@@ -214,7 +217,8 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 						</div>
 						<button
 							type="submit"
-							className="header__button-login"
+							// className="header__button-login"
+							className="btn btn-primary btn-sm ml-2"
 							// onSubmit={handleLogin}
 						>
 							LOGIN

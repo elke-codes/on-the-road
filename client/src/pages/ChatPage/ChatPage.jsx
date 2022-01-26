@@ -53,11 +53,14 @@ const ChatPage = ({
 							</h2>
 							<div className="chat-page__buttons">
 								<button
-									className="chat-page__button"
+									// className="chat-page__button"
+									className="btn btn-sm btn-success mr-4"
 									onClick={() => setRegister(true)}>
 									Register
 								</button>
-								<button className="chat-page__button">
+								<button
+									// className="chat-page__button"
+									className="btn btn-primary btn-sm">
 									Login
 								</button>
 							</div>

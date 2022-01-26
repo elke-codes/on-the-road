@@ -198,7 +198,8 @@ const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 					</div>
 					<button
 						type="submit"
-						className="register-modal__sign-up-button">
+						// className="register-modal__sign-up-button"
+						className="btn btn-primary">
 						Sign up
 					</button>
 				</form>

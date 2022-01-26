@@ -97,7 +97,7 @@ const FriendCardCopy = ({
 							selectedFriend.locations[0].lng,
 							loggedInUser.locations[0].lat,
 							loggedInUser.locations[0].lng
-						)} */}{" "}
+						)}{" "} */}
 						3456 km
 					</span>{" "}
 					apart!

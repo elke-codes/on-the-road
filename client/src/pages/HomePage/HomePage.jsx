@@ -63,21 +63,25 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 			{!register && !loggedInUser && !login && (
 				<>
 					<div className="homepage__buttons">
-						<h1 className="homepage__title">reconnect</h1>
+						<h1 className="homepage__title">
+							the social network that moves you
+						</h1>
+						{/* <p></p> */}
 						<button
-							className="homepage__button"
+							// className="homepage__button "
+							className="btn btn-success"
 							onClick={() => setRegister(true)}>
-							Register
+							GET STARTED!
 						</button>
-						<button
+						{/* <button
 							className="homepage__button"
 							onClick={() => setLogin(true)}>
 							Login
-						</button>
+						</button> */}
 					</div>
-					<Link to="/about" className="homepage__about">
+					{/* <Link to="/about" className="homepage__about">
 						Tell me more!
-					</Link>
+					</Link> */}
 				</>
 			)}
 
@@ -134,10 +138,10 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 			{loggedInUser && (
 				<>
 					<Link to="/map" className="homepage__get-started">
-						Explore where your connections are {" >"}
+						Explore where your connections are
 					</Link>
 					<Link to="/chat" className="homepage__get-started">
-						Chat with your friends {" >"}
+						Chat with your friends
 					</Link>
 				</>
 			)}

@@ -64,19 +64,20 @@
 	}
 
 	&__sign-up-button {
-		@include button;
-		@include labels-buttons-copy;
-		height: 3rem;
-		width: 7rem;
-		align-self: flex-end;
-		color: $green-grey;
-		background-color: $light-blue;
-		border: 1px solid $darker-blue;
+		// @include button;
+		// @include labels-buttons-copy;
+		// @include border-radius;
+		// height: 3rem;
+		// width: 7rem;
+		// align-self: flex-end;
+		// color: $green-grey;
+		// // background-color: $light-blue;
+		// border: 1px solid $darker-blue;
 
-		&:hover {
-			background-color: $darker-blue;
-			color: $light-blue;
-			border: 1px solid $light-blue;
-		}
+		// &:hover {
+		// 	background-color: $darker-blue;
+		// 	// color: $light-blue;
+		// 	border: 1px solid $light-blue;
+		// }
 	}
 }
