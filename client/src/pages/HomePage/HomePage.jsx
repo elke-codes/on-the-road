@@ -64,7 +64,7 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 				<>
 					<div className="homepage__buttons">
 						<h1 className="homepage__title">
-							the social network that moves you
+							the social network that moves with you
 						</h1>
 						{/* <p></p> */}
 						<button

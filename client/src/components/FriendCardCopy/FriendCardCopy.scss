@@ -6,7 +6,9 @@
 @use "../../styles/partials/colors" as *;
 
 .leaflet-container {
+	// display: none;
 	position: unset;
+
 	// height:30%;
 }
 .card {
@@ -14,7 +16,11 @@
 	margin: 2rem;
 	height: 70%;
 	width: 20%;
+	// display: none;
 	@include border-radius;
+	@include tablet {
+		display: unset;
+	}
 
 	&__mini-map {
 		width: 100%;

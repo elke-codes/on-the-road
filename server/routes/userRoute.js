@@ -141,7 +141,6 @@ router.post("/register", async (req, res) => {
 			.status(422)
 			.json({ message: "Email address already taken." });
 	}
-	// TODO EMAIL CHARACTER VALIDATION
 	if (!emailValid(req.body.email)) {
 		return res.status(422).json({
 			message:
@@ -149,8 +148,7 @@ router.post("/register", async (req, res) => {
 		});
 	}
 
-	// do something with password
-	let { password } = req.body;
+	const { password } = req.body;
 	console.log("password", password);
 	const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
 	console.log("hashed", hashedPassword);
@@ -169,6 +167,7 @@ router.post("/register", async (req, res) => {
 				lat: req.body.lat,
 				lng: req.body.lng,
 				created_at: new Date(),
+				// TODO updated_at to create travel history
 				city: req.body.city,
 				country: req.body.country
 			}
