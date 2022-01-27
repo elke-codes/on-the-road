@@ -818,7 +818,35 @@
         "userName": "Elke"
       }
     ],
-    "messages": [],
+    "messages": [
+      {
+        "room": "43be4867-6c2d-4045-acc7-8d3b80a3187bd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Daniil",
+        "receivedByID": "43be4867-6c2d-4045-acc7-8d3b80a3187b",
+        "message": "Hey Daniil! ",
+        "time": 1643265446209
+      },
+      {
+        "room": "43be4867-6c2d-4045-acc7-8d3b80a3187bd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Daniil",
+        "receivedByID": "43be4867-6c2d-4045-acc7-8d3b80a3187b",
+        "message": "Just wanted to drop a quick thank you for being a talented teacher and making such an impact in my life!",
+        "time": 1643265515992
+      },
+      {
+        "room": "43be4867-6c2d-4045-acc7-8d3b80a3187bd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Daniil",
+        "receivedByID": "43be4867-6c2d-4045-acc7-8d3b80a3187b",
+        "message": "The love for coding lives on!",
+        "time": 1643265527459
+      }
+    ],
     "locations": [
       {
         "lat": 43.66151406617474,
@@ -842,7 +870,26 @@
         "userName": "Elke"
       }
     ],
-    "messages": [],
+    "messages": [
+      {
+        "room": "bb77887f-6848-4665-9f61-55e6044a897cd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Kayla",
+        "authorID": "bb77887f-6848-4665-9f61-55e6044a897c",
+        "receivedBy": "Elke",
+        "receivedByID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "message": "Elke, I LIVE for your excitement about coding ",
+        "time": 1643265706804
+      },
+      {
+        "room": "bb77887f-6848-4665-9f61-55e6044a897cd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Kayla",
+        "receivedByID": "bb77887f-6848-4665-9f61-55e6044a897c",
+        "message": "I honestly can't believe I'm having so much fun hahaha",
+        "time": 1643265711427
+      }
+    ],
     "locations": [
       {
         "lat": 49.28507363467836,
@@ -866,7 +913,26 @@
         "userName": "Elke"
       }
     ],
-    "messages": [],
+    "messages": [
+      {
+        "room": "7b155392-76b5-4ee0-9e09-09cac9f14a95d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Sheva",
+        "authorID": "7b155392-76b5-4ee0-9e09-09cac9f14a95",
+        "receivedBy": "Elke",
+        "receivedByID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "message": "Hey Elke, did you push that latest code?",
+        "time": 1643265589430
+      },
+      {
+        "room": "7b155392-76b5-4ee0-9e09-09cac9f14a95d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Sheva",
+        "receivedByID": "7b155392-76b5-4ee0-9e09-09cac9f14a95",
+        "message": "Yup! Just did! ",
+        "time": 1643265598117
+      }
+    ],
     "locations": [
       {
         "lat": 43.652554632636104,
@@ -1488,7 +1554,71 @@
         "userName": "Miriam"
       }
     ],
-    "messages": [],
+    "messages": [
+      {
+        "room": "43be4867-6c2d-4045-acc7-8d3b80a3187bd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Daniil",
+        "receivedByID": "43be4867-6c2d-4045-acc7-8d3b80a3187b",
+        "message": "Hey Daniil! ",
+        "time": 1643265446209
+      },
+      {
+        "room": "43be4867-6c2d-4045-acc7-8d3b80a3187bd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Daniil",
+        "receivedByID": "43be4867-6c2d-4045-acc7-8d3b80a3187b",
+        "message": "Just wanted to drop a quick thank you for being a talented teacher and making such an impact in my life!",
+        "time": 1643265515992
+      },
+      {
+        "room": "43be4867-6c2d-4045-acc7-8d3b80a3187bd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Daniil",
+        "receivedByID": "43be4867-6c2d-4045-acc7-8d3b80a3187b",
+        "message": "The love for coding lives on!",
+        "time": 1643265527459
+      },
+      {
+        "room": "7b155392-76b5-4ee0-9e09-09cac9f14a95d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Sheva",
+        "authorID": "7b155392-76b5-4ee0-9e09-09cac9f14a95",
+        "receivedBy": "Elke",
+        "receivedByID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "message": "Hey Elke, did you push that latest code?",
+        "time": 1643265589430
+      },
+      {
+        "room": "7b155392-76b5-4ee0-9e09-09cac9f14a95d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Sheva",
+        "receivedByID": "7b155392-76b5-4ee0-9e09-09cac9f14a95",
+        "message": "Yup! Just did! ",
+        "time": 1643265598117
+      },
+      {
+        "room": "bb77887f-6848-4665-9f61-55e6044a897cd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Kayla",
+        "authorID": "bb77887f-6848-4665-9f61-55e6044a897c",
+        "receivedBy": "Elke",
+        "receivedByID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "message": "Elke, I LIVE for your excitement about coding ",
+        "time": 1643265706804
+      },
+      {
+        "room": "bb77887f-6848-4665-9f61-55e6044a897cd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Kayla",
+        "receivedByID": "bb77887f-6848-4665-9f61-55e6044a897c",
+        "message": "I honestly can't believe I'm having so much fun hahaha",
+        "time": 1643265711427
+      }
+    ],
     "locations": [
       {
         "lat": 49.2634112,
