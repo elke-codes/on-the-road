@@ -3,8 +3,6 @@
 import React from "react";
 import "./Avatar.scss";
 
-// import Mohan from "../../assets/images/Mohan-muruge.jpg";
-
 const Avatar = (props) => {
 	const { addedClass } = props;
 

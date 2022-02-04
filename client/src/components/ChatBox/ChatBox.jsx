@@ -6,7 +6,6 @@ import ScrollToBottom from "react-scroll-to-bottom";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
 import { timeAgo } from "../../utils/time/timeAgo";
-// import { generateRoomName } from "../../utils/socket/generateRoomName";
 
 const ChatBox = ({
 	friendsData,
@@ -56,15 +55,8 @@ const ChatBox = ({
 		socket.emit("join_room", room);
 	};
 
-	//listen for changes in room, clear the messagelist, join the room
-	// useEffect(() => {
-	// 	setMessageList([]);
-	// 	joinRoom(room);
-	// }, [room]);
-
 	//allow messages to be sent through socket
 	//async because you want to wait for the state to be set
-	//...can do with useEffect listening to the currentMessage to change?
 	const sendMessage = async () => {
 		if (currentMessage !== "") {
 			const messageData = {
@@ -109,7 +101,6 @@ const ChatBox = ({
 			<article className="chat-box__body">
 				<ScrollToBottom className="message-container">
 					{messageList.map((messageContent) => {
-						// console.log("messageContent", messageContent);
 						{
 							/* where messagecontent is the data received back from the server  */
 						}
@@ -132,7 +123,6 @@ const ChatBox = ({
 										<p className="message__meta-time">
 											{timeAgo(messageContent.time)}
 										</p>
-										{/* </div> */}
 									</div>
 									<div className="message__content">
 										{" "}

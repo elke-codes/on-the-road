@@ -14,14 +14,10 @@ import {
 } from "react-leaflet";
 import { useEventHandlers } from "@react-leaflet/core";
 import { v4 as uuid } from "uuid";
-import { getFriendsData } from "../../utils/users/getFriendsData";
 import FriendCard from "../FriendCard/FriendCard";
 
 const Map = ({ loggedInUser, friendsData, setSelectedFriend }) => {
-	const [markers, setMarkers] = useState([]);
-
 	const [userPosition, setUserPosition] = useState(null);
-	const [activeFriend, setActiveFriend] = useState(null);
 	console.log("friendsdata map", friendsData);
 	//on click asks for location and then brings your marker there so smoothly
 	const LocationMarker = () => {
@@ -138,6 +134,7 @@ const Map = ({ loggedInUser, friendsData, setSelectedFriend }) => {
 								]}
 								key={uuid()}
 								loggedInUser={loggedInUser}
+								// TODO HOVER
 								// onClick={() => {
 								// 	setActiveFriend(friend);
 								// }}
@@ -151,13 +148,6 @@ const Map = ({ loggedInUser, friendsData, setSelectedFriend }) => {
 								// }}
 							>
 								<Popup>
-									{/* <p>
-										{console.log("loggedInuser in popup")}
-									</p> */}
-									{/*	<p>
-										{friend.locations[0].city}{" "}
-										{friend.locations[0].county}
-									</p> */}
 									<FriendCard
 										friend={friend}
 										loggedInUser={loggedInUser}
@@ -167,17 +157,6 @@ const Map = ({ loggedInUser, friendsData, setSelectedFriend }) => {
 							</Marker>
 						);
 					})}
-				{/* <Marker
-					position={[
-						loggedInUser.locations[0].lat,
-						loggedInUser.locations[0].lng
-					]}>
-					<Popup>
-						<p>You</p>
-						<p>{loggedInUser.locations[0].city}</p>
-						<p>{loggedInUser.locations[0].country}</p>
-					</Popup>
-				</Marker> */}
 
 				<LocationMarker />
 				<MinimapControl position="topright" />

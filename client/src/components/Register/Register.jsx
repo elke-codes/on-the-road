@@ -1,11 +1,10 @@
 /// --- REGISTER.JSX --- ///
 import "./Register.scss";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { postRegistration } from "../../utils/forms/postRegistration";
 
 const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
-	const history = useHistory();
 	const [userNameInvalid, setUserNameInvalid] = useState(false);
 	const [firstNameInvalid, setFirstNameInvalid] = useState(false);
 	const [lastNameInvalid, setLastNameInvalid] = useState(false);
@@ -48,7 +47,6 @@ const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 				const user = await postRegistration(e);
 				console.log(user);
 				setLoggedInUser(user);
-				// history.push("/map");
 				e.target.reset();
 			} catch (e) {
 				// e.response.data is the error message, set in the server.
@@ -72,10 +70,6 @@ const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 				} else console.log("error handling registrationform", e);
 			}
 		}
-		// setEmailInvalid(false);
-		// setFirstNameInvalid(false);
-		// setFirstNameInvalid(false);
-		// setUserNameInvalid(false);
 	};
 
 	return (
@@ -196,10 +190,7 @@ const Register = ({ setLoggedInUser, setShowRegisterModal }) => {
 							I'd rather enter my location manually
 						</label>
 					</div>
-					<button
-						type="submit"
-						// className="register-modal__sign-up-button"
-						className="btn btn-primary">
+					<button type="submit" className="btn btn-primary">
 						Sign up
 					</button>
 				</form>

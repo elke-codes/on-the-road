@@ -2,9 +2,7 @@
 
 import "./MapPage.scss";
 import React, { useState } from "react";
-import FriendCard from "../../components/FriendCard/FriendCard";
 import Map from "../../components/Map/Map";
-import Inbox from "../../components/Inbox/Inbox";
 import Footer from "../../components/Footer/Footer";
 import Register from "../../components/Register/Register";
 
@@ -30,14 +28,11 @@ const MapPage = ({
 							<div className="homepage__buttons">
 								<div>
 									<button
-										// className="homepage__button"
 										className="btn btn-success btn-sm mr-4"
 										onClick={() => setRegister(true)}>
 										Register
 									</button>
-									<button
-										// className="homepage__button"
-										className="btn btn-primary btn-sm">
+									<button className="btn btn-primary btn-sm">
 										Login
 									</button>
 								</div>
@@ -46,7 +41,6 @@ const MapPage = ({
 					</>
 				)}
 
-				{/* <Map className="homepage__map" /> */}
 				{!loggedInUser && register && (
 					<main className="log-in">
 						{" "}

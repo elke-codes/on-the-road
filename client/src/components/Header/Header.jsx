@@ -1,13 +1,10 @@
 /// --- HEADER.JSX --- ///
 import "./Header.scss";
-import React, { useEffect, useState } from "react";
-import { Link, useHistory, Redirect, NavLink } from "react-router-dom";
-import { getLoggedInUserFromStorage } from "../../utils/users/getLoggedInUserFromStorage";
+import React, { useState } from "react";
+import { Link, useHistory, NavLink } from "react-router-dom";
 import { deleteLoggedInUser } from "../../utils/users/deleteLoggedInUser";
-import { setLoggedInUserIntoStorage } from "../../utils/users/setLoggedInUserIntoStorage";
 import { getUserData } from "../../utils/users/getUserData";
 import Avatar from "../Avatar/Avatar";
-import SearchBar from "../SearchBar/SearchBar";
 import axios from "axios";
 import { getFriendsData } from "../../utils/users/getFriendsData";
 
@@ -23,8 +20,6 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 		useState("");
 
 	const handleLogin = async (e) => {
-		// console.log(e.target.userName.value);
-
 		e.preventDefault();
 
 		if (!e.target.userName.value) {
@@ -106,11 +101,6 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 		<section className="header">
 			<Link to="/" className="header__title-link">
 				<h1 className="header__title">wayward</h1>
-				{/* <img
-					src={logo}
-					alt="two markers connected by dots and an airplane in the middle, on the road text underneath"
-					className="logo"
-				/> */}
 			</Link>
 			<nav className="header__nav">
 				<NavLink
@@ -140,11 +130,8 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 								{/* Welcome, {loggedInUser.userName} */}
 							</p>
 							<div className="header__container">
-								{" "}
-								{/* {showSearchBar && <SearchBar />} */}
 								{showFindFriendButton && (
 									<button
-										// className="header__button-add-friend "
 										className="btn btn-primary btn-sm mr-2"
 										onClick={handleFindFriends}>
 										Find friends
@@ -164,7 +151,6 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 											placeholder="search..."
 										/>
 										<button
-											// className="header__button-add-friend"
 											className="btn btn-primary btn-sm mr-2"
 											type="submit">
 											Add friend!
@@ -172,7 +158,6 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 									</form>
 								)}
 								<button
-									// className="header__button-logout "
 									className="btn btn-outline btn-sm mr-2"
 									onClick={handleLogOut}>
 									Logout
@@ -183,16 +168,12 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 					</>
 				) : (
 					<form className="header__login-form" onSubmit={handleLogin}>
-						{/* <label className="header__input-label" htmlFor="userName">
-					Username
-				</label> */}
 						<div className="input__wrapper">
 							<input
 								className="header__input"
 								type="text"
 								placeholder="username"
 								name="userName"
-								// onChange={handleChange}
 							/>
 							{loginUserNameErrorMessage && (
 								<p className="header__input--error">
@@ -206,7 +187,6 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 								type="password"
 								placeholder="password"
 								name="password"
-								// onChange={handleChange}
 							/>
 							{loginPasswordErrorMessage && (
 								<p className="header__input--error">
@@ -216,10 +196,7 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 						</div>
 						<button
 							type="submit"
-							// className="header__button-login"
-							className="btn btn-primary btn-sm ml-2"
-							// onSubmit={handleLogin}
-						>
+							className="btn btn-primary btn-sm ml-2">
 							LOGIN
 						</button>
 					</form>
@@ -230,72 +207,3 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 };
 
 export default Header;
-
-// <section className="header">
-// 		<Link to="/">
-// 			{" "}
-// 			<h1 className="logo">On the road...</h1>
-// 		</Link>
-// 		<div className="header__logged-in">
-// 			{loggedInUser ? (
-// 				<>
-// 					{/* <Redirect to="/map" />; */}
-// 					{/* <div className="header__logged-in"> */}
-
-// 					<button className="header__button-add-friend btn btn-primary">
-// 						Find friends
-// 					</button>
-// 					<button
-// 						className="header__button-logout btn btn-primary"
-// 						onClick={handleLogOut}>
-// 						logout
-// 					</button>
-// 					<p>Welcome, {loggedInUser.userName}</p>
-// 					<div className="dropdown">
-// 						<div tabIndex="0">
-// 							<div className="avatar header__avatar">
-// 								<div className="mb-8 rounded-full w-14 h-14">
-// 									<img src="http://daisyui.com/tailwind-css-component-profile-1@56w.png" />
-// 								</div>
-// 							</div>
-// 						</div>
-// 						<ul
-// 							tabIndex="0"
-// 							className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52">
-// 							<li>
-// 								<a>Item 1</a>
-// 							</li>
-// 							<li>
-// 								<a>Item 2</a>
-// 							</li>
-// 							<li>
-// 								<a>Item 3</a>
-// 							</li>
-// 						</ul>
-// 					</div>
-
-// 					{/* </div> */}
-// 				</>
-// 			) : (
-// 				<form className="header__login-form" onSubmit={handleLogin}>
-// 					{/* <label className="header__input-label" htmlFor="userName">
-// 					Username
-// 				</label> */}
-// 					<input
-// 						className="header__input"
-// 						type="text"
-// 						placeholder="enter your username"
-// 						name="userName"
-// 						// onChange={handleChange}
-// 					/>
-// 					<button
-// 						type="submit"
-// 						className="header__button-login btn btn-primary"
-// 						// onSubmit={handleLogin}
-// 					>
-// 						LOGIN
-// 					</button>
-// 				</form>
-// 			)}
-// 		</div>
-// 	</section>

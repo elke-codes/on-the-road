@@ -6,11 +6,9 @@ import React, { useEffect, useState } from "react";
 import ChatBox from "../../components/ChatBox/ChatBox";
 
 import socket from "../../utils/socket/socket-client";
-import { io } from "socket.io-client";
 import Inbox from "../../components/Inbox/Inbox";
 import Footer from "../../components/Footer/Footer";
 import Register from "../../components/Register/Register";
-import axios from "axios";
 import FriendCardCopy from "../../components/FriendCardCopy/FriendCardCopy";
 
 // // establish connection to backend
@@ -28,14 +26,12 @@ const ChatPage = ({
 }) => {
 	const [register, setRegister] = useState(false);
 
-	// console.log("loggedinUser chatpage", loggedInUser);
-
 	// when there s a logged in user connect
 	useEffect(() => {
 		if (!loggedInUser) {
 			return;
 		}
-		// socket.auth = { userName: loggedInUser.userName };
+		// TODO ? socket.auth = { userName: loggedInUser.userName };
 		// console.log(socket.auth);
 		socket.connect();
 
@@ -58,9 +54,7 @@ const ChatPage = ({
 									onClick={() => setRegister(true)}>
 									Register
 								</button>
-								<button
-									// className="chat-page__button"
-									className="btn btn-primary btn-sm">
+								<button className="btn btn-primary btn-sm">
 									Login
 								</button>
 							</div>
@@ -68,7 +62,6 @@ const ChatPage = ({
 					</>
 				)}
 
-				{/* <Map className="chat-page__map" /> */}
 				{!loggedInUser && register && (
 					<Register
 						setLoggedInUser={setLoggedInUser}
@@ -109,22 +102,3 @@ const ChatPage = ({
 };
 
 export default ChatPage;
-
-// const ChatPage = ({ userName }) => {
-// 	//get username from login
-// 	const [userName, setUserName] = useState("");
-// 	//get room from click friend inbox/friendlist
-// 	const [room, setRoom] = useState("");
-// 	//get currentFriend from click on friend inbox/friendlist
-// 	const [currentFriend, setCurrentFriend] = useState("");
-
-// 	return (
-// 		<main className="chat-page">
-// 			{/* <Inbox currentFriend={currentFriend}/> */}
-// 			{/* <ChatBox socket={socket} userName={userName} room={room}/> currentFriend={currentFriend} */}
-// 			{/* <FriendInfo currentFriend={currentFriend}>*/}
-// 		</main>
-// 	);
-// };
-
-// export default ChatPage;

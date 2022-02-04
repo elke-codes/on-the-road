@@ -4,9 +4,6 @@ import "./Inbox.scss";
 import React, { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 import { generateRoomName } from "../../utils/socket/generateRoomName";
-import { distanceBetweenCoordinates } from "../../utils/location/distanceBetweenCoordinates";
-import DividerLine from "../DividerLine/DividerLine";
-import FriendCard from "../FriendCard/FriendCard";
 import SearchBar from "../SearchBar/SearchBar";
 
 const Inbox = ({
@@ -35,18 +32,13 @@ const Inbox = ({
 	}, [selectedFriend]);
 
 	const handleSelectedFriend = (friend) => {
-		// setActive(false);
 		console.log("loggedinuserhandeleselectedfriend", loggedInUser);
 		setSelectedFriend(friend);
-		// setActive(true);
 	};
 
 	return (
 		<>
 			<section className="inbox">
-				{/* <h2 className="inbox__title">
-					<SearchBar />
-				</h2> */}
 				<SearchBar />
 
 				{/* filter over people, filter out id that matches logged in id */}
@@ -54,18 +46,11 @@ const Inbox = ({
 				{friendsData &&
 					friendsData.map((friend) => {
 						return (
-							// <article className="inbox__user" key={uuid()}>
 							<div
 								key={uuid()}
 								className="collapse border  border-base-300 inbox__user"
 								onClick={() => {
 									handleSelectedFriend(friend);
-									// setSelectedFriend(friend);
-									// generateRoomName(
-									// 	loggedInUser.id,
-									// 	selectedFriend.id
-									// );
-									// console.log("room", room);
 								}}>
 								<input
 									type="checkbox"
@@ -83,22 +68,7 @@ const Inbox = ({
 										@{friend.userName}
 									</span>
 								</div>
-								{/* <div className="collapse-content">
-									{" "}
-									<FriendCard
-										friend={friend}
-										loggedInUser={loggedInUser}
-										setSelectedFriend={setSelectedFriend}
-									/>
-								</div> */}
 							</div>
-							/* <img
-								className="inbox__image"
-								src="https://placedog.net/50"
-								alt=""
-							/>
-							<p className="inbox__name">{user.userName}</p> */
-							// </article>
 						);
 					})}
 			</section>
@@ -107,47 +77,3 @@ const Inbox = ({
 };
 
 export default Inbox;
-
-{
-	/* <div className="inbox__details"> */
-}
-{
-	/* <div className="inbox__details-left">
-										<p>
-											{" "}
-											{friend.firstName} {friend.lastName}
-										</p>
-										<p className="inbox__details-location">
-											{friend.locations[0].city}{" "}
-											{friend.locations[0].country}
-										</p>
-									</div>
-									{/* </div> */
-}
-// 	<div className="inbox__details-calculations">
-// 		<p className="inbox__details-calculations-distance">
-// 			We're{" "}
-// 			<span className="friend-card__distance--bold">
-// 				{distanceBetweenCoordinates(
-// 					friend.locations[0].lat,
-// 					friend.locations[0].lng,
-// 					loggedInUser.locations[0]
-// 						.lat,
-// 					loggedInUser.locations[0]
-// 						.lng
-// 				)}{" "}
-// 				km
-// 			</span>{" "}
-// 			apart!
-// 		</p>
-// 		<p className="inbox__details-calculations-time">
-// 			It's{" "}
-// 			{/* TODO api s for timezone...  */}
-// 			<span className="friend-card__time--bold">
-// 				3:22pm{" "}
-// 			</span>{" "}
-// 			here
-// 		</p>
-// 	</div>{" "}
-// 	*/}
-// </div>
