@@ -1,8 +1,6 @@
 /// --- FRIENDINFO.JSX --- ///
 
 import "./FriendCard.scss";
-import skyscanner from "../../assets/images/skyscanner.png";
-import airBnb from "../../assets/images/airbnb.png";
 import { distanceBetweenCoordinates } from "../../utils/location/distanceBetweenCoordinates";
 import React from "react";
 import { useHistory } from "react-router-dom";

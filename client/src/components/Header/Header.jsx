@@ -6,7 +6,6 @@ import { getLoggedInUserFromStorage } from "../../utils/users/getLoggedInUserFro
 import { deleteLoggedInUser } from "../../utils/users/deleteLoggedInUser";
 import { setLoggedInUserIntoStorage } from "../../utils/users/setLoggedInUserIntoStorage";
 import { getUserData } from "../../utils/users/getUserData";
-import logo from "../../assets/images/logo3.png";
 import Avatar from "../Avatar/Avatar";
 import SearchBar from "../SearchBar/SearchBar";
 import axios from "axios";

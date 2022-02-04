@@ -75,7 +75,7 @@ const MapPage = ({
 						</article>
 					</>
 				)}
-
+				{/* TODO display modal on hover over questionmark  */}
 				{loggedInUser && showModal && (
 					<>
 						<article className="map-page__explanation">
