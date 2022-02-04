@@ -73,7 +73,7 @@ const FriendCardCopy = ({ loggedInUser, selectedFriend }) => {
 					{selectedFriend.locations[0].country}
 				</p>
 				<p className="card__distance">
-					We're
+					We're{" "}
 					{/* https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates */}
 					<span className="card__distance--bold">
 						{distanceBetweenCoordinates(
@@ -81,15 +81,14 @@ const FriendCardCopy = ({ loggedInUser, selectedFriend }) => {
 							selectedFriend.locations[0].lng,
 							loggedInUser.locations[0].lat,
 							loggedInUser.locations[0].lng
-						)}{" "}
+						)}
 						km
 					</span>{" "}
 					apart!
 				</p>
 				<p className="card__time">
 					It's {/* TODO api s for timezone...  */}
-					<span className="card__time--bold">3:22pm</span>
-					here
+					<span className="card__time--bold">3:22pm</span> here
 				</p>
 			</div>
 		</div>
