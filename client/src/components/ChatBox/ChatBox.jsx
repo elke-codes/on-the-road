@@ -114,14 +114,17 @@ const ChatBox = ({
 										? "you"
 										: "other"
 								}>
-								<div>
+								<div className="message__container">
 									<div className="message__meta">
 										{/* <div> */}{" "}
-										<p className="message__meta-author">
-											{messageContent.author}
-										</p>
 										<p className="message__meta-time">
 											{timeAgo(messageContent.time)}
+										</p>
+										<p className="message__meta-author">
+											{messageContent.author ===
+											loggedInUser.userName
+												? "You"
+												: messageContent.author}
 										</p>
 									</div>
 									<div className="message__content">
