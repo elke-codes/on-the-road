@@ -30,9 +30,9 @@ const FriendCardCopy = ({ loggedInUser, selectedFriend }) => {
 
 	// https://stackoverflow.com/questions/64665827/react-leaflet-center-attribute-does-not-change-when-the-center-state-changes
 	const zoom = 10;
-	const ChangeView = ({ center, zoom }) => {
+	const ChangeView = ({ center }) => {
 		const map = useMap();
-		map.setView(center, zoom);
+		map.setView(center);
 		return null;
 	};
 
@@ -43,13 +43,13 @@ const FriendCardCopy = ({ loggedInUser, selectedFriend }) => {
 			<MapContainer
 				className="card__mini-map"
 				center={center}
-				zoom={3}
+				zoom={10}
 				scrollWheelZoom={true}
 				id="inlineFrameExample"
 				title="Inline Frame Example"
 				width="300"
 				height="200">
-				<ChangeView center={center} zoom={zoom} />
+				<ChangeView center={center} />
 
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -88,14 +88,7 @@ const FriendCardCopy = ({ loggedInUser, selectedFriend }) => {
 					apart!
 				</p>
 				<p className="card__time">
-					It's {/* TODO api s for timezone...  */}
-					<span className="card__time--bold">
-						{/* {console.log(
-							"from friendcardcopu time at locateion", */}
-						{/* {timeAtLocation(selectedFriendLat, selectedFriendLng)} */}
-						{/* )} */}
-						{localTime && localTime}
-					</span>{" "}
+					It's <span className="card__time--bold">{localTime}</span>{" "}
 					here
 				</p>
 			</div>
