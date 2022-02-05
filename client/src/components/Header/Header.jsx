@@ -76,8 +76,6 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 		setShowSearchFriendButton(false);
 		setShowFindFriendButton(true);
 
-		console.log("handle add friend e.target....", e.target.addFriend.value);
-
 		const loggedInUserID = loggedInUser.id;
 		const friendToFind = e.target.addFriend.value;
 		// happening on the backend: look in db and find a user with either username or email address and return that user
@@ -87,7 +85,6 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 				`http://localhost:8000/users/${loggedInUserID}/${friendToFind}`
 			)
 			.then((result) => {
-				console.log("handleAddFriend GET request result", result);
 				//TODO modal new friend added? check out how to show modal for set amount of time and dissapear
 				alert("New Friend Added!");
 			});
