@@ -6,26 +6,26 @@ import React, { useEffect, useState } from "react";
 import Avatar from "../Avatar/Avatar";
 import DividerLine from "../DividerLine/DividerLine";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import { timeAtLocation } from "../../utils/time/timeAtLocation";
 
 const FriendCardCopy = ({ loggedInUser, selectedFriend }) => {
-	console.log(
-		"friendcardcopy selectedfriend",
-		selectedFriend.locations[0].lat
-	);
-	console.log("friendcardcopy loggedInUser", loggedInUser);
 	const selectedFriendLat = selectedFriend.locations[0].lat;
 	const selectedFriendLng = selectedFriend.locations[0].lng;
-
 	const [center, setCenter] = useState([
 		selectedFriend.locations[0].lat,
 		selectedFriend.locations[0].lng
 	]);
+	const [localTime, setLocalTime] = useState(null);
 
 	useEffect(async () => {
 		if (!selectedFriend) {
 			return;
 		}
 		setCenter([selectedFriendLat, selectedFriendLng]);
+
+		setLocalTime(
+			await timeAtLocation(selectedFriendLat, selectedFriendLng)
+		);
 	}, [selectedFriend]);
 
 	// https://stackoverflow.com/questions/64665827/react-leaflet-center-attribute-does-not-change-when-the-center-state-changes
@@ -36,7 +36,8 @@ const FriendCardCopy = ({ loggedInUser, selectedFriend }) => {
 		return null;
 	};
 
-	console.log(center);
+	// console.log(center);
+	console.log("localtime", localTime);
 	return (
 		<div class="card text-center shadow-2xl">
 			<MapContainer
@@ -88,7 +89,14 @@ const FriendCardCopy = ({ loggedInUser, selectedFriend }) => {
 				</p>
 				<p className="card__time">
 					It's {/* TODO api s for timezone...  */}
-					<span className="card__time--bold">3:22pm</span> here
+					<span className="card__time--bold">
+						{/* {console.log(
+							"from friendcardcopu time at locateion", */}
+						{/* {timeAtLocation(selectedFriendLat, selectedFriendLng)} */}
+						{/* )} */}
+						{localTime && localTime}
+					</span>{" "}
+					here
 				</p>
 			</div>
 		</div>
