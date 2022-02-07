@@ -1,78 +1,62 @@
 /// --- FRIENDINFO.JSX --- ///
 
 import "./FriendCardCopy.scss";
-import skyscanner from "../../assets/images/skyscanner.png";
-import airBnb from "../../assets/images/airbnb.png";
 import { distanceBetweenCoordinates } from "../../utils/location/distanceBetweenCoordinates";
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import Avatar from "../Avatar/Avatar";
 import DividerLine from "../DividerLine/DividerLine";
-import { useHistory } from "react-router";
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import { timeAtLocation } from "../../utils/time/timeAtLocation";
 
-import {
-	TileLayer,
-	Popup,
-	MapContainer,
-	Marker,
-	useMapEvents
-} from "react-leaflet";
+const FriendCardCopy = ({ loggedInUser, selectedFriend }) => {
+	const selectedFriendLat = selectedFriend.locations[0].lat;
+	const selectedFriendLng = selectedFriend.locations[0].lng;
+	const [center, setCenter] = useState([
+		selectedFriend.locations[0].lat,
+		selectedFriend.locations[0].lng
+	]);
+	const [localTime, setLocalTime] = useState(null);
 
-const FriendCardCopy = ({
-	friend,
-	loggedInUser,
-	setSelectedFriend,
-	selectedFriend
-}) => {
-	console.log("friendcardcopy selectedfriend", selectedFriend.locations[0]);
-	console.log("friendcardcopy loggedInUser", loggedInUser);
+	useEffect(async () => {
+		if (!selectedFriend) {
+			return;
+		}
+		setCenter([selectedFriendLat, selectedFriendLng]);
 
-	// const handleClick = (friend) => {
-	// 	setSelectedFriend(friend);
-	// };
-	// const history = useHistory;
-	// const handleClickMap = (friend) => {
-	// 	history.push("/map");
-	// };
+		setLocalTime(
+			await timeAtLocation(selectedFriendLat, selectedFriendLng)
+		);
+	}, [selectedFriend]);
 
+	// https://stackoverflow.com/questions/64665827/react-leaflet-center-attribute-does-not-change-when-the-center-state-changes
+	const zoom = 10;
+	const ChangeView = ({ center }) => {
+		const map = useMap();
+		map.setView(center);
+		return null;
+	};
+
+	// console.log(center);
+	console.log("localtime", localTime);
 	return (
 		<div class="card text-center shadow-2xl">
-			{/* <iframe
-				style="border:none; width:100%; margin:0 auto; display:block;"
-				height="500px"
-				allowfullscreen
-				src="https://www.embed-leaflet.com/map?center=47.606011,-122.332147&zoom=8&style=&marker=true&popup=true&title=Marker&enhancedScroll=true"></iframe> */}
-			<iframe
+			<MapContainer
 				className="card__mini-map"
+				center={center}
+				zoom={10}
+				scrollWheelZoom={true}
 				id="inlineFrameExample"
 				title="Inline Frame Example"
 				width="300"
-				height="200"
-				src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"></iframe>
-			<div class="px-10 pt-10" className="mini-map">
-				{/* <MapContainer
-					center={[51.505, -0.09]}
-					zoom={2}
-					scrollWheelZoom={true}>
-					<TileLayer
-						attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-						url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-						// id="mapbox/streets-v11"
-						id="mapbox://styles/mapbox/satellite-v9"
-						projection="naturalEarth" // starting projection
-					/>
+				height="200">
+				<ChangeView center={center} />
 
-					<Marker
-						position={
-							[51.505, -0.09]
-							// [
-							// friend.locations[0].lat,
-							// friend.locations[0].lng
-							// ]
-						}
-					/>
-				</MapContainer> */}
-			</div>
+				<TileLayer
+					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+				/>
+			</MapContainer>
+			{/* )} */}
 
 			<div class="card-body">
 				<div className="card-title__wrapper">
@@ -90,7 +74,7 @@ const FriendCardCopy = ({
 					{selectedFriend.locations[0].country}
 				</p>
 				<p className="card__distance">
-					We're
+					We're{" "}
 					{/* https://stackoverflow.com/questions/18883601/function-to-calculate-distance-between-two-coordinates */}
 					<span className="card__distance--bold">
 						{distanceBetweenCoordinates(
@@ -98,25 +82,18 @@ const FriendCardCopy = ({
 							selectedFriend.locations[0].lng,
 							loggedInUser.locations[0].lat,
 							loggedInUser.locations[0].lng
-						)}{" "}
+						)}
 						km
 					</span>{" "}
 					apart!
 				</p>
-				<p className="card__time">
-					It's {/* api s for timezone...  */}
-					<span className="card__time--bold">3:22pm</span>
-					here
-				</p>
-				{/* <div class="justify-center card-actions">
-					<button
-						className="chat-button"
-						onClick={() => {
-							handleClick();
-						}}>
-						CHAT
-					</button>
-				</div> */}
+				{localTime && (
+					<p className="card__time">
+						It's{" "}
+						<span className="card__time--bold">{localTime}</span>{" "}
+						here
+					</p>
+				)}
 			</div>
 		</div>
 	);

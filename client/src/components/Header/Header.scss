@@ -18,15 +18,25 @@
 	// 	$dark-grey
 	// );
 	height: 100px;
+
 	&__title-link {
-		width: 30%;
+		// width: 30%;
+		@include tablet {
+			width: 30%;
+		}
 	}
 	&__title {
-		font-size: 3rem;
+		// font-size: 3rem;
+		@include tablet {
+			font-size: 3rem;
+		}
 	}
 
 	&__nav {
-		width: 30%;
+		// width: 30%;
+		@include tablet {
+			width: 30%;
+		}
 	}
 
 	&__nav-link {
@@ -34,16 +44,10 @@
 		margin: 2rem;
 		padding: 1rem;
 		&--active {
-			// text-decoration: underline;
 			border-top: 0.125rem dotted $green-grey;
 			border-radius: 50%;
 			font-weight: 600;
 		}
-		// &:hover {
-		// 	text-decoration: underline;
-		// 	color: $green-grey;
-		// }
-
 		&:hover {
 			border-top: 0.125rem dotted $green-grey;
 			border-radius: 50%;

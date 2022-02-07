@@ -2,12 +2,11 @@
 
 import "./App.scss";
 
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 import MapPage from "./pages/MapPage/MapPage";
 import ChatPage from "./pages/ChatPage/ChatPage";
-import Footer from "./components/Footer/Footer";
 import { useState, useEffect } from "react";
 import { getLoggedInUserFromStorage } from "./utils/users/getLoggedInUserFromStorage";
 import { getFriendsData } from "./utils/users/getFriendsData";
@@ -18,35 +17,20 @@ const App = () => {
 	const [friendsData, setFriendsData] = useState([]);
 	const [selectedFriend, setSelectedFriend] = useState(null);
 	const [room, setRoom] = useState();
-	// console.log("selectedFriend", selectedFriend);
 
 	useEffect(() => {
+		console.log("env", process.env);
 		const user = getLoggedInUserFromStorage();
 		setLoggedInUser(user);
 	}, []);
 
-	// useEffect(() => {
-	// 	console.log(selectedFriend);
-	// }, [selectedFriend]);
-
-	// getFriendsData
 	useEffect(async () => {
 		if (!loggedInUser) {
 			return;
 		}
 		console.log("gettting friends data");
 		const friends = await getFriendsData(loggedInUser);
-		// console.log("friends to set", friends);
 		setFriendsData(friends);
-		// console.log("loggedinuser", loggedInUser.userName);
-		// setUserPosition(
-		// 	loggedInUser.locations[0].lat,
-		// 	loggedInUser.locations[0].lng
-		// );
-		// const friendsMarkers = friends.map((friend) => friend.location);
-		// setMarkers(friendsMarkers);
-		// console.log("friendsmarkers", friendsMarkers);
-		// renderFriendMarkers(friends);
 	}, [loggedInUser]);
 
 	return (
@@ -89,7 +73,6 @@ const App = () => {
 					<AboutPage />
 				</Route>
 			</Switch>
-			{/* <Footer /> */}
 		</BrowserRouter>
 	);
 };

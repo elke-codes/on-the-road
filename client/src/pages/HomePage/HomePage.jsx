@@ -1,14 +1,10 @@
 import "./HomePage.scss";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Register from "../../components/Register/Register";
-import Map from "../../components/Map/Map";
-import Hero from "../../components/Hero/Hero";
-import { getLoggedInUserFromStorage } from "../../utils/users/getLoggedInUserFromStorage";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { getUserData } from "../../utils/users/getUserData";
-// import Map from "../../components/Map/Map";
 
 const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 	const [register, setRegister] = useState(false);
@@ -19,16 +15,16 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 	const [loginUserNameErrorMessage, setLoginUserNameErrorMessage] =
 		useState("");
 
-	const handleLogin = async (e) => {
-		// console.log(e.target.userName.value);
+	const API_URL = process.env.REACT_APP_API_URL;
 
+	const handleLogin = async (e) => {
 		e.preventDefault();
 
 		if (!e.target.userName.value) {
 			return alert("please enter your username");
 		}
 		axios
-			.post("http://localhost:8000/users/login", {
+			.post(`${API_URL}/users/login`, {
 				userName: e.target.userName.value,
 				password: e.target.password.value
 			})
@@ -36,7 +32,6 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 				console.log("result login axios", result);
 
 				const user = getUserData(e.target.userName.value);
-				// console.log("user", user);
 				return user;
 			})
 			.then((user) => setLoggedInUser(user))
@@ -58,34 +53,21 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 
 	return (
 		<main className="homepage">
-			{/* <h1 className="homepage__title">reconnect</h1> */}
-			{/* <button onClick={handleOpenRegister}>Register! </button> */}
 			{!register && !loggedInUser && !login && (
 				<>
 					<div className="homepage__buttons">
 						<h1 className="homepage__title">
 							the social network that moves with you
 						</h1>
-						{/* <p></p> */}
 						<button
-							// className="homepage__button "
 							className="btn btn-success"
 							onClick={() => setRegister(true)}>
 							GET STARTED!
 						</button>
-						{/* <button
-							className="homepage__button"
-							onClick={() => setLogin(true)}>
-							Login
-						</button> */}
 					</div>
-					{/* <Link to="/about" className="homepage__about">
-						Tell me more!
-					</Link> */}
 				</>
 			)}
 
-			{/* <Map className="homepage__map" /> */}
 			{!loggedInUser && register && (
 				<Register
 					setLoggedInUser={setLoggedInUser}
@@ -95,16 +77,12 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 
 			{!loggedInUser && login && (
 				<form className="header__login-form" onSubmit={handleLogin}>
-					{/* <label className="header__input-label" htmlFor="userName">
-					Username
-				</label> */}
 					<div className="input__wrapper">
 						<input
 							className="header__input"
 							type="text"
 							placeholder="enter your username"
 							name="userName"
-							// onChange={handleChange}
 						/>
 						{loginUserNameErrorMessage && (
 							<p className="header__input--error">
@@ -118,7 +96,6 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 							type="password"
 							placeholder="enter your password"
 							name="password"
-							// onChange={handleChange}
 						/>
 						{loginPasswordErrorMessage && (
 							<p className="header__input--error">
@@ -145,7 +122,6 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 					</Link>
 				</>
 			)}
-			{/* <Hero /> */}
 		</main>
 	);
 };

@@ -1,21 +1,41 @@
 /// --- FRIENDINFO.JSX --- ///
 
 import "./FriendCard.scss";
-import skyscanner from "../../assets/images/skyscanner.png";
-import airBnb from "../../assets/images/airbnb.png";
 import { distanceBetweenCoordinates } from "../../utils/location/distanceBetweenCoordinates";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Avatar from "../Avatar/Avatar";
 import DividerLine from "../DividerLine/DividerLine";
+import { timeAtLocation } from "../../utils/time/timeAtLocation";
 
-const FriendCard = ({ friend, loggedInUser, setSelectedFriend }) => {
+const FriendCard = ({
+	friend,
+	loggedInUser,
+	setSelectedFriend,
+	selectedFriend
+}) => {
 	const history = useHistory();
+	// const selectedFriendLat = selectedFriend.locations[0].lat;
+	// const selectedFriendLng = selectedFriend.locations[0].lng;
+	const [localTime, setLocalTime] = useState(null);
 
 	const handleSelectedFriend = (friend) => {
 		setSelectedFriend(friend);
 		history.push("/chat");
 	};
+
+	useEffect(async () => {
+		if (!friend) {
+			return;
+		}
+
+		setLocalTime(
+			await timeAtLocation(
+				friend.locations[0].lat,
+				friend.locations[0].lng
+			)
+		);
+	});
 
 	return (
 		<section className="friend">
@@ -50,10 +70,8 @@ const FriendCard = ({ friend, loggedInUser, setSelectedFriend }) => {
 				</p>
 
 				<p className="friend-card__time">
-					It's {/* TODO API for timezone...  */}
-					<span className="friend-card__time--bold">
-						3:22pm{" "}
-					</span>{" "}
+					It's{" "}
+					<span className="friend-card__time--bold">{localTime}</span>{" "}
 					here
 				</p>
 

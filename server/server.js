@@ -10,7 +10,7 @@ const fs = require("fs");
 const { v4: uuid } = require("uuid");
 //server is a class on socket.io
 const { Server } = require("socket.io");
-
+require("dotenv").config();
 app.use(cors());
 
 const readData = () => {
@@ -30,7 +30,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
 	cors: {
 		// origin is  CLIENT_URL
-		origin: "http://localhost:3000"
+		// origin: "http://localhost:3000"
 		// can specify methods here
 		// methods: ["GET", "POST"]
 	}
@@ -85,7 +85,7 @@ io.on("connection", (socket) => {
 });
 
 //listening on SERVER_URL (socket)
-server.listen(3001, () => {
+server.listen(process.env.SOCKET_PORT, () => {
 	console.log("🚀 server running on port 3001");
 });
 
@@ -93,7 +93,7 @@ server.listen(3001, () => {
 
 // include static middleware to be able to serve images from Express server
 app.use(express.static("public"));
-require("dotenv").config();
+// require("dotenv").config();
 // const PORT = process.env.PORT;
 
 app.use("/users", userRouter);
@@ -104,6 +104,6 @@ app.use("/chat", chatRouter);
 // 	console.log("🚀 Server listening on ", process.env.PORT);
 // });
 
-app.listen(8000, () => {
+app.listen(process.env.PORT, () => {
 	console.log("🚀 Server listening on ", 8000);
 });

@@ -6,7 +6,6 @@ import ScrollToBottom from "react-scroll-to-bottom";
 import { v4 as uuid } from "uuid";
 import axios from "axios";
 import { timeAgo } from "../../utils/time/timeAgo";
-// import { generateRoomName } from "../../utils/socket/generateRoomName";
 
 const ChatBox = ({
 	friendsData,
@@ -38,7 +37,9 @@ const ChatBox = ({
 		joinRoom(room);
 
 		axios
-			.get(`http://localhost:8000/chat/${loggedInUserID}/${room}`)
+			.get(
+				`${process.env.REACT_APP_API_URL}/chat/${loggedInUserID}/${room}`
+			)
 			.then((result) => {
 				console.log("axios get chat", result);
 				// update messagelist with all previous messages
@@ -56,15 +57,8 @@ const ChatBox = ({
 		socket.emit("join_room", room);
 	};
 
-	//listen for changes in room, clear the messagelist, join the room
-	// useEffect(() => {
-	// 	setMessageList([]);
-	// 	joinRoom(room);
-	// }, [room]);
-
 	//allow messages to be sent through socket
 	//async because you want to wait for the state to be set
-	//...can do with useEffect listening to the currentMessage to change?
 	const sendMessage = async () => {
 		if (currentMessage !== "") {
 			const messageData = {
@@ -88,6 +82,7 @@ const ChatBox = ({
 
 	// listen to whenever there s changes to our socket server
 	useEffect(() => {
+		// console.log(process.env.REACT_APP_SOCKET_SERVER_URL);
 		//listen for event emitted from server "receive_message", receive data sent from backend
 		socket.on("receive_message", (data) => {
 			console.log("receive message data from client", data);
@@ -109,7 +104,6 @@ const ChatBox = ({
 			<article className="chat-box__body">
 				<ScrollToBottom className="message-container">
 					{messageList.map((messageContent) => {
-						// console.log("messageContent", messageContent);
 						{
 							/* where messagecontent is the data received back from the server  */
 						}
@@ -123,16 +117,18 @@ const ChatBox = ({
 										? "you"
 										: "other"
 								}>
-								<div>
+								<div className="message__container">
 									<div className="message__meta">
 										{/* <div> */}{" "}
-										<p className="message__meta-author">
-											{messageContent.author}
-										</p>
 										<p className="message__meta-time">
 											{timeAgo(messageContent.time)}
 										</p>
-										{/* </div> */}
+										<p className="message__meta-author">
+											{messageContent.author ===
+											loggedInUser.userName
+												? "You"
+												: messageContent.author}
+										</p>
 									</div>
 									<div className="message__content">
 										{" "}
