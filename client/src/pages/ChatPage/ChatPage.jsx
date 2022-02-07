@@ -25,6 +25,7 @@ const ChatPage = ({
 	setLoggedInUser
 }) => {
 	const [register, setRegister] = useState(false);
+	console.log("server url,", process.env.REACT_APP_SOCKET_SERVER_URL);
 
 	// when there s a logged in user connect
 	useEffect(() => {

@@ -87,10 +87,13 @@ const FriendCardCopy = ({ loggedInUser, selectedFriend }) => {
 					</span>{" "}
 					apart!
 				</p>
-				<p className="card__time">
-					It's <span className="card__time--bold">{localTime}</span>{" "}
-					here
-				</p>
+				{localTime && (
+					<p className="card__time">
+						It's{" "}
+						<span className="card__time--bold">{localTime}</span>{" "}
+						here
+					</p>
+				)}
 			</div>
 		</div>
 	);

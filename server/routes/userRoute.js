@@ -130,8 +130,6 @@ router.get("/:userName", (req, res) => {
 router.post("/register", async (req, res) => {
 	const userData = readData();
 
-	// .getTimezoneOffset() to get timezone to be able to say what time it is at their location
-	// timezone_offset: created_at,
 	if (userNameExists(userData, req.body.userName)) {
 		return res.status(422).json({ message: "Username already taken." });
 	}

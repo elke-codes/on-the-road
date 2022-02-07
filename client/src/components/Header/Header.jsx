@@ -18,6 +18,7 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 		useState("");
 	const [loginUserNameErrorMessage, setLoginUserNameErrorMessage] =
 		useState("");
+	const API_URL = process.env.REACT_APP_API_URL;
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
@@ -26,7 +27,7 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 			return alert("please enter your username");
 		}
 		axios
-			.post("http://localhost:8000/users/login", {
+			.post(`${API_URL}/users/login`, {
 				userName: e.target.userName.value,
 				password: e.target.password.value
 			})
@@ -81,9 +82,7 @@ const Header = ({ loggedInUser, setLoggedInUser, setFriendsData }) => {
 		// happening on the backend: look in db and find a user with either username or email address and return that user
 		//take the user returned and add them the the loggedinusers friend array + vice versa
 		await axios
-			.get(
-				`http://localhost:8000/users/${loggedInUserID}/${friendToFind}`
-			)
+			.get(`${API_URL}/users/${loggedInUserID}/${friendToFind}`)
 			.then((result) => {
 				//TODO modal new friend added? check out how to show modal for set amount of time and dissapear
 				alert("New Friend Added!");

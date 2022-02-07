@@ -2,12 +2,12 @@
 
 import axios from "axios";
 // TODO ENV
-// const API_KEY = process.env.TIMEZONEDB_API_KEY;
+const API_KEY = process.env.REACT_APP_TIMEZONEDB_API_KEY;
 
 export const timeAtLocation = async (selectedFriendLat, selectedFriendLng) => {
 	const localTime = await axios
 		.get(
-			`http://api.timezonedb.com/v2.1/get-time-zone?key=1YUH457HAFCG&format=json&by=position&lat=${selectedFriendLat}&lng=${selectedFriendLng}`
+			`http://api.timezonedb.com/v2.1/get-time-zone?key=${API_KEY}&format=json&by=position&lat=${selectedFriendLat}&lng=${selectedFriendLng}`
 		)
 		.then((result) => {
 			const formatted = result.data.formatted;

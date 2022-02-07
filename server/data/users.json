@@ -698,9 +698,23 @@
       {
         "id": "71270f3d-7ca4-4039-96de-7279958c2d97",
         "userName": "Phoebe"
+      },
+      {
+        "id": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "userName": "Elke"
       }
     ],
-    "messages": [],
+    "messages": [
+      {
+        "room": "6d624377-0a79-4f8f-aa76-d6586d1bebdfd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Daniel",
+        "authorID": "6d624377-0a79-4f8f-aa76-d6586d1bebdf",
+        "receivedBy": "Elke",
+        "receivedByID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "message": "hi elke",
+        "time": 1644123375379
+      }
+    ],
     "locations": [
       {
         "lat": 35.6802403682393,
@@ -1207,7 +1221,53 @@
         "userName": "Elke"
       }
     ],
-    "messages": [],
+    "messages": [
+      {
+        "room": "0fe3f293-fff0-4617-9225-08cd81bdee79d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Saba",
+        "authorID": "0fe3f293-fff0-4617-9225-08cd81bdee79",
+        "receivedBy": "Elke",
+        "receivedByID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "message": "hi elke",
+        "time": 1644190981694
+      },
+      {
+        "room": "0fe3f293-fff0-4617-9225-08cd81bdee79d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Saba",
+        "receivedByID": "0fe3f293-fff0-4617-9225-08cd81bdee79",
+        "message": "hi sabe",
+        "time": 1644191004660
+      },
+      {
+        "room": "0fe3f293-fff0-4617-9225-08cd81bdee79d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Saba",
+        "receivedByID": "0fe3f293-fff0-4617-9225-08cd81bdee79",
+        "message": "saba",
+        "time": 1644191006644
+      },
+      {
+        "room": "0fe3f293-fff0-4617-9225-08cd81bdee79d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Saba",
+        "receivedByID": "0fe3f293-fff0-4617-9225-08cd81bdee79",
+        "message": "hillo",
+        "time": 1644192767290
+      },
+      {
+        "room": "0fe3f293-fff0-4617-9225-08cd81bdee79d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Saba",
+        "authorID": "0fe3f293-fff0-4617-9225-08cd81bdee79",
+        "receivedBy": "Elke",
+        "receivedByID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "message": "you",
+        "time": 1644192777779
+      }
+    ],
     "locations": [
       {
         "lat": 49.28379520651449,
@@ -1552,6 +1612,10 @@
       {
         "id": "e28bc748-882f-4c5e-9952-af1114b1a6d9",
         "userName": "Miriam"
+      },
+      {
+        "id": "6d624377-0a79-4f8f-aa76-d6586d1bebdf",
+        "userName": "Daniel"
       }
     ],
     "messages": [
@@ -1617,6 +1681,60 @@
         "receivedByID": "bb77887f-6848-4665-9f61-55e6044a897c",
         "message": "I honestly can't believe I'm having so much fun hahaha",
         "time": 1643265711427
+      },
+      {
+        "room": "6d624377-0a79-4f8f-aa76-d6586d1bebdfd2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Daniel",
+        "authorID": "6d624377-0a79-4f8f-aa76-d6586d1bebdf",
+        "receivedBy": "Elke",
+        "receivedByID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "message": "hi elke",
+        "time": 1644123375379
+      },
+      {
+        "room": "0fe3f293-fff0-4617-9225-08cd81bdee79d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Saba",
+        "authorID": "0fe3f293-fff0-4617-9225-08cd81bdee79",
+        "receivedBy": "Elke",
+        "receivedByID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "message": "hi elke",
+        "time": 1644190981694
+      },
+      {
+        "room": "0fe3f293-fff0-4617-9225-08cd81bdee79d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Saba",
+        "receivedByID": "0fe3f293-fff0-4617-9225-08cd81bdee79",
+        "message": "hi sabe",
+        "time": 1644191004660
+      },
+      {
+        "room": "0fe3f293-fff0-4617-9225-08cd81bdee79d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Saba",
+        "receivedByID": "0fe3f293-fff0-4617-9225-08cd81bdee79",
+        "message": "saba",
+        "time": 1644191006644
+      },
+      {
+        "room": "0fe3f293-fff0-4617-9225-08cd81bdee79d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Elke",
+        "authorID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "receivedBy": "Saba",
+        "receivedByID": "0fe3f293-fff0-4617-9225-08cd81bdee79",
+        "message": "hillo",
+        "time": 1644192767290
+      },
+      {
+        "room": "0fe3f293-fff0-4617-9225-08cd81bdee79d2ebf309-a0df-463d-b019-db4998741b7e",
+        "author": "Saba",
+        "authorID": "0fe3f293-fff0-4617-9225-08cd81bdee79",
+        "receivedBy": "Elke",
+        "receivedByID": "d2ebf309-a0df-463d-b019-db4998741b7e",
+        "message": "you",
+        "time": 1644192777779
       }
     ],
     "locations": [

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { v4 as uuid } from "uuid";
 import { generateRoomName } from "../../utils/socket/generateRoomName";
 import SearchBar from "../SearchBar/SearchBar";
+import Avatar from "../Avatar/Avatar";
 
 const Inbox = ({
 	friendsData,
@@ -57,11 +58,12 @@ const Inbox = ({
 									className="inbox__friend-active"
 								/>
 								<div className="collapse-title text-xl font-medium inbox__user-identity">
-									<div className="avatar online">
+									{/* <div className="avatar online">
 										<div className="rounded-full w-10 h-10">
 											<img src="http://daisyui.com/tailwind-css-component-profile-1@40w.png" />
 										</div>
-									</div>
+									</div> */}
+									<Avatar />
 
 									<span className="inbox__username">
 										{" "}

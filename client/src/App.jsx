@@ -19,6 +19,7 @@ const App = () => {
 	const [room, setRoom] = useState();
 
 	useEffect(() => {
+		console.log("env", process.env);
 		const user = getLoggedInUserFromStorage();
 		setLoggedInUser(user);
 	}, []);

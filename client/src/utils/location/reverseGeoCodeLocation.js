@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const reverseGeoCodeLocation = (coords) => {
 	const baseURL = "api.tomtom.com";
-	const TOM_TOM_API_KEY = "LcLxH0HrljNwaNWvcZ49gAcC85wsz1ZT";
+	const TOM_TOM_API_KEY = process.env.REACT_APP_TOM_TOM_API_KEY;
 	return axios
 		.get(
 			`https://${baseURL}/search/2/reverseGeocode/${coords.lat},${coords.lng}

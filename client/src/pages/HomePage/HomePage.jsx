@@ -15,6 +15,8 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 	const [loginUserNameErrorMessage, setLoginUserNameErrorMessage] =
 		useState("");
 
+	const API_URL = process.env.REACT_APP_API_URL;
+
 	const handleLogin = async (e) => {
 		e.preventDefault();
 
@@ -22,7 +24,7 @@ const HomePage = ({ loggedInUser, setLoggedInUser }) => {
 			return alert("please enter your username");
 		}
 		axios
-			.post("http://localhost:8000/users/login", {
+			.post(`${API_URL}/users/login`, {
 				userName: e.target.userName.value,
 				password: e.target.password.value
 			})

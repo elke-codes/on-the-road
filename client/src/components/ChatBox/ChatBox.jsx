@@ -37,7 +37,9 @@ const ChatBox = ({
 		joinRoom(room);
 
 		axios
-			.get(`http://localhost:8000/chat/${loggedInUserID}/${room}`)
+			.get(
+				`${process.env.REACT_APP_API_URL}/chat/${loggedInUserID}/${room}`
+			)
 			.then((result) => {
 				console.log("axios get chat", result);
 				// update messagelist with all previous messages
@@ -80,6 +82,7 @@ const ChatBox = ({
 
 	// listen to whenever there s changes to our socket server
 	useEffect(() => {
+		// console.log(process.env.REACT_APP_SOCKET_SERVER_URL);
 		//listen for event emitted from server "receive_message", receive data sent from backend
 		socket.on("receive_message", (data) => {
 			console.log("receive message data from client", data);
